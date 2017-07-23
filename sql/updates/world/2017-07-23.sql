@@ -1,0 +1,1 @@
+update creature_template set speed=1.2 where entry=19687;
