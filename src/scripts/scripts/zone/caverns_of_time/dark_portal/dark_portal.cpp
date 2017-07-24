@@ -632,15 +632,15 @@ struct rift_summonAI : public ScriptedAI
             {
                 switch (rand()%9)
                 {
-                  case 0: m_creature->MonsterYell("The wizard will fall!", 0, m_creature->GetGUID()); break;
-                  case 1: m_creature->MonsterYell("We will not be stopped!", 0, m_creature->GetGUID()); break;
-                  case 2: m_creature->MonsterYell("Victory or death!", 0, m_creature->GetGUID()); break;
-                  case 3: m_creature->MonsterYell("You are running out of time!", 0, m_creature->GetGUID()); break;
-                  case 4: m_creature->MonsterYell("The rift must be protected!", 0, m_creature->GetGUID()); break;
-                  case 5: m_creature->MonsterYell("Your efforts... are in vain.", 0, m_creature->GetGUID()); break;
-                  case 6: m_creature->MonsterYell("We are not finished!", 0, m_creature->GetGUID()); break;
-                  case 7: m_creature->MonsterYell("Death to the Last Guardian!", 0, m_creature->GetGUID()); break;
-                  case 8: m_creature->MonsterYell("We will not fail!", 0, m_creature->GetGUID()); break;
+                  case 0: m_creature->MonsterYell("巫师会倒下!", 0, m_creature->GetGUID()); break;
+                  case 1: m_creature->MonsterYell("我们不会被阻止!", 0, m_creature->GetGUID()); break;
+                  case 2: m_creature->MonsterYell("胜利或死亡!", 0, m_creature->GetGUID()); break;
+                  case 3: m_creature->MonsterYell("你的时间快用完了。!", 0, m_creature->GetGUID()); break;
+                  case 4: m_creature->MonsterYell("裂谷必须受到保护。!", 0, m_creature->GetGUID()); break;
+                  case 5: m_creature->MonsterYell("你的努力…都是徒劳的.", 0, m_creature->GetGUID()); break;
+                  case 6: m_creature->MonsterYell("我们还没有完成!", 0, m_creature->GetGUID()); break;
+                  case 7: m_creature->MonsterYell("最后的守护者之死!", 0, m_creature->GetGUID()); break;
+                  case 8: m_creature->MonsterYell("我们不会失败!", 0, m_creature->GetGUID()); break;
                 }
             }
         }
@@ -979,7 +979,7 @@ CreatureAI* GetAI_rift_summon(Creature *_Creature)
 
 #define SAY_SAAT_WELCOME        -1269019
 
-#define GOSSIP_ITEM_OBTAIN      "[PH] Obtain Chrono-Beacon"
+#define GOSSIP_ITEM_OBTAIN      "[博士]获得时空信标"
 #define SPELL_CHRONO_BEACON     34975
 #define ITEM_CHRONO_BEACON      24289
 
