@@ -60,9 +60,9 @@ EndContentData */
 
 #define QUEST_CLUCK         3861
 #define CHICKEN_HELLO_TEXT  50
-#define EMOTE_A_HELLO       "looks up at you quizzically. Maybe you should inspect it?"
-#define EMOTE_H_HELLO       "looks at you unexpectadly."
-#define CLUCK_TEXT2         "starts pecking at the feed."
+#define EMOTE_A_HELLO       "仔细地看着你。 也许你应该检查它?"
+#define EMOTE_H_HELLO       "看着你意外的."
+#define CLUCK_TEXT2         "开始啄食饲料."
 #define FACTION_FRIENDLY    84
 #define FACTION_CHICKEN     31
 
@@ -251,9 +251,9 @@ bool ReceiveEmote_npc_dancing_flames( Player *player, Creature *flame, uint32 em
 ## Triage quest
 ######*/
 
-#define SAY_DOC1 "I'm saved! Thank you, doctor!"
-#define SAY_DOC2 "HOORAY! I AM SAVED!"
-#define SAY_DOC3 "Sweet, sweet embrace... take me..."
+#define SAY_DOC1 "我得救了！谢谢你，医生。!"
+#define SAY_DOC2 "万岁!我得救了!"
+#define SAY_DOC3 "甜蜜，甜蜜的拥抱...带我..."
 
 struct Location
 {
@@ -658,7 +658,7 @@ CreatureAI* GetAI_npc_doctor(Creature *_Creature)
 ######*/
 
 #define SPELL_DEATHTOUCH                5
-#define SAY_AGGRO                       "This area is closed!"
+#define SAY_AGGRO                       "这个区域是关闭的!"
 
 struct npc_guardianAI : public ScriptedAI
 {
@@ -810,7 +810,7 @@ bool GossipHello_npc_sayge(Player *player, Creature *_Creature)
         player->SEND_GOSSIP_MENU(7393, _Creature->GetGUID());
     else
     {
-        player->ADD_GOSSIP_ITEM(0, "Yes", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+        player->ADD_GOSSIP_ITEM(0, "确定", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
         player->SEND_GOSSIP_MENU(7339, _Creature->GetGUID());
     }
 
@@ -822,38 +822,38 @@ void SendAction_npc_sayge(Player *player, Creature *_Creature, uint32 action)
     switch(action)
     {
     case GOSSIP_ACTION_INFO_DEF+1:
-        player->ADD_GOSSIP_ITEM(0, "Slay the Man",                      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
-        player->ADD_GOSSIP_ITEM(0, "Turn him over to liege",            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+3);
-        player->ADD_GOSSIP_ITEM(0, "Confiscate the corn",               GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+4);
-        player->ADD_GOSSIP_ITEM(0, "Let him go and have the corn",      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+5);
+        player->ADD_GOSSIP_ITEM(0, "杀死的人",                      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+        player->ADD_GOSSIP_ITEM(0, "把他交给臣下",            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+3);
+        player->ADD_GOSSIP_ITEM(0, "没收的玉米",               GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+4);
+        player->ADD_GOSSIP_ITEM(0, "让他去吃玉米",      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+5);
         player->SEND_GOSSIP_MENU(7340, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+2:
-        player->ADD_GOSSIP_ITEM(0, "Execute your friend painfully",     GOSSIP_SENDER_MAIN+1, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Execute your friend painlessly",    GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Let your friend go",                GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "痛苦地处决你的朋友",     GOSSIP_SENDER_MAIN+1, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "无痛地执行你的朋友",    GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "让你的朋友去",                GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7341, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+3:
-        player->ADD_GOSSIP_ITEM(0, "Confront the diplomat",             GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Show not so quiet defiance",        GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Remain quiet",                      GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "面对外交官",             GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "显示不那么安静的蔑视",        GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "保持安静",                      GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7361, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+4:
-        player->ADD_GOSSIP_ITEM(0, "Speak against your brother openly", GOSSIP_SENDER_MAIN+6, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Help your brother in",              GOSSIP_SENDER_MAIN+7, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Keep your brother out without letting him know", GOSSIP_SENDER_MAIN+8, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "公开反对你的兄弟", GOSSIP_SENDER_MAIN+6, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "帮助你的兄弟",              GOSSIP_SENDER_MAIN+7, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "不要让你哥哥知道", GOSSIP_SENDER_MAIN+8, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7362, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+5:
-        player->ADD_GOSSIP_ITEM(0, "Take credit, keep gold",            GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Take credit, share the gold",       GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "Let the knight take credit",        GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "拿信用，养黄金",            GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "拿信用，共享黄金",       GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "让骑士获得荣誉",        GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7363, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF:
-        player->ADD_GOSSIP_ITEM(0, "Thanks",                            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+6);
+        player->ADD_GOSSIP_ITEM(0, "谢谢",                            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+6);
         player->SEND_GOSSIP_MENU(7364, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+6:
@@ -1446,28 +1446,28 @@ bool ReceiveEmote_npc_mojo( Player *player, Creature *_Creature, uint32 emote )
                 switch (urand(0, MOJO_WHISPS_COUNT))
                 {
                 case 0:
-                    text = "Now that's what I call froggy-style!";
+                    text = "现在这就是我称之为青蛙的风格!";
                     break;
                 case 1:
-                    text = "Your lily pad or mine?";
+                    text = "你的睡莲叶子还是我的?";
                     break;
                 case 2:
-                    text = "This won't take long, did it?";
+                    text = "这不会花很长时间，是吗？?";
                     break;
                 case 3:
-                    text = "I thought you'd never ask!";
+                    text = "我以为你永远不会问!";
                     break;
                 case 4:
-                    text = "I promise not to give you warts...";
+                    text = "我保证不给你疣...";
                     break;
                 case 5:
-                    text = "Feelin' a little froggy, are ya?";
+                    text = "感觉一个小小的青蛙，你是?";
                     break;
                 case 6:
-                    text = "Listen, $n, I know of a little swamp not too far from here....";
+                    text = "听, $n, 我知道有个小沼泽，离这儿不远....";
                     break;
                 default:
-                    text = "There's just never enough Mojo to go around...";
+                    text = "只是有没有足够的运气去...";
                     break;
                 }
 
@@ -1529,8 +1529,8 @@ CreatureAI* GetAI_npc_woeful_healer(Creature* pCreature)
     return new npc_woeful_healerAI(pCreature);
 }
 
-#define GOSSIP_VIOLET_SIGNET    "I have lost my Violet Signet, could you make me a new one?"
-#define GOSSIP_ETERNAL_BAND    "I have lost my Eternal Band, could you make me a new one?"
+#define GOSSIP_VIOLET_SIGNET    "我的紫色印章掉了，你能给我做个新的吗？"
+#define GOSSIP_ETERNAL_BAND    "我失去了我的永恒乐队，你能给我换一个新的吗？"
 
 // Archmage Leryda from Karazhan and Soridormi from Mount Hyjal
 bool GossipHello_npc_ring_specialist(Player* player, Creature* _Creature)
@@ -1814,22 +1814,22 @@ CreatureAI *GetAI_npc_earth_elemental_guardian(Creature* c)
 # npc_master_omarion
 #########*/
 
-//Blacksmithing
-#define GOSSIP_ITEM_OMARION0  "Learn Icebane Bracers pattern."
-#define GOSSIP_ITEM_OMARION1  "Learn Icebane Gauntlets pattern."
-#define GOSSIP_ITEM_OMARION2  "Learn Icebane Breastplate pattern."
-//Leatherworking
-#define GOSSIP_ITEM_OMARION3  "Learn Polar Bracers pattern."
-#define GOSSIP_ITEM_OMARION4  "Learn Polar Gloves pattern."
-#define GOSSIP_ITEM_OMARION5  "Learn Polar Tunic pattern."
-#define GOSSIP_ITEM_OMARION6  "Learn Icy Scale Bracers pattern."
-#define GOSSIP_ITEM_OMARION7  "Learn Icy Scale Gauntlets pattern."
-#define GOSSIP_ITEM_OMARION8  "Learn Icy Scale Breastplate pattern."
-//Tailoring
-#define GOSSIP_ITEM_OMARION9  "Learn Glacial Wrists pattern."
-#define GOSSIP_ITEM_OMARION10 "Learn Glacial Gloves pattern."
-#define GOSSIP_ITEM_OMARION11 "Learn Glacial Vest pattern."
-#define GOSSIP_ITEM_OMARION12 "Learn Glacial Cloak pattern."
+//Blacksmithing	锻造
+#define GOSSIP_ITEM_OMARION0  "学习破冰护腕图纸."
+#define GOSSIP_ITEM_OMARION1  "学习破冰护手图纸."
+#define GOSSIP_ITEM_OMARION2  "学习破冰胸甲图纸."
+//Leatherworking	制皮
+#define GOSSIP_ITEM_OMARION3  "学习北极护腕图纸."
+#define GOSSIP_ITEM_OMARION4  "学习北极手套图纸."
+#define GOSSIP_ITEM_OMARION5  "学习北极外套图纸."
+#define GOSSIP_ITEM_OMARION6  "学习寒鳞护腕图纸."
+#define GOSSIP_ITEM_OMARION7  "学习寒鳞护手图纸."
+#define GOSSIP_ITEM_OMARION8  "学习寒鳞胸甲图纸."
+//Tailoring	剪裁
+#define GOSSIP_ITEM_OMARION9  "学习冰川护腕图纸."
+#define GOSSIP_ITEM_OMARION10 "学习冰川手套图纸."
+#define GOSSIP_ITEM_OMARION11 "学习冰川外衣图纸."
+#define GOSSIP_ITEM_OMARION12 "学习冰川披风图纸."
 
 bool GossipHello_npc_master_omarion(Player *player, Creature *_Creature)
 {
@@ -1946,10 +1946,10 @@ bool GossipSelect_npc_master_omarion(Player *player, Creature *_Creature, uint32
 # npc_lorekeeper_lydros
 #########*/
 
-#define GOSSIP_ITEM_LOREKEEPER1 "Fascinating, Lorekeeper. Continue please."
-#define GOSSIP_ITEM_LOREKEEPER2 "(Continue)"
-#define GOSSIP_ITEM_LOREKEEPER3 "Eh?"
-#define GOSSIP_ITEM_LOREKEEPER4 "Maybe... What do I do now?"
+#define GOSSIP_ITEM_LOREKEEPER1 "迷人的 莱德罗斯，请继续."
+#define GOSSIP_ITEM_LOREKEEPER2 "（继续）"
+#define GOSSIP_ITEM_LOREKEEPER3 "啊?"
+#define GOSSIP_ITEM_LOREKEEPER4 "也许吧...我现在该怎么办？"
 
 bool GossipHello_npc_lorekeeper_lydros(Player *player, Creature *_Creature)
 {
@@ -2344,7 +2344,7 @@ bool GossipHello_npc_delivery_daily(Player *player, Creature *_Creature)
 
     if(!player->HasAura(44689, 0) && (player->GetQuestStatus(11122) == QUEST_STATUS_COMPLETE || player->GetQuestStatus(11412) == QUEST_STATUS_COMPLETE))
     {
-        player->PlayerTalkClass->GetGossipMenu().AddMenuItem(0, "Do you have additional work?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF, "", 0);
+        player->PlayerTalkClass->GetGossipMenu().AddMenuItem(0, "你有额外的工作吗？", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF, "", 0);
     }
 
     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
@@ -2387,8 +2387,8 @@ CreatureAI* GetAI_trigger_barker(Creature* pCreature)
 //This function is called when the player opens the gossip menubool
 bool GossipHello_npc_arena_spectator(Player *player, Creature *_Creature)
 {
-    player->ADD_GOSSIP_ITEM_EXTENDED(0, "Whose arena do ypu wanna to watch?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1, "", 0, true);
-    player->ADD_GOSSIP_ITEM(0, "I'm not interested", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+    player->ADD_GOSSIP_ITEM_EXTENDED(0, "你想看谁的舞台?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1, "", 0, true);
+    player->ADD_GOSSIP_ITEM(0, "我不感兴趣。", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
 
     player->PlayerTalkClass->SendGossipMenu(907,_Creature->GetGUID());
     return true;
@@ -2685,7 +2685,7 @@ CreatureAI* GetAI_npc_small_pet_handler(Creature* pCreature)
 
 bool GossipHello_npc_combatstop(Player* player, Creature* _Creature) 
 { 
-    player->ADD_GOSSIP_ITEM(0, "Clear in combat state.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1); 
+    player->ADD_GOSSIP_ITEM(0, "清除战斗状态.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1); 
 
     // Hey there, $N. How can I help you?
     player->SEND_GOSSIP_MENU(2, _Creature->GetGUID()); 
@@ -2891,7 +2891,7 @@ CreatureAI* GetAI_npc_explosive_sheep(Creature* pCreature)
 ## Meridith the Mermaiden
 ######*/
 
-#define GOSSIP_HELLO "Thank you for your help"
+#define GOSSIP_HELLO "谢谢你的帮助"
 #define LOVE_SONG_QUEST_ID 8599
 #define SIREN_SONG 25678
 
@@ -2909,7 +2909,7 @@ bool GossipSelect_npc_meridith_the_mermaiden(Player *player, Creature * creature
 {
     if(action == GOSSIP_ACTION_INFO_DEF+1)
     {
-        creature->Say("Farewell!", LANG_UNIVERSAL, 0);
+        creature->Say("再见!", LANG_UNIVERSAL, 0);
         creature->CastSpell(player, SIREN_SONG, false);
         player->CLOSE_GOSSIP_MENU();
     }
