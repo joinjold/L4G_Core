@@ -2975,8 +2975,8 @@ CreatureAI* GetAI_npc_gnomish_flame_turret(Creature *_Creature)
 /*######
  # dummy park control
  ######*/
-#define DUMMY_PARK_ON "Start dummy park event"
-#define DUMMY_PARK_OFF "Stop dummy park event"
+#define DUMMY_PARK_ON "开始贵族花园事件"
+#define DUMMY_PARK_OFF "结束贵族花园事件"
 #define DUMMY_PARK_OBJECTS 16
 #define DUMMY_PARK_NPCS 8
 
@@ -3059,7 +3059,7 @@ bool GossipSelect_npc_dummy_park(Player *player, Creature *creature, uint32 send
     {
         if(action == GOSSIP_ACTION_INFO_DEF+1)
         {
-            creature->Whisper("Preparing dummy park!",player->GetGUID());
+            creature->Whisper("准备贵族花园!",player->GetGUID());
             GameObject* gob;
             for (uint8 i = 0 ; i < DUMMY_PARK_OBJECTS ; i++)
             {
@@ -3094,7 +3094,7 @@ bool GossipSelect_npc_dummy_park(Player *player, Creature *creature, uint32 send
         }
         else if(action == GOSSIP_ACTION_INFO_DEF+2)
         {
-            creature->Whisper("Removing dummy park!",player->GetGUID());
+            creature->Whisper("结束贵族花园!",player->GetGUID());
             GameObject* gob;
             for (uint8 i = 0 ; i < DUMMY_PARK_OBJECTS ; i++)
             {

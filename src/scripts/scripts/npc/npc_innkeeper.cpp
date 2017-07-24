@@ -28,10 +28,10 @@ EndScriptData */
 #define SPELL_TRICK_OR_TREATED  24755
 #define SPELL_TREAT             24715
 
-#define LOCALE_TRICK_OR_TREAT_0 "Trick or Treat!"
-#define LOCALE_TRICK_OR_TREAT_2 "Des bonbons ou des blagues!"
-#define LOCALE_TRICK_OR_TREAT_3 "Ses oder Saures!"
-#define LOCALE_TRICK_OR_TREAT_6 "ruco o trato!"
+#define LOCALE_TRICK_OR_TREAT_0 "不给糖果就捣乱!"
+#define LOCALE_TRICK_OR_TREAT_2 "恶作剧还是笑话!"
+#define LOCALE_TRICK_OR_TREAT_3 "Ses oder Saures!"
+#define LOCALE_TRICK_OR_TREAT_6 "ruco o trato!"
 
 bool isEventActive()
 {

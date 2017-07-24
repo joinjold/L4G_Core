@@ -37,15 +37,15 @@ there is no difference here (except that default text is chosen with `gameobject
 /*###
 # to be removed from here (->ncp_text). This is data for database projects.
 ###*/
-#define TALK_MUST_UNLEARN_WEAPON    "You must forget your weapon type specialty before I can help you. Go to Everlook in Winterspring and seek help there."
+#define TALK_MUST_UNLEARN_WEAPON    "在我帮你之前，你必须忘掉你的武器专业。去冬泉谷的永望镇在那里寻求帮助。"
 
-#define TALK_HAMMER_LEARN           "Ah, a seasoned veteran you once were. I know you are capable, you merely need to ask and I shall teach you the way of the hammersmith."
-#define TALK_AXE_LEARN              "Ah, a seasoned veteran you once were. I know you are capable, you merely need to ask and I shall teach you the way of the axesmith."
-#define TALK_SWORD_LEARN            "Ah, a seasoned veteran you once were. I know you are capable, you merely need to ask and I shall teach you the way of the swordsmith."
+#define TALK_HAMMER_LEARN           "啊，你曾经是一个经验丰富的老将。 我知道你有能力，你只需要问，我会教你铸锤的方法."
+#define TALK_AXE_LEARN              "啊，你曾经是一个经验丰富的老将。 我知道你有能力，你只需要问，我会教你铸斧的方法."
+#define TALK_SWORD_LEARN            "啊，你曾经是一个经验丰富的老将。 我知道你有能力，你只需要问，我会教你铸剑的方法."
 
-#define TALK_HAMMER_UNLEARN         "Forgetting your Hammersmithing skill is not something to do lightly. If you choose to abandon it you will forget all recipes that require Hammersmithing to create!"
-#define TALK_AXE_UNLEARN            "Forgetting your Axesmithing skill is not something to do lightly. If you choose to abandon it you will forget all recipes that require Axesmithing to create!"
-#define TALK_SWORD_UNLEARN          "Forgetting your Swordsmithing skill is not something to do lightly. If you choose to abandon it you will forget all recipes that require Swordsmithing to create!"
+#define TALK_HAMMER_UNLEARN         "忘记你的铸锤技巧不是轻而易举的事情。如果你选择放弃它，你会忘记所有需要铸锤的方法!"
+#define TALK_AXE_UNLEARN            "忘记你的铸斧技能不是轻而易举的事情。如果你选择放弃它，你会忘记所有需要铸斧的方法!"
+#define TALK_SWORD_UNLEARN          "忘了你的铸剑技能不是轻而易举的事情。如果你选择放弃它，你会忘记所有需要铸剑的方法!"
 
 /*###
 # generic defines
@@ -59,130 +59,130 @@ there is no difference here (except that default text is chosen with `gameobject
 # gossip item and box texts
 ###*/
 
-#define GOSSIP_LEARN_POTION         "Please teach me how to become a Master of Potions, Lauranna"
-#define GOSSIP_UNLEARN_POTION       "I wish to unlearn Potion Mastery"
-#define GOSSIP_LEARN_TRANSMUTE      "Please teach me how to become a Master of Transmutations, Zarevhi"
-#define GOSSIP_UNLEARN_TRANSMUTE    "I wish to unlearn Transmutation Mastery"
-#define GOSSIP_LEARN_ELIXIR         "Please teach me how to become a Master of Elixirs, Lorokeem"
-#define GOSSIP_UNLEARN_ELIXIR       "I wish to unlearn Elixir Mastery"
+#define GOSSIP_LEARN_POTION         "请教我如何成为药水大师。劳兰娜·萨维尔"
+#define GOSSIP_UNLEARN_POTION       "我希望忘却精通药水"
+#define GOSSIP_LEARN_TRANSMUTE      "请你教教我如何成为一个转化大师, 萨雷维"
+#define GOSSIP_UNLEARN_TRANSMUTE    "我希望忘却转化大师"
+#define GOSSIP_LEARN_ELIXIR         "请教我如何成为一个药剂大师师, 罗罗基姆"
+#define GOSSIP_UNLEARN_ELIXIR       "我希望忘却药剂大师"
 
-#define BOX_UNLEARN_ALCHEMY_SPEC    "Do you really want to unlearn your alchemy specialty and lose all associated recipes? \n Cost: "
+#define BOX_UNLEARN_ALCHEMY_SPEC    "你真的想忘掉你的炼金专业失去了所有相关的法术? \n Cost: "
 
-#define GOSSIP_WEAPON_LEARN         "Please teach me how to become a Weaponsmith"
-#define GOSSIP_WEAPON_UNLEARN       "I wish to unlearn the art of Weaponsmithing"
-#define GOSSIP_ARMOR_LEARN          "Please teach me how to become a Armorsmith"
-#define GOSSIP_ARMOR_UNLEARN        "I wish to unlearn the art of Armorsmithing"
+#define GOSSIP_WEAPON_LEARN         "请你教教我如何锻造一种武器"
+#define GOSSIP_WEAPON_UNLEARN       "我愿放弃武器锻造工匠的艺术"
+#define GOSSIP_ARMOR_LEARN          "请你教教我如何锻造一种防具"
+#define GOSSIP_ARMOR_UNLEARN        "我想忘掉锻造防具工匠的艺术"
 
-#define GOSSIP_UNLEARN_SMITH_SPEC   "I wish to unlearn my blacksmith specialty"
-#define BOX_UNLEARN_ARMORORWEAPON   "Do you really want to unlearn your blacksmith specialty and lose all associated recipes? \n Cost: "
+#define GOSSIP_UNLEARN_SMITH_SPEC   "我想忘掉我的锻造专业"
+#define BOX_UNLEARN_ARMORORWEAPON   "你真的想忘掉你的锻造专业失去了所有相关的法术? \n Cost: "
 
-#define GOSSIP_LEARN_HAMMER         "Please teach me how to become a Hammersmith, Lilith"
-#define GOSSIP_UNLEARN_HAMMER       "I wish to unlearn Hammersmithing"
-#define GOSSIP_LEARN_AXE            "Please teach me how to become a Axesmith, Kilram"
-#define GOSSIP_UNLEARN_AXE          "I wish to unlearn Axesmithing"
-#define GOSSIP_LEARN_SWORD          "Please teach me how to become a Swordsmith, Seril"
-#define GOSSIP_UNLEARN_SWORD        "I wish to unlearn Swordsmithing"
+#define GOSSIP_LEARN_HAMMER         "请你教教我如何成为一个大师级铸锤, Lilith"
+#define GOSSIP_UNLEARN_HAMMER       "我想忘掉大师级铸锤"
+#define GOSSIP_LEARN_AXE            "请你教教我如何成为一个大师级铸斧, Kilram"
+#define GOSSIP_UNLEARN_AXE          "我想忘掉大师级铸斧"
+#define GOSSIP_LEARN_SWORD          "请你教教我如何成为一个大师级铸剑, Seril"
+#define GOSSIP_UNLEARN_SWORD        "我想忘掉大师级铸剑"
 
-#define BOX_UNLEARN_WEAPON_SPEC     "Do you really want to unlearn your weaponsmith specialty and lose all associated recipes? \n Cost: "
+#define BOX_UNLEARN_WEAPON_SPEC     "你真的想忘掉你的武器专业失去了所有相关的法术? \n Cost: "
 
-#define GOSSIP_LEARN_DRAGON         "I am absolutely certain that i want to learn dragonscale leatherworking"
-#define GOSSIP_UNLEARN_DRAGON       "I wish to unlearn Dragonscale Leatherworking"
-#define GOSSIP_LEARN_ELEMENTAL      "I am absolutely certain that i want to learn elemental leatherworking"
-#define GOSSIP_UNLEARN_ELEMENTAL    "I wish to unlearn Elemental Leatherworking"
-#define GOSSIP_LEARN_TRIBAL         "I am absolutely certain that i want to learn tribal leatherworking"
-#define GOSSIP_UNLEARN_TRIBAL       "I wish to unlearn Tribal Leatherworking"
+#define GOSSIP_LEARN_DRAGON         "我绝对相信我想学习龙鳞制皮"
+#define GOSSIP_UNLEARN_DRAGON       "我想忘掉龙鳞制皮"
+#define GOSSIP_LEARN_ELEMENTAL      "我绝对相信我想学习元素制皮"
+#define GOSSIP_UNLEARN_ELEMENTAL    "我想忘掉元素制皮"
+#define GOSSIP_LEARN_TRIBAL         "我绝对相信我想学习部族制皮"
+#define GOSSIP_UNLEARN_TRIBAL       "我想忘掉部族制皮"
 
-#define BOX_UNLEARN_LEATHER_SPEC    "Do you really want to unlearn your leatherworking specialty and lose all associated recipes? \n Cost: "
+#define BOX_UNLEARN_LEATHER_SPEC    "你真的想忘掉你的制皮专业失去了所有相关的法术? \n Cost: "
 
-#define GOSSIP_LEARN_SPELLFIRE      "Please teach me how to become a Spellcloth tailor"
-#define GOSSIP_UNLEARN_SPELLFIRE    "I wish to unlearn Spellfire Tailoring"
-#define GOSSIP_LEARN_MOONCLOTH      "Please teach me how to become a Mooncloth tailor"
-#define GOSSIP_UNLEARN_MOONCLOTH    "I wish to unlearn Mooncloth Tailoring"
-#define GOSSIP_LEARN_SHADOWEAVE     "Please teach me how to become a Shadoweave tailor"
-#define GOSSIP_UNLEARN_SHADOWEAVE   "I wish to unlearn Shadoweave Tailoring"
+#define GOSSIP_LEARN_SPELLFIRE      "请你教教我如何成为一个魔焰裁缝"
+#define GOSSIP_UNLEARN_SPELLFIRE    "我希望忘却魔焰裁缝"
+#define GOSSIP_LEARN_MOONCLOTH      "请你教教我如何成为一个月布裁缝"
+#define GOSSIP_UNLEARN_MOONCLOTH    "我希望忘却月布裁缝"
+#define GOSSIP_LEARN_SHADOWEAVE     "请你教教我如何成为一个暗纹裁缝"
+#define GOSSIP_UNLEARN_SHADOWEAVE   "我希望忘却暗纹裁缝"
 
-#define BOX_UNLEARN_TAILOR_SPEC     "Do you really want to unlearn your tailoring specialty and lose all associated recipes? \n Cost: "
+#define BOX_UNLEARN_TAILOR_SPEC     "你真的想忘掉你的裁缝专业失去了所有相关的法术? \n Cost: "
 
-#define GOSSIP_LEARN_GOBLIN         "I am absolutely certain that i want to learn Goblin engineering"
-#define GOSSIP_UNLEARN_GOBLIN       "I wish to unlearn my Goblin Engineering specialization!"
-#define GOSSIP_LEARN_GNOMISH        "I am absolutely certain that i want to learn Gnomish engineering"
-#define GOSSIP_UNLEARN_GNOMISH      "I wish to unlearn my Gnomish Engineering specialization!"
+#define GOSSIP_LEARN_GOBLIN         "我绝对肯定我想学地精工程学。"
+#define GOSSIP_UNLEARN_GOBLIN       "我想忘掉我的地精工程学专业!"
+#define GOSSIP_LEARN_GNOMISH        "我绝对肯定我想学侏儒工程学。"
+#define GOSSIP_UNLEARN_GNOMISH      "我想忘掉我的侏儒工程学专业!"
 
-#define BOX_UNLEARN_GOBLIN_SPEC     "Do you really want to unlearn your Goblin Engineering specialization and lose all asociated recipes?"
-#define BOX_UNLEARN_GNOMISH_SPEC    "Do you really want to unlearn your Gnomish Engineering specialization and lose all asociated recipes?"
+#define BOX_UNLEARN_GOBLIN_SPEC     "你真的想忘掉你的地精工程专业并失去所有相关法术?"
+#define BOX_UNLEARN_GNOMISH_SPEC    "你真的想忘掉你的侏儒工程专业并失去所有相关法术?"
 
 /*###
 # spells defines
 ###*/
 
-#define S_WEAPON                9787
-#define S_ARMOR                 9788
-#define S_HAMMER                17040
-#define S_AXE                   17041
-#define S_SWORD                 17039
+#define S_WEAPON                9787	//武器锻造
+#define S_ARMOR                 9788	//防具锻造
+#define S_HAMMER                17040	//大师级铸锤
+#define S_AXE                   17041	//大师级铸斧
+#define S_SWORD                 17039	//大师级铸剑
 
-#define S_LEARN_WEAPON          9789
-#define S_LEARN_ARMOR           9790
-#define S_LEARN_HAMMER          39099
-#define S_LEARN_AXE             39098
-#define S_LEARN_SWORD           39097
+#define S_LEARN_WEAPON          9789	//武器锻造
+#define S_LEARN_ARMOR           9790	//防具锻造
+#define S_LEARN_HAMMER          39099	//大师级铸锤
+#define S_LEARN_AXE             39098	//大师级铸斧
+#define S_LEARN_SWORD           39097	//大师级铸剑
 
-#define S_UNLEARN_WEAPON        36436
-#define S_UNLEARN_ARMOR         36435
-#define S_UNLEARN_HAMMER        36441
-#define S_UNLEARN_AXE           36439
-#define S_UNLEARN_SWORD         36438
+#define S_UNLEARN_WEAPON        36436	//遗忘
+#define S_UNLEARN_ARMOR         36435	//遗忘
+#define S_UNLEARN_HAMMER        36441	//遗忘
+#define S_UNLEARN_AXE           36439	//遗忘
+#define S_UNLEARN_SWORD         36438	//遗忘
 
-#define S_REP_ARMOR             17451
+#define S_REP_ARMOR             17451	
 #define S_REP_WEAPON            17452
 
-#define REP_ARMOR               46
+#define REP_ARMOR               46	//
 #define REP_WEAPON              289
 #define REP_HAMMER              569
 #define REP_AXE                 570
 #define REP_SWORD               571
 
-#define S_DRAGON                10656
-#define S_ELEMENTAL             10658
-#define S_TRIBAL                10660
+#define S_DRAGON                10656	//龙鳞制皮
+#define S_ELEMENTAL             10658	//元素制皮
+#define S_TRIBAL                10660	//部族制皮
 
 #define S_LEARN_DRAGON          10657
 #define S_LEARN_ELEMENTAL       10659
 #define S_LEARN_TRIBAL          10661
 
-#define S_UNLEARN_DRAGON        36434
-#define S_UNLEARN_ELEMENTAL     36328
-#define S_UNLEARN_TRIBAL        36433
+#define S_UNLEARN_DRAGON        36434	//遗忘
+#define S_UNLEARN_ELEMENTAL     36328	//遗忘
+#define S_UNLEARN_TRIBAL        36433	//遗忘
 
-#define S_GOBLIN                20222
-#define S_GNOMISH               20219
+#define S_GOBLIN                20222	//地精工程师
+#define S_GNOMISH               20219	//侏儒工程师
 
-#define S_LEARN_GOBLIN          20221
-#define S_LEARN_GNOMISH         20220
+#define S_LEARN_GOBLIN          20221	//地精工程师
+#define S_LEARN_GNOMISH         20220	//侏儒工程师
 
-#define S_SPELLFIRE             26797
-#define S_MOONCLOTH             26798
-#define S_SHADOWEAVE            26801
+#define S_SPELLFIRE             26797	//魔焰裁缝	
+#define S_MOONCLOTH             26798	//月布裁缝
+#define S_SHADOWEAVE            26801	//暗纹裁缝
 
-#define S_LEARN_SPELLFIRE       26796
+#define S_LEARN_SPELLFIRE       26796	
 #define S_LEARN_MOONCLOTH       26799
 #define S_LEARN_SHADOWEAVE      26800
 
-#define S_UNLEARN_SPELLFIRE     41299
-#define S_UNLEARN_MOONCLOTH     41558
-#define S_UNLEARN_SHADOWEAVE    41559
+#define S_UNLEARN_SPELLFIRE     41299	//遗忘魔焰裁缝
+#define S_UNLEARN_MOONCLOTH     41558	//遗忘月布裁缝
+#define S_UNLEARN_SHADOWEAVE    41559	//遗忘暗纹裁缝
 
-#define S_TRANSMUTE             28672
+#define S_TRANSMUTE             28672	
 #define S_ELIXIR                28677
 #define S_POTION                28675
 
-#define S_LEARN_TRANSMUTE       28674
-#define S_LEARN_ELIXIR          28678
-#define S_LEARN_POTION          28676
+#define S_LEARN_TRANSMUTE       28674	//转化大师
+#define S_LEARN_ELIXIR          28678	//药剂大师
+#define S_LEARN_POTION          28676	//药水大师
 
-#define S_UNLEARN_TRANSMUTE     41565
-#define S_UNLEARN_ELIXIR        41564
-#define S_UNLEARN_POTION        41563
+#define S_UNLEARN_TRANSMUTE     41565	//遗忘转化大师
+#define S_UNLEARN_ELIXIR        41564	//遗忘药剂大师
+#define S_UNLEARN_POTION        41563	//遗忘药水大师
 
 /*###
 # formulas to calculate unlearning cost
