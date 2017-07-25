@@ -39,7 +39,7 @@ EndContentData */
 ## npc_raliq_the_drunk
 ######*/
 
-#define GOSSIP_RALIQ            "You owe Sim'salabim money. Hand them over or die!"
+#define GOSSIP_RALIQ            "你欠 Sim'salabim 钱. 要么交出来，要么死!"
 
 #define FACTION_HOSTILE_RD      45
 #define FACTION_FRIENDLY_RD     35
@@ -225,7 +225,7 @@ bool GossipSelect_npc_shattrathflaskvendors(Player *player, Creature *creature, 
 # npc_zephyr
 ######*/
 
-#define GOSSIP_HZ "Take me to the Caverns of Time."
+#define GOSSIP_HZ "带我去时光之穴。"
 
 bool GossipHello_npc_zephyr(Player *player, Creature *creature)
 {
@@ -535,7 +535,7 @@ CreatureAI* GetAI_npc_kservant(Creature* creature)
 # npc_dirty_larry
 ######*/
 
-#define GOSSIP_BOOK "Ezekiel said that you might have a certain book..."
+#define GOSSIP_BOOK "艾泽基尔说你可能有某些书…"
 
 #define SAY_1       -1000328
 #define SAY_2       -1000329
@@ -744,8 +744,8 @@ CreatureAI* GetAI_npc_dirty_larryAI(Creature *creature)
 # npc_ishanah
 ######*/
 
-#define ISANAH_GOSSIP_1 "Who are the Sha'tar?"
-#define ISANAH_GOSSIP_2 "Isn't Shattrath a draenei city? Why do you allow others here?"
+#define ISANAH_GOSSIP_1 "谁是沙塔尔？"
+#define ISANAH_GOSSIP_2 "沙塔斯城不是一个德莱尼的城市吗？你为什么让别人在这里？"
 
 bool GossipHello_npc_ishanah(Player *player, Creature *creature)
 {
@@ -774,12 +774,12 @@ bool GossipSelect_npc_ishanah(Player *player, Creature *creature, uint32 sender,
 # npc_khadgar
 ######*/
 
-#define KHADGAR_GOSSIP_1    "I've heard your name spoken only in whispers, mage. Who are you?"
-#define KHADGAR_GOSSIP_2    "Go on, please."
-#define KHADGAR_GOSSIP_3    "I see." //6th too this
-#define KHADGAR_GOSSIP_4    "What did you do then?"
-#define KHADGAR_GOSSIP_5    "What happened next?"
-#define KHADGAR_GOSSIP_7    "There was something else I wanted to ask you."
+#define KHADGAR_GOSSIP_1    "我已经听到你的名字只在低声说话，法师。你是谁？"
+#define KHADGAR_GOSSIP_2    "接着说吧。"
+#define KHADGAR_GOSSIP_3    "我看到了。" //6th too this
+#define KHADGAR_GOSSIP_4    "然后你做了什么？"
+#define KHADGAR_GOSSIP_5    "后来又发生了什么？"
+#define KHADGAR_GOSSIP_7    "有一事我想问你。"
 
 bool GossipHello_npc_khadgar(Player *player, Creature *creature)
 {
@@ -845,16 +845,16 @@ bool GossipSelect_npc_khadgar(Player *player, Creature *creature, uint32 sender,
 #define SPELL_OTHERWORLDLY_PORTAL           39952
 #define SPELL_MARK_OF_KAELTHAS              37364
 
-#define ADAL_WHISPER1                       "Silence descends upon Shattrath"
-#define ADAL_WHISPER2                       "A'dal's thoughts invade your mind"
-#define ADAL_WHISPER3_1                     "Kael'thas Sunstrider has been defeated by "
-#define ADAL_WHISPER3_2                     " and "
-#define ADAL_WHISPER3_3                     " allies"
-#define ADAL_WHISPER4                       "The time to strike at the remaining blood elves of Tempest Keep is now. Take arms and let A'dal's song of battle empower you!"
-#define KAEL_YELL1                          "Your monkeys failed to finish the job, naaru! Beaten but alive... The same mistake was not made when we took command of your vessel."
-#define KAEL_YELL2                          "All for what? Trinkets? You are too late. The preparations have already begun. Soon the master will make his return."
-#define KAEL_YELL3                          "And there is nothing you or that fool, Illidan, can do to stop me! You have both served me in your own right - unwillingly."
-#define KAEL_YELL4                          "Lay down your arms and succumb to the might of Kil'jaeden!"
+#define ADAL_WHISPER1                       "沉默降临到沙塔斯城"
+#define ADAL_WHISPER2                       "阿达尔的思想侵入你的心灵"
+#define ADAL_WHISPER3_1                     "凯尔萨斯被打败了 "
+#define ADAL_WHISPER3_2                     " 而且 "
+#define ADAL_WHISPER3_3                     " 盟军"
+#define ADAL_WHISPER4                       "现在对风暴要塞剩下的血精灵进行攻击的时间到了。以武器和战斗让阿达尔的歌给你！"
+#define KAEL_YELL1                          "你的猴子没完成的工作，纳鲁！挨打却活着…我们指挥你的船时，没有犯同样的错误。"
+#define KAEL_YELL2                          "一切为了什么？小饰品？你太迟了。准备工作已经开始。不久，主人会让他回来。"
+#define KAEL_YELL3                          "你或那个傻瓜，伊利丹，没有什么能阻止我！你们俩都是以自己的名义为我服务的——不情愿地。"
+#define KAEL_YELL4                          "放下你的武器和屈服，基尔加丹的可能！"
 
 
 
@@ -1016,18 +1016,18 @@ bool ChooseReward_npc_Adal(Player *player, Creature *creature, const Quest *ques
 }
 
 
-#define MSG_GOSSIP_TEXT_1  "I would like to rent a Ancient Frostsaber" 
-#define MSG_GOSSIP_TEXT_2  "I would like to rent a Swift Brewfest Ram" 
-#define MSG_GOSSIP_TEXT_3  "I would like to rent a Black War Kodo"
-#define MSG_GOSSIP_TEXT_4  "I would like to rent a Swift Blue Raptor"
-#define MSG_GOSSIP_TEXT_5  "I would like to rent a Black War Tiger"
-#define MSG_GOSSIP_TEXT_6  "I would like to rent a Amani War Bear"
-#define MSG_GOSSIP_TEXT_7  "I would like to rent a Mechanostrider" //switch
-#define MSG_GOSSIP_TEXT_8  "I would like to rent a Raven Lord"
-#define MSG_GOSSIP_TEXT_9  "I would like to rent a black Gryphon"
-#define MSG_GOSSIP_TEXT_10 "I would like to rent Alar"
-#define MSG_NOT_MONEY      "You do not have enough money." 
-#define MSG_MOUTED         "You already have a mount." 
+#define MSG_GOSSIP_TEXT_1  "我想租一个古老上古霜刃豹" 
+#define MSG_GOSSIP_TEXT_2  "我想租一个迅捷美酒节赛羊" 
+#define MSG_GOSSIP_TEXT_3  "我想租一个黑色作战科多兽"
+#define MSG_GOSSIP_TEXT_4  "我想租一个迅捷蓝色迅猛龙"
+#define MSG_GOSSIP_TEXT_5  "我想租一个黑色战虎"
+#define MSG_GOSSIP_TEXT_6  "我想租一个阿曼尼战熊"
+#define MSG_GOSSIP_TEXT_7  "我想租一个白色机械陆行鸟B型" //switch
+#define MSG_GOSSIP_TEXT_8  "我想租一个乌鸦之神"
+#define MSG_GOSSIP_TEXT_9  "我想租一个黑色狮鹫"
+#define MSG_GOSSIP_TEXT_10 "我想租一个奥的灰烬"
+#define MSG_NOT_MONEY      "你没有足够的钱。" 
+#define MSG_MOUTED         "你已经有坐骑了。" 
 #define MOUNT_SPELL_ID_1   16056 
 #define MOUNT_SPELL_ID_2   43900 
 #define MOUNT_SPELL_ID_3   22718 
@@ -1151,7 +1151,7 @@ bool GossipSelect_npc_rentalmount(Player *player, Creature *_creature, uint32 se
         } 
         else if(player->getLevel() < 68)
         {
-            _creature->MonsterSay("Du musst mindestens Level 68 sein.", LANG_UNIVERSAL, player->GetGUID());
+            _creature->MonsterSay("你必须至少68级。", LANG_UNIVERSAL, player->GetGUID());
         }
         else { 
             player->CastSpell(player,MOUNT_SPELL_ID_9,false); 
@@ -1165,7 +1165,7 @@ bool GossipSelect_npc_rentalmount(Player *player, Creature *_creature, uint32 se
         }
         else if(player->getLevel() < 68)
         {
-            _creature->MonsterSay("Du musst mindestens Level 68 sein.", LANG_UNIVERSAL, player->GetGUID());
+            _creature->MonsterSay("你必须至少68级。", LANG_UNIVERSAL, player->GetGUID());
         }
         else { 
             player->CastSpell(player,MOUNT_SPELL_ID_10,false); 

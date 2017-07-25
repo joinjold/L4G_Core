@@ -250,7 +250,7 @@ bool GossipSelect_npc_marin_noggenfogger(Player* pPlayer, Creature* pCreature, u
 ## npc_steward_of_time
 ######*/
 
-#define GOSSIP_ITEM_FLIGHT  "Please take me to the master's lair."
+#define GOSSIP_ITEM_FLIGHT  "请带我到主人的巢穴。"
 
 bool GossipHello_npc_steward_of_time(Player* pPlayer, Creature* pCreature)
 {
@@ -288,12 +288,12 @@ bool GossipSelect_npc_steward_of_time(Player* pPlayer, Creature* /*pCreature*/, 
 ## npc_stone_watcher_of_norgannon
 ######*/
 
-#define GOSSIP_ITEM_NORGANNON_1     "What function do you serve?"
-#define GOSSIP_ITEM_NORGANNON_2     "What are the Plates of Uldum?"
-#define GOSSIP_ITEM_NORGANNON_3     "Where are the Plates of Uldum?"
-#define GOSSIP_ITEM_NORGANNON_4     "Excuse me? We've been \"reschedueled for visitations\"? What does that mean?!"
-#define GOSSIP_ITEM_NORGANNON_5     "So, what's inside Uldum?"
-#define GOSSIP_ITEM_NORGANNON_6     "I will return when i have the Plates of Uldum."
+#define GOSSIP_ITEM_NORGANNON_1     "你能提供什么?"
+#define GOSSIP_ITEM_NORGANNON_2     "奥丹姆罗盘是什么?"
+#define GOSSIP_ITEM_NORGANNON_3     "奥丹姆罗盘在哪?"
+#define GOSSIP_ITEM_NORGANNON_4     "打扰了? 我们已经安排了从新访问? 这是什么意思?!"
+#define GOSSIP_ITEM_NORGANNON_5     "所以，在乌奥丹姆的什么？"
+#define GOSSIP_ITEM_NORGANNON_6     "但我拿到奥丹姆罗盘我会回来的。"
 
 bool GossipHello_npc_stone_watcher_of_norgannon(Player* pPlayer, Creature* pCreature)
 {
@@ -692,7 +692,7 @@ struct npc_anachronosAI : public ScriptedAI
         {
             if (HealthBelowPct(20))
             {
-                me->Yell("A terrible and costly mistake you have made. It is not my time, mortals.", LANG_UNIVERSAL, 0);
+                me->Yell("你犯了一个可怕而昂贵的错误。这不是我的时间，凡人。", LANG_UNIVERSAL, 0);
                 me->SetVisibility(VISIBILITY_OFF);
                 me->DestroyForNearbyPlayers();
                 me->Kill(me, false);

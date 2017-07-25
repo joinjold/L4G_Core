@@ -18,7 +18,7 @@
 SDName: Guards
 SD%Complete: 100
 SDComment: All Guard gossip data, quite some npc_text-id's still missing, adding constantly as new id's are known. CombatAI should be organized better for future.
-SDCategory: Guards
+SDCategory: Guards 卫兵
 EndScriptData */
 
 /* ContentData
@@ -57,27 +57,27 @@ EndContentData */
 #define GOSSIP_SENDER_SEC_AUCTIONHOUSE        102
 
 //script spesific gossip text
-#define GOSSIP_TEXT_TAVERN                    "Worlds End Tavern"
+#define GOSSIP_TEXT_TAVERN                    "世界末日酒吧"
 #define GOSSIP_TEXT_BANKSCYERS                "Scyers bank"
 #define GOSSIP_TEXT_BANKALDOR                 "Aldor Bank"
 #define GOSSIP_TEXT_INNSCYERS                 "Scyers Inn"
-#define GOSSIP_TEXT_INNALDOR                  "Aldor Inn"
+#define GOSSIP_TEXT_INNALDOR                  "阿尔多酒店"
 #define GOSSIP_TEXT_STABLESCYERS              "Scyers Stable"
 #define GOSSIP_TEXT_STABLEALDOR               "Aldor Stable"
 #define GOSSIP_TEXT_BATTLEMASTERALLIANCE      "Alliance Battlemasters"
 #define GOSSIP_TEXT_BATTLEMASTERHORDE         "Horde Battlemasters"
-#define GOSSIP_TEXT_BATTLEMASTERARENA         "Arena Battlemasters"
-#define GOSSIP_TEXT_MANALOOM                  "Mana Loom"
-#define GOSSIP_TEXT_ALCHEMYLAB                "Alchemy Lab"
-#define GOSSIP_TEXT_GEMMERCHANT               "Gem Merchant"
-#define GOSSIP_TEXT_GEMSCYERS                 "Scyers Gem Merchant"
-#define GOSSIP_TEXT_GEMALDOR                  "Aldor Gem Merchant"
+#define GOSSIP_TEXT_BATTLEMASTERARENA         "竞技场管理员"
+#define GOSSIP_TEXT_MANALOOM                  "魔法织布机"
+#define GOSSIP_TEXT_ALCHEMYLAB                "炼金实验室"
+#define GOSSIP_TEXT_GEMMERCHANT               "宝石商人"
+#define GOSSIP_TEXT_GEMSCYERS                 "宝石商"
+#define GOSSIP_TEXT_GEMALDOR                  "阿尔多宝石商人"
 
-#define GOSSIP_TEXT_AH_SILVERMOON_1           "Western Auction House"
-#define GOSSIP_TEXT_AH_SILVERMOON_2           "Royal Exchange Auction House"
+#define GOSSIP_TEXT_AH_SILVERMOON_1           "西方拍卖行"
+#define GOSSIP_TEXT_AH_SILVERMOON_2           "皇家交易所拍卖"
 
-#define GOSSIP_TEXT_INN_SILVERMOON_1          "Silvermoon City Inn"
-#define GOSSIP_TEXT_INN_SILVERMOON_2          "Wayfarer's Rest tavern"
+#define GOSSIP_TEXT_INN_SILVERMOON_1          "银月城旅馆"
+#define GOSSIP_TEXT_INN_SILVERMOON_2          "旅人休息的客栈"
 
 //common used for guards in main cities
 void DoReplyToTextEmote(Creature *_Creature,uint32 em)
@@ -115,26 +115,26 @@ void SendDefaultMenu_guard_azuremyst(Player *player, Creature *_Creature, uint32
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Bank
-            player->SEND_POI(-3918.95, -11544.7, 6, 6, 0, "Bank");
+            player->SEND_POI(-3918.95, -11544.7, 6, 6, 0, "银行");
             player->SEND_GOSSIP_MENU(10067,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 2:                    //Hippogryph Master
-            player->SEND_POI(-4057.15, -11788.6, 6, 6, 0, "Stephanos");
+        case GOSSIP_ACTION_INFO_DEF + 2:                    //Hippogryph Master 角鹰兽主人
+            player->SEND_POI(-4057.15, -11788.6, 6, 6, 0, "斯泰法努斯");
             player->SEND_GOSSIP_MENU(10071,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
-            player->SEND_POI(-4092.43, -11626.6, 6, 6, 0, "Funaam");
+            player->SEND_POI(-4092.43, -11626.6, 6, 6, 0, "弗纳姆");
             player->SEND_GOSSIP_MENU(10073,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
-            player->SEND_POI(-4129.43, -12469, 6, 6, 0, "Caregiver Chellan");
+        case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn酒店
+            player->SEND_POI(-4129.43, -12469, 6, 6, 0, "看护员谢尔兰");
             player->SEND_GOSSIP_MENU(10074,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Stable Master
-            player->SEND_POI(-4146.42, -12492.7, 6, 6, 0, "Esbina");
+            player->SEND_POI(-4146.42, -12492.7, 6, 6, 0, "伊斯比纳");
             player->SEND_GOSSIP_MENU(10075,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 6:                    //Class trainer
+        case GOSSIP_ACTION_INFO_DEF + 6:                    //Class trainer 职业训练师
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_DRUID               , GOSSIP_SENDER_SEC_CLASSTRAIN, GOSSIP_ACTION_INFO_DEF + 1);
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_HUNTER              , GOSSIP_SENDER_SEC_CLASSTRAIN, GOSSIP_ACTION_INFO_DEF + 2);
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_MAGE                , GOSSIP_SENDER_SEC_CLASSTRAIN, GOSSIP_ACTION_INFO_DEF + 3);
@@ -144,7 +144,7 @@ void SendDefaultMenu_guard_azuremyst(Player *player, Creature *_Creature, uint32
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_WARRIOR             , GOSSIP_SENDER_SEC_CLASSTRAIN, GOSSIP_ACTION_INFO_DEF + 7);
             player->SEND_GOSSIP_MENU(10076,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 7:                    //Profession trainer
+        case GOSSIP_ACTION_INFO_DEF + 7:                    //Profession trainer 专业训练师
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_ALCHEMY             , GOSSIP_SENDER_SEC_PROFTRAIN, GOSSIP_ACTION_INFO_DEF + 1);
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_BLACKSMITHING       , GOSSIP_SENDER_SEC_PROFTRAIN, GOSSIP_ACTION_INFO_DEF + 2);
             player->ADD_GOSSIP_ITEM( 0, GOSSIP_TEXT_COOKING             , GOSSIP_SENDER_SEC_PROFTRAIN, GOSSIP_ACTION_INFO_DEF + 3);
@@ -168,31 +168,31 @@ void SendClassTrainerMenu_guard_azuremyst(Player *player, Creature *_Creature, u
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
-            player->SEND_POI(-4274.81, -11495.3, 6, 6, 0, "Shalannius");
+            player->SEND_POI(-4274.81, -11495.3, 6, 6, 0, "沙兰尤斯");
             player->SEND_GOSSIP_MENU(10077,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
-            player->SEND_POI(-4203.65, -12526.5, 6, 6, 0, "Acteon");
+            player->SEND_POI(-4203.65, -12526.5, 6, 6, 0, "艾克提恩");
             player->SEND_GOSSIP_MENU(10078,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
-            player->SEND_POI(-4149.62, -12530.1, 6, 6, 0, "Semid");
+            player->SEND_POI(-4149.62, -12530.1, 6, 6, 0, "塞米德");
             player->SEND_GOSSIP_MENU(10081,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Paladin
-            player->SEND_POI(-4138.98, -12468.5, 6, 6, 0, "Tullas");
+            player->SEND_POI(-4138.98, -12468.5, 6, 6, 0, "图拉丝");
             player->SEND_GOSSIP_MENU(10083,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
-            player->SEND_POI(-4131.66, -12478.6, 6, 6, 0, "Guvan");
+            player->SEND_POI(-4131.66, -12478.6, 6, 6, 0, "吉安");
             player->SEND_GOSSIP_MENU(10084,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Shaman
-            player->SEND_POI(-4162.33, -12456.1, 6, 6, 0, "Tuluun");
+            player->SEND_POI(-4162.33, -12456.1, 6, 6, 0, "图伦");
             player->SEND_GOSSIP_MENU(10085,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
-            player->SEND_POI(-4165.05, -12536.4, 6, 6, 0, "Ruada");
+            player->SEND_POI(-4165.05, -12536.4, 6, 6, 0, "鲁安达");
             player->SEND_GOSSIP_MENU(10086,_Creature->GetGUID());
             break;
     }
@@ -203,54 +203,54 @@ void SendProfTrainerMenu_guard_azuremyst(Player *player, Creature *_Creature, ui
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(-4191.15, -12470, 6, 6, 0, "Daedal");
+            player->SEND_POI(-4191.15, -12470, 6, 6, 0, "丹达尔");
             player->SEND_GOSSIP_MENU(10088,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(-4726.29, -12387, 6, 6, 0, "Blacksmith Calypso");
+            player->SEND_POI(-4726.29, -12387, 6, 6, 0, "铁匠卡里普索");
             player->SEND_GOSSIP_MENU(10089,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
-            player->SEND_POI(-4710.87, -12400.6, 6, 6, 0, "'Cookie' McWeaksauce");
+            player->SEND_POI(-4710.87, -12400.6, 6, 6, 0, "“曲奇”米维克索斯");
             player->SEND_GOSSIP_MENU(10090,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
-            player->SEND_POI(-3882.85, -11496.7, 6, 6, 0, "Nahogg");
+            player->SEND_POI(-3882.85, -11496.7, 6, 6, 0, "纳霍加");
             player->SEND_GOSSIP_MENU(10091,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
-            player->SEND_POI(-4157.57, -12470.2, 6, 6, 0, "Artificer Daelo");
+            player->SEND_POI(-4157.57, -12470.2, 6, 6, 0, "技师戴罗");
             player->SEND_GOSSIP_MENU(10092,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
-            player->SEND_POI(-4199.11, -12469.9, 6, 6, 0, "Anchorite Fateema");
+            player->SEND_POI(-4199.11, -12469.9, 6, 6, 0, "学者法蒂玛");
             player->SEND_GOSSIP_MENU(10093,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
-            player->SEND_POI(-4266.38, -12985.1, 6, 6, 0, "Diktynna");
+            player->SEND_POI(-4266.38, -12985.1, 6, 6, 0, "迪泰娜");
             player->SEND_GOSSIP_MENU(10094,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
             player->SEND_GOSSIP_MENU(10095,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //Jewelcrafting
-            player->SEND_POI(-3781.55, -11541.8, 6, 6, 0, "Farii");
+            player->SEND_POI(-3781.55, -11541.8, 6, 6, 0, "法里");
             player->SEND_GOSSIP_MENU(10096,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 10:                   //Leatherworking
-            player->SEND_POI(-3442.68, -12322.2, 6, 6, 0, "Moordo");
+            player->SEND_POI(-3442.68, -12322.2, 6, 6, 0, "莫多");
             player->SEND_GOSSIP_MENU(10098,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 11:                   //Mining
-            player->SEND_POI(-4179.89, -12493.1, 6, 6, 0, "Dulvi");
+            player->SEND_POI(-4179.89, -12493.1, 6, 6, 0, "杜尔维");
             player->SEND_GOSSIP_MENU(10097,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 12:                   //Skinning
-            player->SEND_POI(-3431.17, -12316.5, 6, 6, 0, "Gurf");
+            player->SEND_POI(-3431.17, -12316.5, 6, 6, 0, "吉尔弗");
             player->SEND_GOSSIP_MENU(10098,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 13:                   //Tailoring
-            player->SEND_POI(-4711.54, -12386.7, 6, 6, 0, "Erin Kelly");
+            player->SEND_POI(-4711.54, -12386.7, 6, 6, 0, "艾林·凯利");
             player->SEND_GOSSIP_MENU(10099,_Creature->GetGUID());
             break;
     }
@@ -277,7 +277,7 @@ CreatureAI* GetAI_guard_azuremyst(Creature *_Creature)
 }
 
 /*******************************************************
- * guard_bluffwatcher start
+ * guard_bluffwatcher start 雷霆崖守卫
  *******************************************************/
 
 bool GossipHello_guard_bluffwatcher(Player *player, Creature *_Creature)
@@ -302,7 +302,7 @@ void SendDefaultMenu_guard_bluffwatcher(Player *player, Creature *_Creature, uin
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Bank
-            player->SEND_POI(-1257.8, 24.14, 6, 6, 0, "Thunder Bluff Bank");
+            player->SEND_POI(-1257.8, 24.14, 6, 6, 0, "雷霆崖银行");
             player->SEND_GOSSIP_MENU(1292,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Wind master
@@ -310,15 +310,15 @@ void SendDefaultMenu_guard_bluffwatcher(Player *player, Creature *_Creature, uin
             player->SEND_GOSSIP_MENU(1293,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
-            player->SEND_POI(-1296.5, 127.57, 6, 6, 0, "Thunder Bluff Civic Information");
+            player->SEND_POI(-1296.5, 127.57, 6, 6, 0, "雷霆虚构公民资料");
             player->SEND_GOSSIP_MENU(1291,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
-            player->SEND_POI(-1296, 39.7, 6, 6, 0, "Thunder Bluff Inn");
+            player->SEND_POI(-1296, 39.7, 6, 6, 0, "雷霆崖酒店");
             player->SEND_GOSSIP_MENU(3153,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Mailbox
-            player->SEND_POI(-1263.59, 44.36, 6, 6, 0, "Thunder Bluff Mailbox");
+            player->SEND_POI(-1263.59, 44.36, 6, 6, 0, "雷霆崖的邮箱");
             player->SEND_GOSSIP_MENU(3154,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Auction House
@@ -326,11 +326,11 @@ void SendDefaultMenu_guard_bluffwatcher(Player *player, Creature *_Creature, uin
             player->SEND_GOSSIP_MENU(3155,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Weapon master
-            player->SEND_POI(-1282.31, 89.56, 6, 6, 0, "Ansekhwa");
+            player->SEND_POI(-1282.31, 89.56, 6, 6, 0, "安塞瓦");
             player->SEND_GOSSIP_MENU(4520,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Stable master
-            player->SEND_POI(-1270.19, 48.84, 6, 6, 0, "Bulrug");
+            player->SEND_POI(-1270.19, 48.84, 6, 6, 0, "布尔鲁格");
             player->SEND_GOSSIP_MENU(5977,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //battlemaster
@@ -370,15 +370,15 @@ void SendBattleMasterMenu_guard_bluffwatcher(Player *player, Creature *_Creature
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
-            player->SEND_POI(-1387.82, -97.55, 6, 6, 0, "Taim Ragetotem");
+            player->SEND_POI(-1387.82, -97.55, 6, 6, 0, "泰姆·暴怒图腾");
             player->SEND_GOSSIP_MENU(7522,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
-            player->SEND_POI(-997, 214.12, 6, 6, 0, "Martin Lindsey");
+            player->SEND_POI(-997, 214.12, 6, 6, 0, "马丁·林塞");
             player->SEND_GOSSIP_MENU(7648,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
-            player->SEND_POI(-1384.94, -75.91, 6, 6, 0, "Kergul Bloodaxe");
+            player->SEND_POI(-1384.94, -75.91, 6, 6, 0, "克古尔·血斧");
             player->SEND_GOSSIP_MENU(7523,_Creature->GetGUID());
             break;
     }
@@ -389,27 +389,27 @@ void SendClassTrainerMenu_guard_bluffwatcher(Player *player, Creature *_Creature
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
-            player->SEND_POI(-1054.47, -285, 6, 6, 0, "Hall of Elders");
+            player->SEND_POI(-1054.47, -285, 6, 6, 0, "大厅的长老");
             player->SEND_GOSSIP_MENU(1294,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
-            player->SEND_POI(-1416.32, -114.28, 6, 6, 0, "Hunter's Hall");
+            player->SEND_POI(-1416.32, -114.28, 6, 6, 0, "猎人大厅");
             player->SEND_GOSSIP_MENU(1295,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
-            player->SEND_POI(-1061.2, 195.5, 6, 6, 0, "Pools of Vision");
+            player->SEND_POI(-1061.2, 195.5, 6, 6, 0, "愿景池");
             player->SEND_GOSSIP_MENU(1296,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Priest
-            player->SEND_POI(-1061.2, 195.5, 6, 6, 0, "Pools of Vision");
+            player->SEND_POI(-1061.2, 195.5, 6, 6, 0, "愿景池");
             player->SEND_GOSSIP_MENU(1297,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Shaman
-            player->SEND_POI(-989.54, 278.25, 6, 6, 0, "Hall of Spirits");
+            player->SEND_POI(-989.54, 278.25, 6, 6, 0, "灵魂大厅");
             player->SEND_GOSSIP_MENU(1298,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warrior
-            player->SEND_POI(-1416.32, -114.28, 6, 6, 0, "Hunter's Hall");
+            player->SEND_POI(-1416.32, -114.28, 6, 6, 0, "猎人大厅");
             player->SEND_GOSSIP_MENU(1299,_Creature->GetGUID());
             break;
     }
@@ -419,48 +419,48 @@ void SendProfTrainerMenu_guard_bluffwatcher(Player *player, Creature *_Creature,
 {
     switch (action)
     {
-        case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(-1085.56, 27.29, 6, 6, 0, "Bena's Alchemy");
+        case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy 炼金
+            player->SEND_POI(-1085.56, 27.29, 6, 6, 0, "本娜的炼金店");
             player->SEND_GOSSIP_MENU(1332,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(-1239.75, 104.88, 6, 6, 0, "Karn's Smithy");
+        case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing 锻造
+            player->SEND_POI(-1239.75, 104.88, 6, 6, 0, "卡恩铁匠铺");
             player->SEND_GOSSIP_MENU(1333,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
-            player->SEND_POI(-1214.5, -21.23, 6, 6, 0, "Aska's Kitchen");
+        case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking 烹饪
+            player->SEND_POI(-1214.5, -21.23, 6, 6, 0, "阿丝卡的厨房");
             player->SEND_GOSSIP_MENU(1334,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
-            player->SEND_POI(-1112.65, 48.26, 6, 6, 0, "Dawnstrider Enchanters");
+        case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting 附魔
+            player->SEND_POI(-1112.65, 48.26, 6, 6, 0, "泰戈·晨行者 附魔师");
             player->SEND_GOSSIP_MENU(1335,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 5:                    //First Aid
-            player->SEND_POI(-996.58, 200.5, 6, 6, 0, "Spiritual Healing");
+        case GOSSIP_ACTION_INFO_DEF + 5:                    //First Aid 急救
+            player->SEND_POI(-996.58, 200.5, 6, 6, 0, "精神治疗");
             player->SEND_GOSSIP_MENU(1336,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 6:                    //Fishing
-            player->SEND_POI(-1169.35, -68.87, 6, 6, 0, "Mountaintop Bait & Tackle");
+        case GOSSIP_ACTION_INFO_DEF + 6:                    //Fishing 钓鱼
+            player->SEND_POI(-1169.35, -68.87, 6, 6, 0, "山顶渔具店");
             player->SEND_GOSSIP_MENU(1337,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 7:                    //Herbalism
-            player->SEND_POI(-1137.7, -1.51, 6, 6, 0, "Holistic Herbalism");
+        case GOSSIP_ACTION_INFO_DEF + 7:                    //Herbalism 草药
+            player->SEND_POI(-1137.7, -1.51, 6, 6, 0, "绿色草药");
             player->SEND_GOSSIP_MENU(1338,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 8:                    //Leatherworking
-            player->SEND_POI(-1156.22, 66.86, 6, 6, 0, "Thunder Bluff Armorers");
+        case GOSSIP_ACTION_INFO_DEF + 8:                    //Leatherworking 制皮
+            player->SEND_POI(-1156.22, 66.86, 6, 6, 0, "雷霆崖防具店");
             player->SEND_GOSSIP_MENU(1339,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 9:                    //Mining
-            player->SEND_POI(-1249.17, 155, 6, 6, 0, "Stonehoof Geology");
+        case GOSSIP_ACTION_INFO_DEF + 9:                    //Mining 采矿
+            player->SEND_POI(-1249.17, 155, 6, 6, 0, "石蹄地质学会");
             player->SEND_GOSSIP_MENU(1340,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 10:                   //Skinning
-            player->SEND_POI(-1148.56, 51.18, 6, 6, 0, "Mooranta");
+        case GOSSIP_ACTION_INFO_DEF + 10:                   //Skinning 剥皮
+            player->SEND_POI(-1148.56, 51.18, 6, 6, 0, "莫兰塔");
             player->SEND_GOSSIP_MENU(1343,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 11:                   //Tailoring
-            player->SEND_POI(-1156.22, 66.86, 6, 6, 0, "Thunder Bluff Armorers");
+        case GOSSIP_ACTION_INFO_DEF + 11:                   //Tailoring 裁缝
+            player->SEND_POI(-1156.22, 66.86, 6, 6, 0, "雷霆崖防具店");
             player->SEND_GOSSIP_MENU(1341,_Creature->GetGUID());
             break;
     }
@@ -525,35 +525,35 @@ void SendDefaultMenu_guard_darnassus(Player *player, Creature *_Creature, uint32
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction house
-            player->SEND_POI(9861.23, 2334.55, 6, 6, 0, "Darnassus Auction House");
+            player->SEND_POI(9861.23, 2334.55, 6, 6, 0, "达纳苏斯拍卖行");
             player->SEND_GOSSIP_MENU(3833, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
-            player->SEND_POI(9938.45, 2512.35, 6, 6, 0, "Darnassus Bank");
+            player->SEND_POI(9938.45, 2512.35, 6, 6, 0, "达纳苏斯银行");
             player->SEND_GOSSIP_MENU(3017, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Wind master
-            player->SEND_POI(9945.65, 2618.94, 6, 6, 0, "Rut'theran Village");
+            player->SEND_POI(9945.65, 2618.94, 6, 6, 0, "鲁瑟兰村");
             player->SEND_GOSSIP_MENU(3018, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Guild master
-            player->SEND_POI(10076.40, 2199.59, 6, 6, 0, "Darnassus Guild Master");
+            player->SEND_POI(10076.40, 2199.59, 6, 6, 0, "达纳苏斯公会会长");
             player->SEND_GOSSIP_MENU(3019, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Inn
-            player->SEND_POI(10133.29, 2222.52, 6, 6, 0, "Darnassus Inn");
+            player->SEND_POI(10133.29, 2222.52, 6, 6, 0, "达纳苏斯酒吧");
             player->SEND_GOSSIP_MENU(3020, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Mailbox
-            player->SEND_POI(9942.17, 2495.48, 6, 6, 0, "Darnassus Mailbox");
+            player->SEND_POI(9942.17, 2495.48, 6, 6, 0, "达纳苏斯的邮箱");
             player->SEND_GOSSIP_MENU(3021, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Stable master
-            player->SEND_POI(10167.20, 2522.66, 6, 6, 0, "Alassin");
+            player->SEND_POI(10167.20, 2522.66, 6, 6, 0, "阿拉辛");
             player->SEND_GOSSIP_MENU(5980, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Weapon trainer
-            player->SEND_POI(9907.11, 2329.70, 6, 6, 0, "Ilyenia Moonfire");
+            player->SEND_POI(9907.11, 2329.70, 6, 6, 0, "伊琳尼雅·月火");
             player->SEND_GOSSIP_MENU(4517, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //Battlemaster
@@ -590,15 +590,15 @@ void SendBattleMasterMenu_guard_darnassus(Player *player, Creature *_Creature, u
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
-            player->SEND_POI(9923.61, 2327.43, 6, 6, 0, "Brogun Stoneshield");
+            player->SEND_POI(9923.61, 2327.43, 6, 6, 0, "布洛冈·石盾");
             player->SEND_GOSSIP_MENU(7518, _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
-            player->SEND_POI(9977.37, 2324.39, 6, 6, 0, "Keras Wolfheart");
+        case GOSSIP_ACTION_INFO_DEF + 2:                    //AB 阿拉希盆地
+            player->SEND_POI(9977.37, 2324.39, 6, 6, 0, "克拉斯·沃夫哈特");
             player->SEND_GOSSIP_MENU(7651,  _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
-            player->SEND_POI(9979.84, 2315.79, 6, 6, 0, "Aethalas");
+        case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG 战歌峡谷
+            player->SEND_POI(9979.84, 2315.79, 6, 6, 0, "伊萨拉斯");
             player->SEND_GOSSIP_MENU(7482, _Creature->GetGUID());
             break;
     }
@@ -609,23 +609,23 @@ void SendClassTrainerMenu_guard_darnassus(Player *player, Creature *_Creature, u
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
-            player->SEND_POI(10186, 2570.46, 6, 6, 0, "Darnassus Druid Trainer");
+            player->SEND_POI(10186, 2570.46, 6, 6, 0, "达纳苏斯的德鲁伊训练师");
             player->SEND_GOSSIP_MENU(3024, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
-            player->SEND_POI(10177.29, 2511.10, 6, 6, 0, "Darnassus Hunter Trainer");
+            player->SEND_POI(10177.29, 2511.10, 6, 6, 0, "达纳苏斯的猎人训练师");
             player->SEND_GOSSIP_MENU(3023, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Priest
-            player->SEND_POI(9659.12, 2524.88, 6, 6, 0, "Temple of the Moon");
+            player->SEND_POI(9659.12, 2524.88, 6, 6, 0, "月神殿");
             player->SEND_GOSSIP_MENU(3025, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Rogue
-            player->SEND_POI(10122, 2599.12, 6, 6, 0, "Darnassus Rogue Trainer");
+            player->SEND_POI(10122, 2599.12, 6, 6, 0, "达纳苏斯的盗贼训练师");
             player->SEND_GOSSIP_MENU(3026, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Warrior
-            player->SEND_POI(9951.91, 2280.38, 6, 6, 0, "Warrior's Terrace");
+            player->SEND_POI(9951.91, 2280.38, 6, 6, 0, "战士区");
             player->SEND_GOSSIP_MENU(3033, _Creature->GetGUID());
             break;
     }
@@ -636,39 +636,39 @@ void SendProfTrainerMenu_guard_darnassus(Player *player, Creature *_Creature, ui
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(10075.90, 2356.76, 6, 6, 0, "Darnassus Alchemy Trainer");
+            player->SEND_POI(10075.90, 2356.76, 6, 6, 0, "达纳苏斯的炼金术师");
             player->SEND_GOSSIP_MENU(3035, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Cooking
-            player->SEND_POI(10088.59, 2419.21, 6, 6, 0, "Darnassus Cooking Trainer");
+            player->SEND_POI(10088.59, 2419.21, 6, 6, 0, "达纳苏斯的烹饪师");
             player->SEND_GOSSIP_MENU(3036, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Enchanting
-            player->SEND_POI(10146.09, 2313.42, 6, 6, 0, "Darnassus Enchanting Trainer");
+            player->SEND_POI(10146.09, 2313.42, 6, 6, 0, "达纳苏斯附魔训练师");
             player->SEND_GOSSIP_MENU(3337, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //First Aid
-            player->SEND_POI(10150.09, 2390.43, 6, 6, 0, "Darnassus First Aid Trainer");
+            player->SEND_POI(10150.09, 2390.43, 6, 6, 0, "达纳苏斯的急救培训");
             player->SEND_GOSSIP_MENU(3037, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Fishing
-            player->SEND_POI(9836.20, 2432.17, 6, 6, 0, "Darnassus Fishing Trainer");
+            player->SEND_POI(9836.20, 2432.17, 6, 6, 0, "达纳苏斯的钓鱼训练师");
             player->SEND_GOSSIP_MENU(3038, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Herbalism
-            player->SEND_POI(9757.17, 2430.16, 6, 6, 0, "Darnassus Herbalism Trainer");
+            player->SEND_POI(9757.17, 2430.16, 6, 6, 0, "达纳苏斯的草药师");
             player->SEND_GOSSIP_MENU(3039, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Leatherworking
-            player->SEND_POI(10086.59, 2255.77, 6, 6, 0, "Darnassus Leatherworking Trainer");
+            player->SEND_POI(10086.59, 2255.77, 6, 6, 0, "达纳苏斯的制皮训练师");
             player->SEND_GOSSIP_MENU(3040, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Skinning
-            player->SEND_POI(10081.40, 2257.18, 6, 6, 0, "Darnassus Skinning Trainer");
+            player->SEND_POI(10081.40, 2257.18, 6, 6, 0, "达纳苏斯的剥皮训练师");
             player->SEND_GOSSIP_MENU(3042, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //Tailoring
-            player->SEND_POI(10079.70, 2268.19, 6, 6, 0, "Darnassus Tailor");
+            player->SEND_POI(10079.70, 2268.19, 6, 6, 0, "达纳苏斯的裁缝");
             player->SEND_GOSSIP_MENU(3044, _Creature->GetGUID());
             break;
     }
@@ -727,11 +727,11 @@ void SendDefaultMenu_guard_dunmorogh(Player *player, Creature *_Creature, uint32
             player->SEND_GOSSIP_MENU(4290,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
-            player->SEND_POI(-5582.66, -525.89, 6, 6, 0, "Thunderbrew Distillery");
+            player->SEND_POI(-5582.66, -525.89, 6, 6, 0, "雷霆酒厂");
             player->SEND_GOSSIP_MENU(4291,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Stable Master
-            player->SEND_POI(-5604, -509.58, 6, 6, 0, "Shelby Stoneflint");
+            player->SEND_POI(-5604, -509.58, 6, 6, 0, "谢尔比·石火");
             player->SEND_GOSSIP_MENU(5985,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Class trainer
@@ -767,31 +767,31 @@ void SendClassTrainerMenu_guard_dunmorogh(Player *player, Creature *_Creature, u
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Hunter
-            player->SEND_POI(-5618.29, -454.25, 6, 6, 0, "Grif Wildheart");
+            player->SEND_POI(-5618.29, -454.25, 6, 6, 0, "格瑞夫");
             player->SEND_GOSSIP_MENU(4293,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Mage
-            player->SEND_POI(-5585.6, -539.99, 6, 6, 0, "Magis Sparkmantle");
+            player->SEND_POI(-5585.6, -539.99, 6, 6, 0, "玛济斯·石衣");
             player->SEND_GOSSIP_MENU(4294,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Paladin
-            player->SEND_POI(-5585.6, -539.99, 6, 6, 0, "Azar Stronghammer");
+            player->SEND_POI(-5585.6, -539.99, 6, 6, 0, "阿扎尔·战锤");
             player->SEND_GOSSIP_MENU(4295,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Priest
-            player->SEND_POI(-5591.74, -525.61, 6, 6, 0, "Maxan Anvol");
+            player->SEND_POI(-5591.74, -525.61, 6, 6, 0, "马克萨恩·安沃尔");
             player->SEND_GOSSIP_MENU(4296,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Rogue
-            player->SEND_POI(-5602.75, -542.4, 6, 6, 0, "Hogral Bakkan");
+            player->SEND_POI(-5602.75, -542.4, 6, 6, 0, "霍格拉尔·巴坎");
             player->SEND_GOSSIP_MENU(4297,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warlock
-            player->SEND_POI(-5641.97, -523.76, 6, 6, 0, "Gimrizz Shadowcog");
+            player->SEND_POI(-5641.97, -523.76, 6, 6, 0, "吉姆瑞兹·黑轮");
             player->SEND_GOSSIP_MENU(4298,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
-            player->SEND_POI(-5604.79, -529.38, 6, 6, 0, "Granis Swiftaxe");
+            player->SEND_POI(-5604.79, -529.38, 6, 6, 0, "格兰尼斯·快斧");
             player->SEND_GOSSIP_MENU(4299,_Creature->GetGUID());
             break;
     }
@@ -805,26 +805,26 @@ void SendProfTrainerMenu_guard_dunmorogh(Player *player, Creature *_Creature, ui
             player->SEND_GOSSIP_MENU(4301,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(-5584.72, -428.41, 6, 6, 0, "Tognus Flintfire");
+            player->SEND_POI(-5584.72, -428.41, 6, 6, 0, "托格努斯·燧火");
             player->SEND_GOSSIP_MENU(4302,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
-            player->SEND_POI(-5596.85, -541.43, 6, 6, 0, "Gremlock Pilsnor");
+            player->SEND_POI(-5596.85, -541.43, 6, 6, 0, "格雷姆罗克·匹斯诺尔");
             player->SEND_GOSSIP_MENU(4303,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
             player->SEND_GOSSIP_MENU(4304,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
-            player->SEND_POI(-5531, -666.53, 6, 6, 0, "Bronk Guzzlegear");
+            player->SEND_POI(-5531, -666.53, 6, 6, 0, "布隆克");
             player->SEND_GOSSIP_MENU(4305,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
-            player->SEND_POI(-5603.67, -523.57, 6, 6, 0, "Thamner Pol");
+            player->SEND_POI(-5603.67, -523.57, 6, 6, 0, "萨姆诺·普尔");
             player->SEND_GOSSIP_MENU(4306,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
-            player->SEND_POI(-5199.9, 58.58, 6, 6, 0, "Paxton Ganter");
+            player->SEND_POI(-5199.9, 58.58, 6, 6, 0, "帕克斯顿·冈特尔");
             player->SEND_GOSSIP_MENU(4307,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
@@ -834,7 +834,7 @@ void SendProfTrainerMenu_guard_dunmorogh(Player *player, Creature *_Creature, ui
             player->SEND_GOSSIP_MENU(4310,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
-            player->SEND_POI(-5531, -666.53, 6, 6, 0, "Yarr Hamerstone");
+            player->SEND_POI(-5531, -666.53, 6, 6, 0, "亚尔·锤石");
             player->SEND_GOSSIP_MENU(4311,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
@@ -893,11 +893,11 @@ void SendDefaultMenu_guard_durotar(Player *player, Creature *_Creature, uint32 a
             player->SEND_GOSSIP_MENU(4033,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn
-            player->SEND_POI(338.7, -4688.87, 6, 6, 0, "Razor Hill Inn");
+            player->SEND_POI(338.7, -4688.87, 6, 6, 0, "剃刀山酒店");
             player->SEND_GOSSIP_MENU(4034,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable master
-            player->SEND_POI(330.31, -4710.66, 6, 6, 0, "Shoja'my");
+            player->SEND_POI(330.31, -4710.66, 6, 6, 0, "苏亚米");
             player->SEND_GOSSIP_MENU(5973,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Class trainer
@@ -933,31 +933,31 @@ void SendClassTrainerMenu_guard_durotar(Player *player, Creature *_Creature, uin
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Hunter
-            player->SEND_POI(276, -4706.72, 6, 6, 0, "Thotar");
+            player->SEND_POI(276, -4706.72, 6, 6, 0, "索塔尔");
             player->SEND_GOSSIP_MENU(4013,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Mage
-            player->SEND_POI(-839.33, -4935.6, 6, 6, 0, "Un'Thuwa");
+            player->SEND_POI(-839.33, -4935.6, 6, 6, 0, "安苏瓦");
             player->SEND_GOSSIP_MENU(4014,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Priest
-            player->SEND_POI(296.22, -4828.1, 6, 6, 0, "Tai'jin");
+            player->SEND_POI(296.22, -4828.1, 6, 6, 0, "泰金");
             player->SEND_GOSSIP_MENU(4015,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Rogue
-            player->SEND_POI(265.76, -4709, 6, 6, 0, "Kaplak");
+            player->SEND_POI(265.76, -4709, 6, 6, 0, "卡普拉克");
             player->SEND_GOSSIP_MENU(4016,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Shaman
-            player->SEND_POI(307.79, -4836.97, 6, 6, 0, "Swart");
+            player->SEND_POI(307.79, -4836.97, 6, 6, 0, "斯瓦特");
             player->SEND_GOSSIP_MENU(4017,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warlock
-            player->SEND_POI(355.88, -4836.45, 6, 6, 0, "Dhugru Gorelust");
+            player->SEND_POI(355.88, -4836.45, 6, 6, 0, "杜格鲁·血怒");
             player->SEND_GOSSIP_MENU(4018,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
-            player->SEND_POI(312.3, -4824.66, 6, 6, 0, "Tarshaw Jaggedscar");
+            player->SEND_POI(312.3, -4824.66, 6, 6, 0, "塔绍尔·锯痕");
             player->SEND_GOSSIP_MENU(4019,_Creature->GetGUID());
             break;
     }
@@ -968,11 +968,11 @@ void SendProfTrainerMenu_guard_durotar(Player *player, Creature *_Creature, uint
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(-800.25, -4894.33, 6, 6, 0, "Miao'zan");
+            player->SEND_POI(-800.25, -4894.33, 6, 6, 0, "米奥赞");
             player->SEND_GOSSIP_MENU(4020,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(373.24, -4716.45, 6, 6, 0, "Dwukk");
+            player->SEND_POI(373.24, -4716.45, 6, 6, 0, "杜克");
             player->SEND_GOSSIP_MENU(4021,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
@@ -982,26 +982,26 @@ void SendProfTrainerMenu_guard_durotar(Player *player, Creature *_Creature, uint
             player->SEND_GOSSIP_MENU(4023,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
-            player->SEND_POI(368.95, -4723.95, 6, 6, 0, "Mukdrak");
+            player->SEND_POI(368.95, -4723.95, 6, 6, 0, "穆德拉克");
             player->SEND_GOSSIP_MENU(4024,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
-            player->SEND_POI(327.17, -4825.62, 6, 6, 0, "Rawrk");
+            player->SEND_POI(327.17, -4825.62, 6, 6, 0, "拉乌克");
             player->SEND_GOSSIP_MENU(4025,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
-            player->SEND_POI(-1065.48, -4777.43, 6, 6, 0, "Lau'Tiki");
+            player->SEND_POI(-1065.48, -4777.43, 6, 6, 0, "劳迪克");
             player->SEND_GOSSIP_MENU(4026,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
-            player->SEND_POI(-836.25, -4896.89, 6, 6, 0, "Mishiki");
+            player->SEND_POI(-836.25, -4896.89, 6, 6, 0, "米什基");
             player->SEND_GOSSIP_MENU(4027,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
             player->SEND_GOSSIP_MENU(4028,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
-            player->SEND_POI(366.94, -4705, 6, 6, 0, "Krunn");
+            player->SEND_POI(366.94, -4705, 6, 6, 0, "克鲁恩");
             player->SEND_GOSSIP_MENU(4029,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
@@ -1064,11 +1064,11 @@ void SendDefaultMenu_guard_elwynnforest(Player *player, Creature *_Creature, uin
             player->SEND_GOSSIP_MENU(4262,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
-            player->SEND_POI(-9459.34, 42.08, 6, 6, 0, "Lion's Pride Inn");
+            player->SEND_POI(-9459.34, 42.08, 6, 6, 0, "狮王之傲旅店");
             player->SEND_GOSSIP_MENU(4263,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Stable Master
-            player->SEND_POI(-9466.62, 45.87, 6, 6, 0, "Erma");
+            player->SEND_POI(-9466.62, 45.87, 6, 6, 0, "艾玛");
             player->SEND_GOSSIP_MENU(5983,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Class trainer
@@ -1111,27 +1111,27 @@ void SendClassTrainerMenu_guard_elwynnforest(Player *player, Creature *_Creature
             player->SEND_GOSSIP_MENU(4266,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
-            player->SEND_POI(-9471.12, 33.44, 6, 6, 0, "Zaldimar Wefhellt");
+            player->SEND_POI(-9471.12, 33.44, 6, 6, 0, "扎尔迪玛·维夫希尔特 ");
             player->SEND_GOSSIP_MENU(4268,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Paladin
-            player->SEND_POI(-9469, 108.05, 6, 6, 0, "Brother Wilhelm");
+            player->SEND_POI(-9469, 108.05, 6, 6, 0, "威尔海姆修士 ");
             player->SEND_GOSSIP_MENU(4269,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
-            player->SEND_POI(-9461.07, 32.6, 6, 6, 0, "Priestess Josetta");
+            player->SEND_POI(-9461.07, 32.6, 6, 6, 0, "女牧师洁塞塔 ");
             player->SEND_GOSSIP_MENU(4267,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Rogue
-            player->SEND_POI(-9465.13, 13.29, 6, 6, 0, "Keryn Sylvius");
+            player->SEND_POI(-9465.13, 13.29, 6, 6, 0, "科瑞恩·塞尔留斯 ");
             player->SEND_GOSSIP_MENU(4270,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warlock
-            player->SEND_POI(-9473.21, -4.08, 6, 6, 0, "Maximillian Crowe");
+            player->SEND_POI(-9473.21, -4.08, 6, 6, 0, "玛克西米利安·克洛文 ");
             player->SEND_GOSSIP_MENU(4272,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Warrior
-            player->SEND_POI(-9461.82, 109.50, 6, 6, 0, "Lyria Du Lac");
+            player->SEND_POI(-9461.82, 109.50, 6, 6, 0, "里瑞亚·杜拉克");
             player->SEND_GOSSIP_MENU(4271,_Creature->GetGUID());
             break;
     }
@@ -1142,15 +1142,15 @@ void SendProfTrainerMenu_guard_elwynnforest(Player *player, Creature *_Creature,
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(-9057.04, 153.63, 6, 6, 0, "Alchemist Mallory");
+            player->SEND_POI(-9057.04, 153.63, 6, 6, 0, "炼金师玛洛瑞");
             player->SEND_GOSSIP_MENU(4274,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(-9456.58, 87.90, 6, 6, 0, "Smith Argus");
+            player->SEND_POI(-9456.58, 87.90, 6, 6, 0, "铁匠阿古斯");
             player->SEND_GOSSIP_MENU(4275,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
-            player->SEND_POI(-9467.54, -3.16, 6, 6, 0, "Tomas");
+            player->SEND_POI(-9467.54, -3.16, 6, 6, 0, "厨师托马斯");
             player->SEND_GOSSIP_MENU(4276,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
@@ -1160,30 +1160,30 @@ void SendProfTrainerMenu_guard_elwynnforest(Player *player, Creature *_Creature,
             player->SEND_GOSSIP_MENU(4278,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
-            player->SEND_POI(-9456.82, 30.49, 6, 6, 0, "Michelle Belle");
+            player->SEND_POI(-9456.82, 30.49, 6, 6, 0, "米歇尔·贝利");
             player->SEND_GOSSIP_MENU(4279,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
-            player->SEND_POI(-9386.54, -118.73, 6, 6, 0, "Lee Brown");
+            player->SEND_POI(-9386.54, -118.73, 6, 6, 0, "李·布朗");
             player->SEND_GOSSIP_MENU(4280,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
-            player->SEND_POI(-9060.70, 149.23, 6, 6, 0, "Herbalist Pomeroy");
+            player->SEND_POI(-9060.70, 149.23, 6, 6, 0, "草药师博米洛伊");
             player->SEND_GOSSIP_MENU(4281,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
-            player->SEND_POI(-9376.12, -75.23, 6, 6, 0, "Adele Fielder");
+            player->SEND_POI(-9376.12, -75.23, 6, 6, 0, "艾德勒·费欧德");
             player->SEND_GOSSIP_MENU(4282,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
             player->SEND_GOSSIP_MENU(4283,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
-            player->SEND_POI(-9536.91, -1212.76, 6, 6, 0, "Helene Peltskinner");
+            player->SEND_POI(-9536.91, -1212.76, 6, 6, 0, "海伦尼·派特斯金纳");
             player->SEND_GOSSIP_MENU(4284,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 12:                   //Tailoring
-            player->SEND_POI(-9376.12, -75.23, 6, 6, 0, "Eldrin");
+            player->SEND_POI(-9376.12, -75.23, 6, 6, 0, "艾尔丁");
             player->SEND_GOSSIP_MENU(4285,_Creature->GetGUID());
             break;
     }
@@ -1229,19 +1229,19 @@ void SendDefaultMenu_guard_eversong(Player *player, Creature *_Creature, uint32 
 {
     switch (action)
     {
-        case GOSSIP_ACTION_INFO_DEF + 1:                    //Bat Handler
-            player->SEND_POI(9371.93, -7164.80, 6, 6, 0, "Skymistress Gloaming");
+        case GOSSIP_ACTION_INFO_DEF + 1:                    //Bat Handler 蝙蝠管理员
+            player->SEND_POI(9371.93, -7164.80, 6, 6, 0, "葛拉米");
             player->SEND_GOSSIP_MENU(10181,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 2:                    //Guild master
+        case GOSSIP_ACTION_INFO_DEF + 2:                    //Guild master 公会注册员
             player->SEND_GOSSIP_MENU(10182,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn
-            player->SEND_POI(9483.74, -6844.58, 6, 6, 0, "Delaniel's inn");
+        case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn 旅店
+            player->SEND_POI(9483.74, -6844.58, 6, 6, 0, "德兰妮尔的旅店");
             player->SEND_GOSSIP_MENU(10183,_Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable Master
-            player->SEND_POI(9489.62, -6829.93, 6, 6, 0, "Anathos");
+        case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable Master 兽栏管理员
+            player->SEND_POI(9489.62, -6829.93, 6, 6, 0, "阿娜索丝");
             player->SEND_GOSSIP_MENU(10184,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Class trainer
@@ -1280,27 +1280,27 @@ void SendClassTrainerMenu_guard_eversong(Player *player, Creature *_Creature, ui
             player->SEND_GOSSIP_MENU(10185,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
-            player->SEND_POI(9527.44, -6865.25, 6, 6, 0, "Hannovia");
+            player->SEND_POI(9527.44, -6865.25, 6, 6, 0, "汉诺维亚");
             player->SEND_GOSSIP_MENU(10186,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
-            player->SEND_POI(9464.24, -6855.52, 6, 6, 0, "Garridel");
+            player->SEND_POI(9464.24, -6855.52, 6, 6, 0, "加琳戴尔");
             player->SEND_GOSSIP_MENU(10187,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Paladin
-            player->SEND_POI(9517.61, -6871.04, 6, 6, 0, "Noellene");
+            player->SEND_POI(9517.61, -6871.04, 6, 6, 0, "诺尔蕾妮");
             player->SEND_GOSSIP_MENU(10189,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
-            player->SEND_POI(9467.39, -6845.72, 6, 6, 0, "Ponaris");
+            player->SEND_POI(9467.39, -6845.72, 6, 6, 0, "珀纳瑞斯");
             player->SEND_GOSSIP_MENU(10190,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Rogue
-            player->SEND_POI(9533.67, -6877.39, 6, 6, 0, "Tannaria");
+            player->SEND_POI(9533.67, -6877.39, 6, 6, 0, "塔娜莉亚");
             player->SEND_GOSSIP_MENU(10191,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warlock
-            player->SEND_POI(9468.99, -6865.60, 6, 6, 0, "Celoenus");
+            player->SEND_POI(9468.99, -6865.60, 6, 6, 0, "塞罗努斯");
             player->SEND_GOSSIP_MENU(10192,_Creature->GetGUID());
             break;
     }
@@ -1311,11 +1311,11 @@ void SendProfTrainerMenu_guard_eversong(Player *player, Creature *_Creature, uin
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(8659.90, -6368.12, 6, 6, 0, "Arcanist Sheynathren");
+            player->SEND_POI(8659.90, -6368.12, 6, 6, 0, "奥术师森纳瑟琳");
             player->SEND_GOSSIP_MENU(10193,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(8984.21, -7419.21, 6, 6, 0, "Arathel Sunforge");
+            player->SEND_POI(8984.21, -7419.21, 6, 6, 0, "阿拉瑟尔");
             player->SEND_GOSSIP_MENU(10194,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
@@ -1404,35 +1404,35 @@ void SendDefaultMenu_guard_exodar(Player *player, Creature *_Creature, uint32 ac
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction house
-            player->SEND_POI(-4023.6, -11739.3, 6, 6, 0, "Exodar Auction House");
+            player->SEND_POI(-4023.6, -11739.3, 6, 6, 0, "埃索达·拍卖行");
             player->SEND_GOSSIP_MENU(9528, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
-            player->SEND_POI(-3923.89, -11544.5, 6, 6, 0, "Exodar Bank");
+            player->SEND_POI(-3923.89, -11544.5, 6, 6, 0, "埃索达·银行");
             player->SEND_GOSSIP_MENU(9529, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
-            player->SEND_POI(-4092.57, -11626.5, 6, 6, 0, "Exodar Guild Master");
+            player->SEND_POI(-4092.57, -11626.5, 6, 6, 0, "埃索达·工会注册");
             player->SEND_GOSSIP_MENU(9539, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Hippogryph master
-            player->SEND_POI(-4060.46, -11787.1, 6, 6, 0, "Exodar Hippogryph Master");
+            player->SEND_POI(-4060.46, -11787.1, 6, 6, 0, "埃索达·角鹰兽管理员");
             player->SEND_GOSSIP_MENU(9530, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Inn
-            player->SEND_POI(-3741.87, -11695.1, 6, 6, 0, "Exodar Inn");
+            player->SEND_POI(-3741.87, -11695.1, 6, 6, 0, "埃索达旅店");
             player->SEND_GOSSIP_MENU(9545, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Mailbox
-            player->SEND_POI(-3972.5, -11696.0, 6, 6, 0, "Mailbox");
+            player->SEND_POI(-3972.5, -11696.0, 6, 6, 0, "邮箱");
             player->SEND_GOSSIP_MENU(10254, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Stable master
-            player->SEND_POI(-3786.5, -11702.5, 6, 6, 0, "Stable Master Arthaid");
+            player->SEND_POI(-3786.5, -11702.5, 6, 6, 0, "兽栏管理员·阿尔泰德");
             player->SEND_GOSSIP_MENU(9558, _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 8:                    //Weapon trainer
-            player->SEND_POI(-4215.68, -11628.9, 6, 6, 0, "Weapon Master Handiir");
+        case GOSSIP_ACTION_INFO_DEF + 8:                    //Weapon trainer 武器训练
+            player->SEND_POI(-4215.68, -11628.9, 6, 6, 0, "武器大师·韩迪尔");
             player->SEND_GOSSIP_MENU(9565, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 9:                    //Battlemaster
@@ -1477,23 +1477,23 @@ void SendBattleMasterMenu_guard_exodar(Player *player, Creature *_Creature, uint
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
-            player->SEND_POI(-3978.1, -11357, 6, 6, 0, "Alterac Valley Battlemaster");
+            player->SEND_POI(-3978.1, -11357, 6, 6, 0, "奥特兰克山谷的战斗大师");
             player->SEND_GOSSIP_MENU(9531, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
-            player->SEND_POI(-3998.9, -11345.2, 6, 6, 0, "Arathi Basin Battlemaster");
+            player->SEND_POI(-3998.9, -11345.2, 6, 6, 0, "阿拉希盆地战斗大师");
             player->SEND_GOSSIP_MENU(9531,  _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 3:                    //A
-            player->SEND_POI(-3759.27, -11695.63, 6, 6, 0, "Miglik Blotstrom");
+        case GOSSIP_ACTION_INFO_DEF + 3:                    //A 竞技场管理员
+            player->SEND_POI(-3759.27, -11695.63, 6, 6, 0, "米格里克·布罗斯托");
             player->SEND_GOSSIP_MENU(10223, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //EOS
-            player->SEND_POI(-3978.1, -11357, 6, 6, 0, "Eye Of The Storm Battlemaster");
+            player->SEND_POI(-3978.1, -11357, 6, 6, 0, "风暴之眼的战斗大师");
             player->SEND_GOSSIP_MENU(9531, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //WSG
-            player->SEND_POI(-3977.5, -11381.2, 6, 6, 0, "Warsong Gulch Battlemaster");
+            player->SEND_POI(-3977.5, -11381.2, 6, 6, 0, "战歌峡谷战斗大师");
             player->SEND_GOSSIP_MENU(9531, _Creature->GetGUID());
             break;
     }
@@ -1504,31 +1504,31 @@ void SendClassTrainerMenu_guard_exodar(Player *player, Creature *_Creature, uint
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
-            player->SEND_POI(-4276.0, -11495, 6, 6, 0, "Exodar Druid Trainer");
+            player->SEND_POI(-4276.0, -11495, 6, 6, 0, "埃索达德鲁伊训练师");
             player->SEND_GOSSIP_MENU(9534, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
-            player->SEND_POI(-4210.6, -11575.2, 6, 6, 0, "Exodar Hunter Trainer");
+            player->SEND_POI(-4210.6, -11575.2, 6, 6, 0, "埃索达猎人训练师");
             player->SEND_GOSSIP_MENU(9544, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
-            player->SEND_POI(-4057.32, -11556.5, 6, 6, 0, "Exodar Mage Trainer");
+            player->SEND_POI(-4057.32, -11556.5, 6, 6, 0, "埃索达法师训练师");
             player->SEND_GOSSIP_MENU(9550, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Paladin
-            player->SEND_POI(-4191.2, -11470.4, 6, 6, 0, "Exodar Paladin Trainer");
+            player->SEND_POI(-4191.2, -11470.4, 6, 6, 0, "埃索达圣骑士训练师");
             player->SEND_GOSSIP_MENU(9553, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
-            player->SEND_POI(-3969.63, -11482.8, 6, 6, 0, "Exodar Priest Trainer");
+            player->SEND_POI(-3969.63, -11482.8, 6, 6, 0, "埃索达牧师训练师");
             player->SEND_GOSSIP_MENU(9554, _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 6:                    //Shaman
-            player->SEND_POI(-3805.5, -11380.7, 6, 6, 0, "Exodar Shaman Trainer");
+        case GOSSIP_ACTION_INFO_DEF + 6:                    //Shaman 
+            player->SEND_POI(-3805.5, -11380.7, 6, 6, 0, "埃索达萨满训练师");
             player->SEND_GOSSIP_MENU(9556, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
-            player->SEND_POI(-4189.43, -11653.7, 6, 6, 0, "Exodar Warrior Trainer");
+            player->SEND_POI(-4189.43, -11653.7, 6, 6, 0, "埃索达战士训练师");
             player->SEND_GOSSIP_MENU(9562, _Creature->GetGUID());
             break;
     }
@@ -1539,55 +1539,55 @@ void SendProfTrainerMenu_guard_exodar(Player *player, Creature *_Creature, uint3
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
-            player->SEND_POI(-4040.6, -11364.5, 6, 6, 0, "Exodar Alchemy Trainer");
+            player->SEND_POI(-4040.6, -11364.5, 6, 6, 0, "埃索达炼金术师");
             player->SEND_GOSSIP_MENU(9527, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
-            player->SEND_POI(-4229.5, -11706, 6, 6, 0, "Exodar Blacksmithing Trainer");
+            player->SEND_POI(-4229.5, -11706, 6, 6, 0, "埃索达锻造训练师");
             player->SEND_GOSSIP_MENU(9532, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
-            player->SEND_POI(-3798.3, -11651.7, 6, 6, 0, "Exodar Cooking Trainer");
+            player->SEND_POI(-3798.3, -11651.7, 6, 6, 0, "埃索达烹调师");
             player->SEND_GOSSIP_MENU(9551, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
-            player->SEND_POI(-3889.3, -11495, 6, 6, 0, "Exodar Enchanting Trainer");
+            player->SEND_POI(-3889.3, -11495, 6, 6, 0, "埃索达附魔训练师");
             player->SEND_GOSSIP_MENU(9535, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
-            player->SEND_POI(-4257.68, -11640.3, 6, 6, 0, "Exodar Engineering Trainer");
+            player->SEND_POI(-4257.68, -11640.3, 6, 6, 0, "埃索达工程师");
             player->SEND_GOSSIP_MENU(9536, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
-            player->SEND_POI(-3769.5, -11479.6, 6, 6, 0, "Exodar First Aid Trainer");
+            player->SEND_POI(-3769.5, -11479.6, 6, 6, 0, "埃索达急救训练师");
             player->SEND_GOSSIP_MENU(9537, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
-            player->SEND_POI(-3725.5, -11385.2, 6, 6, 0, "Exodar Fishing Trainer");
+            player->SEND_POI(-3725.5, -11385.2, 6, 6, 0, "埃索达钓鱼训练师");
             player->SEND_GOSSIP_MENU(9538, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 8:                    //Jewelcrafting
-            player->SEND_POI(-3783, -11546, 6, 6, 0, "Exodar Jewelcrafting Trainer");
+            player->SEND_POI(-3783, -11546, 6, 6, 0, "埃索达珠宝师");
             player->SEND_GOSSIP_MENU(9547, _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 9:                    //Herbalism
-            player->SEND_POI(-4040.6, -11364.5, 6, 6, 0, "Exodar Herbalist Trainer");
+        case GOSSIP_ACTION_INFO_DEF + 9:                    //Herbalism 草药学
+            player->SEND_POI(-4040.6, -11364.5, 6, 6, 0, "埃索达草药学训练师");
             player->SEND_GOSSIP_MENU(9543, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 10:                   //Leatherworking
-            player->SEND_POI(-4140.6, -11776.7, 6, 6, 0, "Exodar Leatherworking Trainer");
+            player->SEND_POI(-4140.6, -11776.7, 6, 6, 0, "埃索达制皮训练师");
             player->SEND_GOSSIP_MENU(9549, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 11:                   //Mining
-            player->SEND_POI(-4228, -11697, 6, 6, 0, "Exodar Mining Trainer");
+            player->SEND_POI(-4228, -11697, 6, 6, 0, "埃索达采矿训练师");
             player->SEND_GOSSIP_MENU(9552, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 12:                   //Skinning
-            player->SEND_POI(-4134.97, -11760.5, 6, 6, 0, "Exodar Skinning Trainer");
+            player->SEND_POI(-4134.97, -11760.5, 6, 6, 0, "埃索达剥皮训练师");
             player->SEND_GOSSIP_MENU(9557, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 13:                   //Tailoring
-            player->SEND_POI(-4092.5, -11744.5, 6, 6, 0, "Exodar Tailor Trainer");
+            player->SEND_POI(-4092.5, -11744.5, 6, 6, 0, "埃索达的裁缝师");
             player->SEND_GOSSIP_MENU(9559, _Creature->GetGUID());
             break;
     }
@@ -1641,39 +1641,39 @@ void SendDefaultMenu_guard_ironforge(Player *player, Creature *_Creature, uint32
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction House
-            player->SEND_POI(-4957.39, -911.6, 6, 6, 0, "Ironforge Auction House");
+            player->SEND_POI(-4957.39, -911.6, 6, 6, 0, "铁炉堡的拍卖行");
             player->SEND_GOSSIP_MENU(3014, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
-            player->SEND_POI(-4891.91, -991.47, 6, 6, 0, "The Vault");
+            player->SEND_POI(-4891.91, -991.47, 6, 6, 0, "铁炉堡银行");
             player->SEND_GOSSIP_MENU(2761, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Tram
-            player->SEND_POI(-4835.27, -1294.69, 6, 6, 0, "Deeprun Tram");
+            player->SEND_POI(-4835.27, -1294.69, 6, 6, 0, "矿道地铁");
             player->SEND_GOSSIP_MENU(3814, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Gryphon Master
-            player->SEND_POI(-4821.52, -1152.3, 6, 6, 0, "Ironforge Gryphon Master");
+            player->SEND_POI(-4821.52, -1152.3, 6, 6, 0, "铁炉堡的狮鹫大师");
             player->SEND_GOSSIP_MENU(2762, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Guild Master
-            player->SEND_POI(-5021, -996.45, 6, 6, 0, "Ironforge Visitor's Center");
+            player->SEND_POI(-5021, -996.45, 6, 6, 0, "铁炉堡的工会管理员");
             player->SEND_GOSSIP_MENU(2764, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 6:                    //Inn
-            player->SEND_POI(-4850.47, -872.57, 6, 6, 0, "Stonefire Tavern");
+            player->SEND_POI(-4850.47, -872.57, 6, 6, 0, "石火旅店");
             player->SEND_GOSSIP_MENU(2768, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 7:                    //Mailbox
-            player->SEND_POI(-4845.7, -880.55, 6, 6, 0, "Ironforge Mailbox");
+            player->SEND_POI(-4845.7, -880.55, 6, 6, 0, "铁炉堡邮箱");
             player->SEND_GOSSIP_MENU(2769, _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 8:                    //Stable Master
-            player->SEND_POI(-5010.2, -1262, 6, 6, 0, "Ulbrek Firehand");
+        case GOSSIP_ACTION_INFO_DEF + 8:                    //Stable Master 兽栏管理员
+            player->SEND_POI(-5010.2, -1262, 6, 6, 0, "兽栏管理员·乌布雷克·火拳");
             player->SEND_GOSSIP_MENU(5986, _Creature->GetGUID());
             break;
-        case GOSSIP_ACTION_INFO_DEF + 9:                    //Weapons Trainer
-            player->SEND_POI(-5040, -1201.88, 6, 6, 0, "Bixi and Buliwyf");
+        case GOSSIP_ACTION_INFO_DEF + 9:                    //Weapons Trainer 武器大师 比克斯
+            player->SEND_POI(-5040, -1201.88, 6, 6, 0, "武器大师·布里维夫·石拳");
             player->SEND_GOSSIP_MENU(4518, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 10:                   //Battlemaster
@@ -1716,15 +1716,15 @@ void SendBattleMasterMenu_guard_ironforge(Player *player, Creature *_Creature, u
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
-            player->SEND_POI(-5047.87, -1263.77, 6, 6, 0, "Glordrum Steelbeard");
+            player->SEND_POI(-5047.87, -1263.77, 6, 6, 0, "格罗杜姆·钢须");
             player->SEND_GOSSIP_MENU(7483, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
-            player->SEND_POI(-5038.37, -1266.39, 6, 6, 0, "Donal Osgood");
+            player->SEND_POI(-5038.37, -1266.39, 6, 6, 0, "杜纳尔·奥斯古德");
             player->SEND_GOSSIP_MENU(7649, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
-            player->SEND_POI(-5037.24, -1274.82, 6, 6, 0, "Lylandris");
+            player->SEND_POI(-5037.24, -1274.82, 6, 6, 0, "莱兰迪斯");
             player->SEND_GOSSIP_MENU(7528, _Creature->GetGUID());
             break;
     }
@@ -1873,11 +1873,11 @@ void SendDefaultMenu_guard_mulgore(Player *player, Creature *_Creature, uint32 a
             player->SEND_GOSSIP_MENU(4052,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn
-            player->SEND_POI(-2361.38, -349.19, 6, 6, 0, "Bloodhoof Village Inn");
+            player->SEND_POI(-2361.38, -349.19, 6, 6, 0, "血蹄村旅店");
             player->SEND_GOSSIP_MENU(4053,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable master
-            player->SEND_POI(-2338.86, -357.56, 6, 6, 0, "Seikwa");
+            player->SEND_POI(-2338.86, -357.56, 6, 6, 0, "希克瓦");
             player->SEND_GOSSIP_MENU(5976,_Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF + 5:                    //Class trainer

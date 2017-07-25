@@ -632,15 +632,15 @@ struct rift_summonAI : public ScriptedAI
             {
                 switch (rand()%9)
                 {
-                  case 0: m_creature->MonsterYell("Œ◊ ¶ª·µπœ¬!", 0, m_creature->GetGUID()); break;
-                  case 1: m_creature->MonsterYell("Œ“√«≤ªª·±ª◊Ë÷π!", 0, m_creature->GetGUID()); break;
-                  case 2: m_creature->MonsterYell(" §¿˚ªÚÀ¿Õˆ!", 0, m_creature->GetGUID()); break;
-                  case 3: m_creature->MonsterYell("ƒ„µƒ ±º‰øÏ”√ÕÍ¡À°£!", 0, m_creature->GetGUID()); break;
-                  case 4: m_creature->MonsterYell("¡—π»±ÿ–Î ‹µΩ±£ª§°£!", 0, m_creature->GetGUID()); break;
-                  case 5: m_creature->MonsterYell("ƒ„µƒ≈¨¡¶°≠∂º «ÕΩ¿Õµƒ.", 0, m_creature->GetGUID()); break;
-                  case 6: m_creature->MonsterYell("Œ“√«ªπ√ª”–ÕÍ≥…!", 0, m_creature->GetGUID()); break;
-                  case 7: m_creature->MonsterYell("◊Ó∫Ûµƒ ÿª§’ﬂ÷ÆÀ¿!", 0, m_creature->GetGUID()); break;
-                  case 8: m_creature->MonsterYell("Œ“√«≤ªª· ß∞‹!", 0, m_creature->GetGUID()); break;
+                  case 0: m_creature->MonsterYell("Â∑´Â∏à‰ºöÂÄí‰∏ã!", 0, m_creature->GetGUID()); break;
+                  case 1: m_creature->MonsterYell("Êàë‰ª¨‰∏ç‰ºöË¢´ÈòªÊ≠¢!", 0, m_creature->GetGUID()); break;
+                  case 2: m_creature->MonsterYell("ËÉúÂà©ÊàñÊ≠ª‰∫°!", 0, m_creature->GetGUID()); break;
+                  case 3: m_creature->MonsterYell("‰Ω†ÁöÑÊó∂Èó¥Âø´Áî®ÂÆå‰∫Ü„ÄÇ!", 0, m_creature->GetGUID()); break;
+                  case 4: m_creature->MonsterYell("Ë£ÇË∞∑ÂøÖÈ°ªÂèóÂà∞‰øùÊä§„ÄÇ!", 0, m_creature->GetGUID()); break;
+                  case 5: m_creature->MonsterYell("‰Ω†ÁöÑÂä™Âäõ‚Ä¶ÈÉΩÊòØÂæíÂä≥ÁöÑ.", 0, m_creature->GetGUID()); break;
+                  case 6: m_creature->MonsterYell("Êàë‰ª¨ËøòÊ≤°ÊúâÂÆåÊàê!", 0, m_creature->GetGUID()); break;
+                  case 7: m_creature->MonsterYell("ÊúÄÂêéÁöÑÂÆàÊä§ËÄÖ‰πãÊ≠ª!", 0, m_creature->GetGUID()); break;
+                  case 8: m_creature->MonsterYell("Êàë‰ª¨‰∏ç‰ºöÂ§±Ë¥•!", 0, m_creature->GetGUID()); break;
                 }
             }
         }
@@ -979,7 +979,7 @@ CreatureAI* GetAI_rift_summon(Creature *_Creature)
 
 #define SAY_SAAT_WELCOME        -1269019
 
-#define GOSSIP_ITEM_OBTAIN      "[≤© ø]ªÒµ√ ±ø’–≈±Í"
+#define GOSSIP_ITEM_OBTAIN      "[ÂçöÂ£´]Ëé∑ÂæóÊó∂Á©∫‰ø°Ê†á"
 #define SPELL_CHRONO_BEACON     34975
 #define ITEM_CHRONO_BEACON      24289
 
