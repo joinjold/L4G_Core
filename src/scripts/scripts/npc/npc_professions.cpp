@@ -37,15 +37,15 @@ there is no difference here (except that default text is chosen with `gameobject
 /*###
 # to be removed from here (->ncp_text). This is data for database projects.
 ###*/
-#define TALK_MUST_UNLEARN_WEAPON    "ÔÚÎÒ°ïÄãÖ®Ç°£¬Äã±ØÐëÍüµôÄãµÄÎäÆ÷×¨Òµ¡£È¥¶¬Èª¹ÈµÄÓÀÍûÕòÔÚÄÇÀïÑ°Çó°ïÖú¡£"
+#define TALK_MUST_UNLEARN_WEAPON    "åœ¨æˆ‘å¸®ä½ ä¹‹å‰ï¼Œä½ å¿…é¡»å¿˜æŽ‰ä½ çš„æ­¦å™¨ä¸“ä¸šã€‚åŽ»å†¬æ³‰è°·çš„æ°¸æœ›é•‡åœ¨é‚£é‡Œå¯»æ±‚å¸®åŠ©ã€‚"
 
-#define TALK_HAMMER_LEARN           "°¡£¬ÄãÔø¾­ÊÇÒ»¸ö¾­Ñé·á¸»µÄÀÏ½«¡£ ÎÒÖªµÀÄãÓÐÄÜÁ¦£¬ÄãÖ»ÐèÒªÎÊ£¬ÎÒ»á½ÌÄãÖý´¸µÄ·½·¨."
-#define TALK_AXE_LEARN              "°¡£¬ÄãÔø¾­ÊÇÒ»¸ö¾­Ñé·á¸»µÄÀÏ½«¡£ ÎÒÖªµÀÄãÓÐÄÜÁ¦£¬ÄãÖ»ÐèÒªÎÊ£¬ÎÒ»á½ÌÄãÖý¸«µÄ·½·¨."
-#define TALK_SWORD_LEARN            "°¡£¬ÄãÔø¾­ÊÇÒ»¸ö¾­Ñé·á¸»µÄÀÏ½«¡£ ÎÒÖªµÀÄãÓÐÄÜÁ¦£¬ÄãÖ»ÐèÒªÎÊ£¬ÎÒ»á½ÌÄãÖý½£µÄ·½·¨."
+#define TALK_HAMMER_LEARN           "å•Šï¼Œä½ æ›¾ç»æ˜¯ä¸€ä¸ªç»éªŒä¸°å¯Œçš„è€å°†ã€‚ æˆ‘çŸ¥é“ä½ æœ‰èƒ½åŠ›ï¼Œä½ åªéœ€è¦é—®ï¼Œæˆ‘ä¼šæ•™ä½ é“¸é”¤çš„æ–¹æ³•."
+#define TALK_AXE_LEARN              "å•Šï¼Œä½ æ›¾ç»æ˜¯ä¸€ä¸ªç»éªŒä¸°å¯Œçš„è€å°†ã€‚ æˆ‘çŸ¥é“ä½ æœ‰èƒ½åŠ›ï¼Œä½ åªéœ€è¦é—®ï¼Œæˆ‘ä¼šæ•™ä½ é“¸æ–§çš„æ–¹æ³•."
+#define TALK_SWORD_LEARN            "å•Šï¼Œä½ æ›¾ç»æ˜¯ä¸€ä¸ªç»éªŒä¸°å¯Œçš„è€å°†ã€‚ æˆ‘çŸ¥é“ä½ æœ‰èƒ½åŠ›ï¼Œä½ åªéœ€è¦é—®ï¼Œæˆ‘ä¼šæ•™ä½ é“¸å‰‘çš„æ–¹æ³•."
 
-#define TALK_HAMMER_UNLEARN         "Íü¼ÇÄãµÄÖý´¸¼¼ÇÉ²»ÊÇÇá¶øÒ×¾ÙµÄÊÂÇé¡£Èç¹ûÄãÑ¡Ôñ·ÅÆúËü£¬Äã»áÍü¼ÇËùÓÐÐèÒªÖý´¸µÄ·½·¨!"
-#define TALK_AXE_UNLEARN            "Íü¼ÇÄãµÄÖý¸«¼¼ÄÜ²»ÊÇÇá¶øÒ×¾ÙµÄÊÂÇé¡£Èç¹ûÄãÑ¡Ôñ·ÅÆúËü£¬Äã»áÍü¼ÇËùÓÐÐèÒªÖý¸«µÄ·½·¨!"
-#define TALK_SWORD_UNLEARN          "ÍüÁËÄãµÄÖý½£¼¼ÄÜ²»ÊÇÇá¶øÒ×¾ÙµÄÊÂÇé¡£Èç¹ûÄãÑ¡Ôñ·ÅÆúËü£¬Äã»áÍü¼ÇËùÓÐÐèÒªÖý½£µÄ·½·¨!"
+#define TALK_HAMMER_UNLEARN         "å¿˜è®°ä½ çš„é“¸é”¤æŠ€å·§ä¸æ˜¯è½»è€Œæ˜“ä¸¾çš„äº‹æƒ…ã€‚å¦‚æžœä½ é€‰æ‹©æ”¾å¼ƒå®ƒï¼Œä½ ä¼šå¿˜è®°æ‰€æœ‰éœ€è¦é“¸é”¤çš„æ–¹æ³•!"
+#define TALK_AXE_UNLEARN            "å¿˜è®°ä½ çš„é“¸æ–§æŠ€èƒ½ä¸æ˜¯è½»è€Œæ˜“ä¸¾çš„äº‹æƒ…ã€‚å¦‚æžœä½ é€‰æ‹©æ”¾å¼ƒå®ƒï¼Œä½ ä¼šå¿˜è®°æ‰€æœ‰éœ€è¦é“¸æ–§çš„æ–¹æ³•!"
+#define TALK_SWORD_UNLEARN          "å¿˜äº†ä½ çš„é“¸å‰‘æŠ€èƒ½ä¸æ˜¯è½»è€Œæ˜“ä¸¾çš„äº‹æƒ…ã€‚å¦‚æžœä½ é€‰æ‹©æ”¾å¼ƒå®ƒï¼Œä½ ä¼šå¿˜è®°æ‰€æœ‰éœ€è¦é“¸å‰‘çš„æ–¹æ³•!"
 
 /*###
 # generic defines
@@ -59,79 +59,79 @@ there is no difference here (except that default text is chosen with `gameobject
 # gossip item and box texts
 ###*/
 
-#define GOSSIP_LEARN_POTION         "Çë½ÌÎÒÈçºÎ³ÉÎªÒ©Ë®´óÊ¦¡£ÀÍÀ¼ÄÈ¡¤ÈøÎ¬¶û"
-#define GOSSIP_UNLEARN_POTION       "ÎÒÏ£ÍûÍüÈ´¾«Í¨Ò©Ë®"
-#define GOSSIP_LEARN_TRANSMUTE      "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸ö×ª»¯´óÊ¦, ÈøÀ×Î¬"
-#define GOSSIP_UNLEARN_TRANSMUTE    "ÎÒÏ£ÍûÍüÈ´×ª»¯´óÊ¦"
-#define GOSSIP_LEARN_ELIXIR         "Çë½ÌÎÒÈçºÎ³ÉÎªÒ»¸öÒ©¼Á´óÊ¦Ê¦, ÂÞÂÞ»ùÄ·"
-#define GOSSIP_UNLEARN_ELIXIR       "ÎÒÏ£ÍûÍüÈ´Ò©¼Á´óÊ¦"
+#define GOSSIP_LEARN_POTION         "è¯·æ•™æˆ‘å¦‚ä½•æˆä¸ºè¯æ°´å¤§å¸ˆã€‚åŠ³å…°å¨œÂ·è¨ç»´å°”"
+#define GOSSIP_UNLEARN_POTION       "æˆ‘å¸Œæœ›å¿˜å´ç²¾é€šè¯æ°´"
+#define GOSSIP_LEARN_TRANSMUTE      "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªè½¬åŒ–å¤§å¸ˆ, è¨é›·ç»´"
+#define GOSSIP_UNLEARN_TRANSMUTE    "æˆ‘å¸Œæœ›å¿˜å´è½¬åŒ–å¤§å¸ˆ"
+#define GOSSIP_LEARN_ELIXIR         "è¯·æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªè¯å‰‚å¤§å¸ˆå¸ˆ, ç½—ç½—åŸºå§†"
+#define GOSSIP_UNLEARN_ELIXIR       "æˆ‘å¸Œæœ›å¿˜å´è¯å‰‚å¤§å¸ˆ"
 
-#define BOX_UNLEARN_ALCHEMY_SPEC    "ÄãÕæµÄÏëÍüµôÄãµÄÁ¶½ð×¨ÒµÊ§È¥ÁËËùÓÐÏà¹ØµÄ·¨Êõ? \n Cost: "
+#define BOX_UNLEARN_ALCHEMY_SPEC    "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„ç‚¼é‡‘ä¸“ä¸šå¤±åŽ»äº†æ‰€æœ‰ç›¸å…³çš„æ³•æœ¯? \n Cost: "
 
-#define GOSSIP_WEAPON_LEARN         "ÇëÄã½Ì½ÌÎÒÈçºÎ¶ÍÔìÒ»ÖÖÎäÆ÷"
-#define GOSSIP_WEAPON_UNLEARN       "ÎÒÔ¸·ÅÆúÎäÆ÷¶ÍÔì¹¤½³µÄÒÕÊõ"
-#define GOSSIP_ARMOR_LEARN          "ÇëÄã½Ì½ÌÎÒÈçºÎ¶ÍÔìÒ»ÖÖ·À¾ß"
-#define GOSSIP_ARMOR_UNLEARN        "ÎÒÏëÍüµô¶ÍÔì·À¾ß¹¤½³µÄÒÕÊõ"
+#define GOSSIP_WEAPON_LEARN         "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•é”»é€ ä¸€ç§æ­¦å™¨"
+#define GOSSIP_WEAPON_UNLEARN       "æˆ‘æ„¿æ”¾å¼ƒæ­¦å™¨é”»é€ å·¥åŒ çš„è‰ºæœ¯"
+#define GOSSIP_ARMOR_LEARN          "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•é”»é€ ä¸€ç§é˜²å…·"
+#define GOSSIP_ARMOR_UNLEARN        "æˆ‘æƒ³å¿˜æŽ‰é”»é€ é˜²å…·å·¥åŒ çš„è‰ºæœ¯"
 
-#define GOSSIP_UNLEARN_SMITH_SPEC   "ÎÒÏëÍüµôÎÒµÄ¶ÍÔì×¨Òµ"
-#define BOX_UNLEARN_ARMORORWEAPON   "ÄãÕæµÄÏëÍüµôÄãµÄ¶ÍÔì×¨ÒµÊ§È¥ÁËËùÓÐÏà¹ØµÄ·¨Êõ? \n Cost: "
+#define GOSSIP_UNLEARN_SMITH_SPEC   "æˆ‘æƒ³å¿˜æŽ‰æˆ‘çš„é”»é€ ä¸“ä¸š"
+#define BOX_UNLEARN_ARMORORWEAPON   "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„é”»é€ ä¸“ä¸šå¤±åŽ»äº†æ‰€æœ‰ç›¸å…³çš„æ³•æœ¯? \n Cost: "
 
-#define GOSSIP_LEARN_HAMMER         "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸ö´óÊ¦¼¶Öý´¸, Lilith"
-#define GOSSIP_UNLEARN_HAMMER       "ÎÒÏëÍüµô´óÊ¦¼¶Öý´¸"
-#define GOSSIP_LEARN_AXE            "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸ö´óÊ¦¼¶Öý¸«, Kilram"
-#define GOSSIP_UNLEARN_AXE          "ÎÒÏëÍüµô´óÊ¦¼¶Öý¸«"
-#define GOSSIP_LEARN_SWORD          "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸ö´óÊ¦¼¶Öý½£, Seril"
-#define GOSSIP_UNLEARN_SWORD        "ÎÒÏëÍüµô´óÊ¦¼¶Öý½£"
+#define GOSSIP_LEARN_HAMMER         "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªå¤§å¸ˆçº§é“¸é”¤, Lilith"
+#define GOSSIP_UNLEARN_HAMMER       "æˆ‘æƒ³å¿˜æŽ‰å¤§å¸ˆçº§é“¸é”¤"
+#define GOSSIP_LEARN_AXE            "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªå¤§å¸ˆçº§é“¸æ–§, Kilram"
+#define GOSSIP_UNLEARN_AXE          "æˆ‘æƒ³å¿˜æŽ‰å¤§å¸ˆçº§é“¸æ–§"
+#define GOSSIP_LEARN_SWORD          "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªå¤§å¸ˆçº§é“¸å‰‘, Seril"
+#define GOSSIP_UNLEARN_SWORD        "æˆ‘æƒ³å¿˜æŽ‰å¤§å¸ˆçº§é“¸å‰‘"
 
-#define BOX_UNLEARN_WEAPON_SPEC     "ÄãÕæµÄÏëÍüµôÄãµÄÎäÆ÷×¨ÒµÊ§È¥ÁËËùÓÐÏà¹ØµÄ·¨Êõ? \n Cost: "
+#define BOX_UNLEARN_WEAPON_SPEC     "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„æ­¦å™¨ä¸“ä¸šå¤±åŽ»äº†æ‰€æœ‰ç›¸å…³çš„æ³•æœ¯? \n Cost: "
 
-#define GOSSIP_LEARN_DRAGON         "ÎÒ¾ø¶ÔÏàÐÅÎÒÏëÑ§Ï°ÁúÁÛÖÆÆ¤"
-#define GOSSIP_UNLEARN_DRAGON       "ÎÒÏëÍüµôÁúÁÛÖÆÆ¤"
-#define GOSSIP_LEARN_ELEMENTAL      "ÎÒ¾ø¶ÔÏàÐÅÎÒÏëÑ§Ï°ÔªËØÖÆÆ¤"
-#define GOSSIP_UNLEARN_ELEMENTAL    "ÎÒÏëÍüµôÔªËØÖÆÆ¤"
-#define GOSSIP_LEARN_TRIBAL         "ÎÒ¾ø¶ÔÏàÐÅÎÒÏëÑ§Ï°²¿×åÖÆÆ¤"
-#define GOSSIP_UNLEARN_TRIBAL       "ÎÒÏëÍüµô²¿×åÖÆÆ¤"
+#define GOSSIP_LEARN_DRAGON         "æˆ‘ç»å¯¹ç›¸ä¿¡æˆ‘æƒ³å­¦ä¹ é¾™é³žåˆ¶çš®"
+#define GOSSIP_UNLEARN_DRAGON       "æˆ‘æƒ³å¿˜æŽ‰é¾™é³žåˆ¶çš®"
+#define GOSSIP_LEARN_ELEMENTAL      "æˆ‘ç»å¯¹ç›¸ä¿¡æˆ‘æƒ³å­¦ä¹ å…ƒç´ åˆ¶çš®"
+#define GOSSIP_UNLEARN_ELEMENTAL    "æˆ‘æƒ³å¿˜æŽ‰å…ƒç´ åˆ¶çš®"
+#define GOSSIP_LEARN_TRIBAL         "æˆ‘ç»å¯¹ç›¸ä¿¡æˆ‘æƒ³å­¦ä¹ éƒ¨æ—åˆ¶çš®"
+#define GOSSIP_UNLEARN_TRIBAL       "æˆ‘æƒ³å¿˜æŽ‰éƒ¨æ—åˆ¶çš®"
 
-#define BOX_UNLEARN_LEATHER_SPEC    "ÄãÕæµÄÏëÍüµôÄãµÄÖÆÆ¤×¨ÒµÊ§È¥ÁËËùÓÐÏà¹ØµÄ·¨Êõ? \n Cost: "
+#define BOX_UNLEARN_LEATHER_SPEC    "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„åˆ¶çš®ä¸“ä¸šå¤±åŽ»äº†æ‰€æœ‰ç›¸å…³çš„æ³•æœ¯? \n Cost: "
 
-#define GOSSIP_LEARN_SPELLFIRE      "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸öÄ§Ñæ²Ã·ì"
-#define GOSSIP_UNLEARN_SPELLFIRE    "ÎÒÏ£ÍûÍüÈ´Ä§Ñæ²Ã·ì"
-#define GOSSIP_LEARN_MOONCLOTH      "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸öÔÂ²¼²Ã·ì"
-#define GOSSIP_UNLEARN_MOONCLOTH    "ÎÒÏ£ÍûÍüÈ´ÔÂ²¼²Ã·ì"
-#define GOSSIP_LEARN_SHADOWEAVE     "ÇëÄã½Ì½ÌÎÒÈçºÎ³ÉÎªÒ»¸ö°µÎÆ²Ã·ì"
-#define GOSSIP_UNLEARN_SHADOWEAVE   "ÎÒÏ£ÍûÍüÈ´°µÎÆ²Ã·ì"
+#define GOSSIP_LEARN_SPELLFIRE      "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªé­”ç„°è£ç¼"
+#define GOSSIP_UNLEARN_SPELLFIRE    "æˆ‘å¸Œæœ›å¿˜å´é­”ç„°è£ç¼"
+#define GOSSIP_LEARN_MOONCLOTH      "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªæœˆå¸ƒè£ç¼"
+#define GOSSIP_UNLEARN_MOONCLOTH    "æˆ‘å¸Œæœ›å¿˜å´æœˆå¸ƒè£ç¼"
+#define GOSSIP_LEARN_SHADOWEAVE     "è¯·ä½ æ•™æ•™æˆ‘å¦‚ä½•æˆä¸ºä¸€ä¸ªæš—çº¹è£ç¼"
+#define GOSSIP_UNLEARN_SHADOWEAVE   "æˆ‘å¸Œæœ›å¿˜å´æš—çº¹è£ç¼"
 
-#define BOX_UNLEARN_TAILOR_SPEC     "ÄãÕæµÄÏëÍüµôÄãµÄ²Ã·ì×¨ÒµÊ§È¥ÁËËùÓÐÏà¹ØµÄ·¨Êõ? \n Cost: "
+#define BOX_UNLEARN_TAILOR_SPEC     "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„è£ç¼ä¸“ä¸šå¤±åŽ»äº†æ‰€æœ‰ç›¸å…³çš„æ³•æœ¯? \n Cost: "
 
-#define GOSSIP_LEARN_GOBLIN         "ÎÒ¾ø¶Ô¿Ï¶¨ÎÒÏëÑ§µØ¾«¹¤³ÌÑ§¡£"
-#define GOSSIP_UNLEARN_GOBLIN       "ÎÒÏëÍüµôÎÒµÄµØ¾«¹¤³ÌÑ§×¨Òµ!"
-#define GOSSIP_LEARN_GNOMISH        "ÎÒ¾ø¶Ô¿Ï¶¨ÎÒÏëÑ§ÙªÈå¹¤³ÌÑ§¡£"
-#define GOSSIP_UNLEARN_GNOMISH      "ÎÒÏëÍüµôÎÒµÄÙªÈå¹¤³ÌÑ§×¨Òµ!"
+#define GOSSIP_LEARN_GOBLIN         "æˆ‘ç»å¯¹è‚¯å®šæˆ‘æƒ³å­¦åœ°ç²¾å·¥ç¨‹å­¦ã€‚"
+#define GOSSIP_UNLEARN_GOBLIN       "æˆ‘æƒ³å¿˜æŽ‰æˆ‘çš„åœ°ç²¾å·¥ç¨‹å­¦ä¸“ä¸š!"
+#define GOSSIP_LEARN_GNOMISH        "æˆ‘ç»å¯¹è‚¯å®šæˆ‘æƒ³å­¦ä¾å„’å·¥ç¨‹å­¦ã€‚"
+#define GOSSIP_UNLEARN_GNOMISH      "æˆ‘æƒ³å¿˜æŽ‰æˆ‘çš„ä¾å„’å·¥ç¨‹å­¦ä¸“ä¸š!"
 
-#define BOX_UNLEARN_GOBLIN_SPEC     "ÄãÕæµÄÏëÍüµôÄãµÄµØ¾«¹¤³Ì×¨Òµ²¢Ê§È¥ËùÓÐÏà¹Ø·¨Êõ?"
-#define BOX_UNLEARN_GNOMISH_SPEC    "ÄãÕæµÄÏëÍüµôÄãµÄÙªÈå¹¤³Ì×¨Òµ²¢Ê§È¥ËùÓÐÏà¹Ø·¨Êõ?"
+#define BOX_UNLEARN_GOBLIN_SPEC     "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„åœ°ç²¾å·¥ç¨‹ä¸“ä¸šå¹¶å¤±åŽ»æ‰€æœ‰ç›¸å…³æ³•æœ¯?"
+#define BOX_UNLEARN_GNOMISH_SPEC    "ä½ çœŸçš„æƒ³å¿˜æŽ‰ä½ çš„ä¾å„’å·¥ç¨‹ä¸“ä¸šå¹¶å¤±åŽ»æ‰€æœ‰ç›¸å…³æ³•æœ¯?"
 
 /*###
 # spells defines
 ###*/
 
-#define S_WEAPON                9787	//ÎäÆ÷¶ÍÔì
-#define S_ARMOR                 9788	//·À¾ß¶ÍÔì
-#define S_HAMMER                17040	//´óÊ¦¼¶Öý´¸
-#define S_AXE                   17041	//´óÊ¦¼¶Öý¸«
-#define S_SWORD                 17039	//´óÊ¦¼¶Öý½£
+#define S_WEAPON                9787	//æ­¦å™¨é”»é€ 
+#define S_ARMOR                 9788	//é˜²å…·é”»é€ 
+#define S_HAMMER                17040	//å¤§å¸ˆçº§é“¸é”¤
+#define S_AXE                   17041	//å¤§å¸ˆçº§é“¸æ–§
+#define S_SWORD                 17039	//å¤§å¸ˆçº§é“¸å‰‘
 
-#define S_LEARN_WEAPON          9789	//ÎäÆ÷¶ÍÔì
-#define S_LEARN_ARMOR           9790	//·À¾ß¶ÍÔì
-#define S_LEARN_HAMMER          39099	//´óÊ¦¼¶Öý´¸
-#define S_LEARN_AXE             39098	//´óÊ¦¼¶Öý¸«
-#define S_LEARN_SWORD           39097	//´óÊ¦¼¶Öý½£
+#define S_LEARN_WEAPON          9789	//æ­¦å™¨é”»é€ 
+#define S_LEARN_ARMOR           9790	//é˜²å…·é”»é€ 
+#define S_LEARN_HAMMER          39099	//å¤§å¸ˆçº§é“¸é”¤
+#define S_LEARN_AXE             39098	//å¤§å¸ˆçº§é“¸æ–§
+#define S_LEARN_SWORD           39097	//å¤§å¸ˆçº§é“¸å‰‘
 
-#define S_UNLEARN_WEAPON        36436	//ÒÅÍü
-#define S_UNLEARN_ARMOR         36435	//ÒÅÍü
-#define S_UNLEARN_HAMMER        36441	//ÒÅÍü
-#define S_UNLEARN_AXE           36439	//ÒÅÍü
-#define S_UNLEARN_SWORD         36438	//ÒÅÍü
+#define S_UNLEARN_WEAPON        36436	//é—å¿˜
+#define S_UNLEARN_ARMOR         36435	//é—å¿˜
+#define S_UNLEARN_HAMMER        36441	//é—å¿˜
+#define S_UNLEARN_AXE           36439	//é—å¿˜
+#define S_UNLEARN_SWORD         36438	//é—å¿˜
 
 #define S_REP_ARMOR             17451	
 #define S_REP_WEAPON            17452
@@ -142,47 +142,47 @@ there is no difference here (except that default text is chosen with `gameobject
 #define REP_AXE                 570
 #define REP_SWORD               571
 
-#define S_DRAGON                10656	//ÁúÁÛÖÆÆ¤
-#define S_ELEMENTAL             10658	//ÔªËØÖÆÆ¤
-#define S_TRIBAL                10660	//²¿×åÖÆÆ¤
+#define S_DRAGON                10656	//é¾™é³žåˆ¶çš®
+#define S_ELEMENTAL             10658	//å…ƒç´ åˆ¶çš®
+#define S_TRIBAL                10660	//éƒ¨æ—åˆ¶çš®
 
 #define S_LEARN_DRAGON          10657
 #define S_LEARN_ELEMENTAL       10659
 #define S_LEARN_TRIBAL          10661
 
-#define S_UNLEARN_DRAGON        36434	//ÒÅÍü
-#define S_UNLEARN_ELEMENTAL     36328	//ÒÅÍü
-#define S_UNLEARN_TRIBAL        36433	//ÒÅÍü
+#define S_UNLEARN_DRAGON        36434	//é—å¿˜
+#define S_UNLEARN_ELEMENTAL     36328	//é—å¿˜
+#define S_UNLEARN_TRIBAL        36433	//é—å¿˜
 
-#define S_GOBLIN                20222	//µØ¾«¹¤³ÌÊ¦
-#define S_GNOMISH               20219	//ÙªÈå¹¤³ÌÊ¦
+#define S_GOBLIN                20222	//åœ°ç²¾å·¥ç¨‹å¸ˆ
+#define S_GNOMISH               20219	//ä¾å„’å·¥ç¨‹å¸ˆ
 
-#define S_LEARN_GOBLIN          20221	//µØ¾«¹¤³ÌÊ¦
-#define S_LEARN_GNOMISH         20220	//ÙªÈå¹¤³ÌÊ¦
+#define S_LEARN_GOBLIN          20221	//åœ°ç²¾å·¥ç¨‹å¸ˆ
+#define S_LEARN_GNOMISH         20220	//ä¾å„’å·¥ç¨‹å¸ˆ
 
-#define S_SPELLFIRE             26797	//Ä§Ñæ²Ã·ì	
-#define S_MOONCLOTH             26798	//ÔÂ²¼²Ã·ì
-#define S_SHADOWEAVE            26801	//°µÎÆ²Ã·ì
+#define S_SPELLFIRE             26797	//é­”ç„°è£ç¼	
+#define S_MOONCLOTH             26798	//æœˆå¸ƒè£ç¼
+#define S_SHADOWEAVE            26801	//æš—çº¹è£ç¼
 
 #define S_LEARN_SPELLFIRE       26796	
 #define S_LEARN_MOONCLOTH       26799
 #define S_LEARN_SHADOWEAVE      26800
 
-#define S_UNLEARN_SPELLFIRE     41299	//ÒÅÍüÄ§Ñæ²Ã·ì
-#define S_UNLEARN_MOONCLOTH     41558	//ÒÅÍüÔÂ²¼²Ã·ì
-#define S_UNLEARN_SHADOWEAVE    41559	//ÒÅÍü°µÎÆ²Ã·ì
+#define S_UNLEARN_SPELLFIRE     41299	//é—å¿˜é­”ç„°è£ç¼
+#define S_UNLEARN_MOONCLOTH     41558	//é—å¿˜æœˆå¸ƒè£ç¼
+#define S_UNLEARN_SHADOWEAVE    41559	//é—å¿˜æš—çº¹è£ç¼
 
 #define S_TRANSMUTE             28672	
 #define S_ELIXIR                28677
 #define S_POTION                28675
 
-#define S_LEARN_TRANSMUTE       28674	//×ª»¯´óÊ¦
-#define S_LEARN_ELIXIR          28678	//Ò©¼Á´óÊ¦
-#define S_LEARN_POTION          28676	//Ò©Ë®´óÊ¦
+#define S_LEARN_TRANSMUTE       28674	//è½¬åŒ–å¤§å¸ˆ
+#define S_LEARN_ELIXIR          28678	//è¯å‰‚å¤§å¸ˆ
+#define S_LEARN_POTION          28676	//è¯æ°´å¤§å¸ˆ
 
-#define S_UNLEARN_TRANSMUTE     41565	//ÒÅÍü×ª»¯´óÊ¦
-#define S_UNLEARN_ELIXIR        41564	//ÒÅÍüÒ©¼Á´óÊ¦
-#define S_UNLEARN_POTION        41563	//ÒÅÍüÒ©Ë®´óÊ¦
+#define S_UNLEARN_TRANSMUTE     41565	//é—å¿˜è½¬åŒ–å¤§å¸ˆ
+#define S_UNLEARN_ELIXIR        41564	//é—å¿˜è¯å‰‚å¤§å¸ˆ
+#define S_UNLEARN_POTION        41563	//é—å¿˜è¯æ°´å¤§å¸ˆ
 
 /*###
 # formulas to calculate unlearning cost

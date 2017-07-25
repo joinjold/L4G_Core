@@ -28,8 +28,8 @@ EndScriptData */
 #define SPELL_TRICK_OR_TREATED  24755
 #define SPELL_TREAT             24715
 
-#define LOCALE_TRICK_OR_TREAT_0 "²»¸øÌÇ¹û¾Íµ·ÂÒ!"
-#define LOCALE_TRICK_OR_TREAT_2 "¶ñ×÷¾ç»¹ÊÇĞ¦»°!"
+#define LOCALE_TRICK_OR_TREAT_0 "ä¸ç»™ç³–æœå°±æ£ä¹±!"
+#define LOCALE_TRICK_OR_TREAT_2 "æ¶ä½œå‰§è¿˜æ˜¯ç¬‘è¯!"
 #define LOCALE_TRICK_OR_TREAT_3 "Ses oder Saures!"
 #define LOCALE_TRICK_OR_TREAT_6 "ruco o trato!"
 

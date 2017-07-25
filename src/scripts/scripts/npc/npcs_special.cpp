@@ -60,9 +60,9 @@ EndContentData */
 
 #define QUEST_CLUCK         3861
 #define CHICKEN_HELLO_TEXT  50
-#define EMOTE_A_HELLO       "×ÐÏ¸µØ¿´×ÅÄã¡£ Ò²ÐíÄãÓ¦¸Ã¼ì²éËü?"
-#define EMOTE_H_HELLO       "¿´×ÅÄãÒâÍâµÄ."
-#define CLUCK_TEXT2         "¿ªÊ¼×ÄÊ³ËÇÁÏ."
+#define EMOTE_A_HELLO       "ä»”ç»†åœ°çœ‹ç€ä½ ã€‚ ä¹Ÿè®¸ä½ åº”è¯¥æ£€æŸ¥å®ƒ?"
+#define EMOTE_H_HELLO       "çœ‹ç€ä½ æ„å¤–çš„."
+#define CLUCK_TEXT2         "å¼€å§‹å•„é£Ÿé¥²æ–™."
 #define FACTION_FRIENDLY    84
 #define FACTION_CHICKEN     31
 
@@ -251,9 +251,9 @@ bool ReceiveEmote_npc_dancing_flames( Player *player, Creature *flame, uint32 em
 ## Triage quest
 ######*/
 
-#define SAY_DOC1 "ÎÒµÃ¾ÈÁË£¡Ð»Ð»Äã£¬Ò½Éú¡£!"
-#define SAY_DOC2 "ÍòËê!ÎÒµÃ¾ÈÁË!"
-#define SAY_DOC3 "ÌðÃÛ£¬ÌðÃÛµÄÓµ±§...´øÎÒ..."
+#define SAY_DOC1 "æˆ‘å¾—æ•‘äº†ï¼è°¢è°¢ä½ ï¼ŒåŒ»ç”Ÿã€‚!"
+#define SAY_DOC2 "ä¸‡å²!æˆ‘å¾—æ•‘äº†!"
+#define SAY_DOC3 "ç”œèœœï¼Œç”œèœœçš„æ‹¥æŠ±...å¸¦æˆ‘..."
 
 struct Location
 {
@@ -658,7 +658,7 @@ CreatureAI* GetAI_npc_doctor(Creature *_Creature)
 ######*/
 
 #define SPELL_DEATHTOUCH                5
-#define SAY_AGGRO                       "Õâ¸öÇøÓòÊÇ¹Ø±ÕµÄ!"
+#define SAY_AGGRO                       "è¿™ä¸ªåŒºåŸŸæ˜¯å…³é—­çš„!"
 
 struct npc_guardianAI : public ScriptedAI
 {
@@ -810,7 +810,7 @@ bool GossipHello_npc_sayge(Player *player, Creature *_Creature)
         player->SEND_GOSSIP_MENU(7393, _Creature->GetGUID());
     else
     {
-        player->ADD_GOSSIP_ITEM(0, "È·¶¨", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+        player->ADD_GOSSIP_ITEM(0, "ç¡®å®š", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
         player->SEND_GOSSIP_MENU(7339, _Creature->GetGUID());
     }
 
@@ -822,38 +822,38 @@ void SendAction_npc_sayge(Player *player, Creature *_Creature, uint32 action)
     switch(action)
     {
     case GOSSIP_ACTION_INFO_DEF+1:
-        player->ADD_GOSSIP_ITEM(0, "É±ËÀµÄÈË",                      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
-        player->ADD_GOSSIP_ITEM(0, "°ÑËû½»¸ø³¼ÏÂ",            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+3);
-        player->ADD_GOSSIP_ITEM(0, "Ã»ÊÕµÄÓñÃ×",               GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+4);
-        player->ADD_GOSSIP_ITEM(0, "ÈÃËûÈ¥³ÔÓñÃ×",      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+5);
+        player->ADD_GOSSIP_ITEM(0, "æ€æ­»çš„äºº",                      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+        player->ADD_GOSSIP_ITEM(0, "æŠŠä»–äº¤ç»™è‡£ä¸‹",            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+3);
+        player->ADD_GOSSIP_ITEM(0, "æ²¡æ”¶çš„çŽ‰ç±³",               GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+4);
+        player->ADD_GOSSIP_ITEM(0, "è®©ä»–åŽ»åƒçŽ‰ç±³",      GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+5);
         player->SEND_GOSSIP_MENU(7340, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+2:
-        player->ADD_GOSSIP_ITEM(0, "Í´¿àµØ´¦¾öÄãµÄÅóÓÑ",     GOSSIP_SENDER_MAIN+1, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "ÎÞÍ´µØÖ´ÐÐÄãµÄÅóÓÑ",    GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "ÈÃÄãµÄÅóÓÑÈ¥",                GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "ç—›è‹¦åœ°å¤„å†³ä½ çš„æœ‹å‹",     GOSSIP_SENDER_MAIN+1, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "æ— ç—›åœ°æ‰§è¡Œä½ çš„æœ‹å‹",    GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "è®©ä½ çš„æœ‹å‹åŽ»",                GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7341, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+3:
-        player->ADD_GOSSIP_ITEM(0, "Ãæ¶ÔÍâ½»¹Ù",             GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "ÏÔÊ¾²»ÄÇÃ´°²¾²µÄÃïÊÓ",        GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "±£³Ö°²¾²",                      GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "é¢å¯¹å¤–äº¤å®˜",             GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "æ˜¾ç¤ºä¸é‚£ä¹ˆå®‰é™çš„è”‘è§†",        GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "ä¿æŒå®‰é™",                      GOSSIP_SENDER_MAIN+2, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7361, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+4:
-        player->ADD_GOSSIP_ITEM(0, "¹«¿ª·´¶ÔÄãµÄÐÖµÜ", GOSSIP_SENDER_MAIN+6, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "°ïÖúÄãµÄÐÖµÜ",              GOSSIP_SENDER_MAIN+7, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "²»ÒªÈÃÄã¸ç¸çÖªµÀ", GOSSIP_SENDER_MAIN+8, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "å…¬å¼€åå¯¹ä½ çš„å…„å¼Ÿ", GOSSIP_SENDER_MAIN+6, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "å¸®åŠ©ä½ çš„å…„å¼Ÿ",              GOSSIP_SENDER_MAIN+7, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "ä¸è¦è®©ä½ å“¥å“¥çŸ¥é“", GOSSIP_SENDER_MAIN+8, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7362, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+5:
-        player->ADD_GOSSIP_ITEM(0, "ÄÃÐÅÓÃ£¬Ñø»Æ½ð",            GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "ÄÃÐÅÓÃ£¬¹²Ïí»Æ½ð",       GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
-        player->ADD_GOSSIP_ITEM(0, "ÈÃÆïÊ¿»ñµÃÈÙÓþ",        GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "æ‹¿ä¿¡ç”¨ï¼Œå…»é»„é‡‘",            GOSSIP_SENDER_MAIN+5, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "æ‹¿ä¿¡ç”¨ï¼Œå…±äº«é»„é‡‘",       GOSSIP_SENDER_MAIN+4, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(0, "è®©éª‘å£«èŽ·å¾—è£èª‰",        GOSSIP_SENDER_MAIN+3, GOSSIP_ACTION_INFO_DEF);
         player->SEND_GOSSIP_MENU(7363, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF:
-        player->ADD_GOSSIP_ITEM(0, "Ð»Ð»",                            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+6);
+        player->ADD_GOSSIP_ITEM(0, "è°¢è°¢",                            GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+6);
         player->SEND_GOSSIP_MENU(7364, _Creature->GetGUID());
         break;
     case GOSSIP_ACTION_INFO_DEF+6:
@@ -1446,28 +1446,28 @@ bool ReceiveEmote_npc_mojo( Player *player, Creature *_Creature, uint32 emote )
                 switch (urand(0, MOJO_WHISPS_COUNT))
                 {
                 case 0:
-                    text = "ÏÖÔÚÕâ¾ÍÊÇÎÒ³ÆÖ®ÎªÇàÍÜµÄ·ç¸ñ!";
+                    text = "çŽ°åœ¨è¿™å°±æ˜¯æˆ‘ç§°ä¹‹ä¸ºé’è›™çš„é£Žæ ¼!";
                     break;
                 case 1:
-                    text = "ÄãµÄË¯Á«Ò¶×Ó»¹ÊÇÎÒµÄ?";
+                    text = "ä½ çš„ç¡èŽ²å¶å­è¿˜æ˜¯æˆ‘çš„?";
                     break;
                 case 2:
-                    text = "Õâ²»»á»¨ºÜ³¤Ê±¼ä£¬ÊÇÂð£¿?";
+                    text = "è¿™ä¸ä¼šèŠ±å¾ˆé•¿æ—¶é—´ï¼Œæ˜¯å—ï¼Ÿ?";
                     break;
                 case 3:
-                    text = "ÎÒÒÔÎªÄãÓÀÔ¶²»»áÎÊ!";
+                    text = "æˆ‘ä»¥ä¸ºä½ æ°¸è¿œä¸ä¼šé—®!";
                     break;
                 case 4:
-                    text = "ÎÒ±£Ö¤²»¸øÄãðà...";
+                    text = "æˆ‘ä¿è¯ä¸ç»™ä½ ç–£...";
                     break;
                 case 5:
-                    text = "¸Ð¾õÒ»¸öÐ¡Ð¡µÄÇàÍÜ£¬ÄãÊÇ?";
+                    text = "æ„Ÿè§‰ä¸€ä¸ªå°å°çš„é’è›™ï¼Œä½ æ˜¯?";
                     break;
                 case 6:
-                    text = "Ìý, $n, ÎÒÖªµÀÓÐ¸öÐ¡ÕÓÔó£¬ÀëÕâ¶ù²»Ô¶....";
+                    text = "å¬, $n, æˆ‘çŸ¥é“æœ‰ä¸ªå°æ²¼æ³½ï¼Œç¦»è¿™å„¿ä¸è¿œ....";
                     break;
                 default:
-                    text = "Ö»ÊÇÓÐÃ»ÓÐ×ã¹»µÄÔËÆøÈ¥...";
+                    text = "åªæ˜¯æœ‰æ²¡æœ‰è¶³å¤Ÿçš„è¿æ°”åŽ»...";
                     break;
                 }
 
@@ -1529,8 +1529,8 @@ CreatureAI* GetAI_npc_woeful_healer(Creature* pCreature)
     return new npc_woeful_healerAI(pCreature);
 }
 
-#define GOSSIP_VIOLET_SIGNET    "ÎÒµÄ×ÏÉ«Ó¡ÕÂµôÁË£¬ÄãÄÜ¸øÎÒ×ö¸öÐÂµÄÂð£¿"
-#define GOSSIP_ETERNAL_BAND    "ÎÒÊ§È¥ÁËÎÒµÄÓÀºãÀÖ¶Ó£¬ÄãÄÜ¸øÎÒ»»Ò»¸öÐÂµÄÂð£¿"
+#define GOSSIP_VIOLET_SIGNET    "æˆ‘çš„ç´«è‰²å°ç« æŽ‰äº†ï¼Œä½ èƒ½ç»™æˆ‘åšä¸ªæ–°çš„å—ï¼Ÿ"
+#define GOSSIP_ETERNAL_BAND    "æˆ‘å¤±åŽ»äº†æˆ‘çš„æ°¸æ’ä¹é˜Ÿï¼Œä½ èƒ½ç»™æˆ‘æ¢ä¸€ä¸ªæ–°çš„å—ï¼Ÿ"
 
 // Archmage Leryda from Karazhan and Soridormi from Mount Hyjal
 bool GossipHello_npc_ring_specialist(Player* player, Creature* _Creature)
@@ -1814,22 +1814,22 @@ CreatureAI *GetAI_npc_earth_elemental_guardian(Creature* c)
 # npc_master_omarion
 #########*/
 
-//Blacksmithing	¶ÍÔì
-#define GOSSIP_ITEM_OMARION0  "Ñ§Ï°ÆÆ±ù»¤ÍóÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION1  "Ñ§Ï°ÆÆ±ù»¤ÊÖÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION2  "Ñ§Ï°ÆÆ±ùÐØ¼×Í¼Ö½."
-//Leatherworking	ÖÆÆ¤
-#define GOSSIP_ITEM_OMARION3  "Ñ§Ï°±±¼«»¤ÍóÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION4  "Ñ§Ï°±±¼«ÊÖÌ×Í¼Ö½."
-#define GOSSIP_ITEM_OMARION5  "Ñ§Ï°±±¼«ÍâÌ×Í¼Ö½."
-#define GOSSIP_ITEM_OMARION6  "Ñ§Ï°º®ÁÛ»¤ÍóÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION7  "Ñ§Ï°º®ÁÛ»¤ÊÖÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION8  "Ñ§Ï°º®ÁÛÐØ¼×Í¼Ö½."
-//Tailoring	¼ô²Ã
-#define GOSSIP_ITEM_OMARION9  "Ñ§Ï°±ù´¨»¤ÍóÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION10 "Ñ§Ï°±ù´¨ÊÖÌ×Í¼Ö½."
-#define GOSSIP_ITEM_OMARION11 "Ñ§Ï°±ù´¨ÍâÒÂÍ¼Ö½."
-#define GOSSIP_ITEM_OMARION12 "Ñ§Ï°±ù´¨Åû·çÍ¼Ö½."
+//Blacksmithing	é”»é€ 
+#define GOSSIP_ITEM_OMARION0  "å­¦ä¹ ç ´å†°æŠ¤è…•å›¾çº¸."
+#define GOSSIP_ITEM_OMARION1  "å­¦ä¹ ç ´å†°æŠ¤æ‰‹å›¾çº¸."
+#define GOSSIP_ITEM_OMARION2  "å­¦ä¹ ç ´å†°èƒ¸ç”²å›¾çº¸."
+//Leatherworking	åˆ¶çš®
+#define GOSSIP_ITEM_OMARION3  "å­¦ä¹ åŒ—æžæŠ¤è…•å›¾çº¸."
+#define GOSSIP_ITEM_OMARION4  "å­¦ä¹ åŒ—æžæ‰‹å¥—å›¾çº¸."
+#define GOSSIP_ITEM_OMARION5  "å­¦ä¹ åŒ—æžå¤–å¥—å›¾çº¸."
+#define GOSSIP_ITEM_OMARION6  "å­¦ä¹ å¯’é³žæŠ¤è…•å›¾çº¸."
+#define GOSSIP_ITEM_OMARION7  "å­¦ä¹ å¯’é³žæŠ¤æ‰‹å›¾çº¸."
+#define GOSSIP_ITEM_OMARION8  "å­¦ä¹ å¯’é³žèƒ¸ç”²å›¾çº¸."
+//Tailoring	å‰ªè£
+#define GOSSIP_ITEM_OMARION9  "å­¦ä¹ å†°å·æŠ¤è…•å›¾çº¸."
+#define GOSSIP_ITEM_OMARION10 "å­¦ä¹ å†°å·æ‰‹å¥—å›¾çº¸."
+#define GOSSIP_ITEM_OMARION11 "å­¦ä¹ å†°å·å¤–è¡£å›¾çº¸."
+#define GOSSIP_ITEM_OMARION12 "å­¦ä¹ å†°å·æŠ«é£Žå›¾çº¸."
 
 bool GossipHello_npc_master_omarion(Player *player, Creature *_Creature)
 {
@@ -1946,10 +1946,10 @@ bool GossipSelect_npc_master_omarion(Player *player, Creature *_Creature, uint32
 # npc_lorekeeper_lydros
 #########*/
 
-#define GOSSIP_ITEM_LOREKEEPER1 "ÃÔÈËµÄ À³µÂÂÞË¹£¬Çë¼ÌÐø."
-#define GOSSIP_ITEM_LOREKEEPER2 "£¨¼ÌÐø£©"
-#define GOSSIP_ITEM_LOREKEEPER3 "°¡?"
-#define GOSSIP_ITEM_LOREKEEPER4 "Ò²Ðí°É...ÎÒÏÖÔÚ¸ÃÔõÃ´°ì£¿"
+#define GOSSIP_ITEM_LOREKEEPER1 "è¿·äººçš„ èŽ±å¾·ç½—æ–¯ï¼Œè¯·ç»§ç»­."
+#define GOSSIP_ITEM_LOREKEEPER2 "ï¼ˆç»§ç»­ï¼‰"
+#define GOSSIP_ITEM_LOREKEEPER3 "å•Š?"
+#define GOSSIP_ITEM_LOREKEEPER4 "ä¹Ÿè®¸å§...æˆ‘çŽ°åœ¨è¯¥æ€Žä¹ˆåŠžï¼Ÿ"
 
 bool GossipHello_npc_lorekeeper_lydros(Player *player, Creature *_Creature)
 {
@@ -2344,7 +2344,7 @@ bool GossipHello_npc_delivery_daily(Player *player, Creature *_Creature)
 
     if(!player->HasAura(44689, 0) && (player->GetQuestStatus(11122) == QUEST_STATUS_COMPLETE || player->GetQuestStatus(11412) == QUEST_STATUS_COMPLETE))
     {
-        player->PlayerTalkClass->GetGossipMenu().AddMenuItem(0, "ÄãÓÐ¶îÍâµÄ¹¤×÷Âð£¿", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF, "", 0);
+        player->PlayerTalkClass->GetGossipMenu().AddMenuItem(0, "ä½ æœ‰é¢å¤–çš„å·¥ä½œå—ï¼Ÿ", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF, "", 0);
     }
 
     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
@@ -2387,8 +2387,8 @@ CreatureAI* GetAI_trigger_barker(Creature* pCreature)
 //This function is called when the player opens the gossip menubool
 bool GossipHello_npc_arena_spectator(Player *player, Creature *_Creature)
 {
-    player->ADD_GOSSIP_ITEM_EXTENDED(0, "ÄãÏë¿´Ë­µÄÎèÌ¨?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1, "", 0, true);
-    player->ADD_GOSSIP_ITEM(0, "ÎÒ²»¸ÐÐËÈ¤¡£", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+    player->ADD_GOSSIP_ITEM_EXTENDED(0, "ä½ æƒ³çœ‹è°çš„èˆžå°?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1, "", 0, true);
+    player->ADD_GOSSIP_ITEM(0, "æˆ‘ä¸æ„Ÿå…´è¶£ã€‚", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
 
     player->PlayerTalkClass->SendGossipMenu(907,_Creature->GetGUID());
     return true;
@@ -2685,7 +2685,7 @@ CreatureAI* GetAI_npc_small_pet_handler(Creature* pCreature)
 
 bool GossipHello_npc_combatstop(Player* player, Creature* _Creature) 
 { 
-    player->ADD_GOSSIP_ITEM(0, "Çå³ýÕ½¶·×´Ì¬.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1); 
+    player->ADD_GOSSIP_ITEM(0, "æ¸…é™¤æˆ˜æ–—çŠ¶æ€.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1); 
 
     // Hey there, $N. How can I help you?
     player->SEND_GOSSIP_MENU(2, _Creature->GetGUID()); 
@@ -2891,7 +2891,7 @@ CreatureAI* GetAI_npc_explosive_sheep(Creature* pCreature)
 ## Meridith the Mermaiden
 ######*/
 
-#define GOSSIP_HELLO "Ð»Ð»ÄãµÄ°ïÖú"
+#define GOSSIP_HELLO "è°¢è°¢ä½ çš„å¸®åŠ©"
 #define LOVE_SONG_QUEST_ID 8599
 #define SIREN_SONG 25678
 
@@ -2909,7 +2909,7 @@ bool GossipSelect_npc_meridith_the_mermaiden(Player *player, Creature * creature
 {
     if(action == GOSSIP_ACTION_INFO_DEF+1)
     {
-        creature->Say("ÔÙ¼û!", LANG_UNIVERSAL, 0);
+        creature->Say("å†è§!", LANG_UNIVERSAL, 0);
         creature->CastSpell(player, SIREN_SONG, false);
         player->CLOSE_GOSSIP_MENU();
     }
@@ -2975,8 +2975,8 @@ CreatureAI* GetAI_npc_gnomish_flame_turret(Creature *_Creature)
 /*######
  # dummy park control
  ######*/
-#define DUMMY_PARK_ON "¿ªÊ¼¹ó×å»¨Ô°ÊÂ¼þ"
-#define DUMMY_PARK_OFF "½áÊø¹ó×å»¨Ô°ÊÂ¼þ"
+#define DUMMY_PARK_ON "å¼€å§‹è´µæ—èŠ±å›­äº‹ä»¶"
+#define DUMMY_PARK_OFF "ç»“æŸè´µæ—èŠ±å›­äº‹ä»¶"
 #define DUMMY_PARK_OBJECTS 16
 #define DUMMY_PARK_NPCS 8
 
@@ -3059,7 +3059,7 @@ bool GossipSelect_npc_dummy_park(Player *player, Creature *creature, uint32 send
     {
         if(action == GOSSIP_ACTION_INFO_DEF+1)
         {
-            creature->Whisper("×¼±¸¹ó×å»¨Ô°!",player->GetGUID());
+            creature->Whisper("å‡†å¤‡è´µæ—èŠ±å›­!",player->GetGUID());
             GameObject* gob;
             for (uint8 i = 0 ; i < DUMMY_PARK_OBJECTS ; i++)
             {
@@ -3094,7 +3094,7 @@ bool GossipSelect_npc_dummy_park(Player *player, Creature *creature, uint32 send
         }
         else if(action == GOSSIP_ACTION_INFO_DEF+2)
         {
-            creature->Whisper("½áÊø¹ó×å»¨Ô°!",player->GetGUID());
+            creature->Whisper("ç»“æŸè´µæ—èŠ±å›­!",player->GetGUID());
             GameObject* gob;
             for (uint8 i = 0 ; i < DUMMY_PARK_OBJECTS ; i++)
             {
