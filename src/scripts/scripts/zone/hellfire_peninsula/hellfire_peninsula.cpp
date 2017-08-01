@@ -148,8 +148,8 @@ bool GOUse_go_haaleshi_altar(Player *player, GameObject* go)
 ## npc_wing_commander_dabiree
 ######*/
 
-#define GOSSIP_ITEM1_DAB "Fly me to Murketh and Shaadraz Gateways"
-#define GOSSIP_ITEM2_DAB "Fly me to Shatter Point"
+#define GOSSIP_ITEM1_DAB "带我飞到穆尔凯斯和沙德拉兹之门"
+#define GOSSIP_ITEM2_DAB "带我飞到粉碎点"
 
 bool GossipHello_npc_wing_commander_dabiree(Player *player, Creature *creature)
 {
@@ -188,8 +188,8 @@ bool GossipSelect_npc_wing_commander_dabiree(Player *player, Creature *creature,
 ## npc_gryphoneer_windbellow
 ######*/
 
-#define GOSSIP_ITEM1_WIN "Fly me to The Abyssal Shelf"
-#define GOSSIP_ITEM2_WIN "Fly me to Honor Point"
+#define GOSSIP_ITEM1_WIN "带我飞行到深渊架"
+#define GOSSIP_ITEM2_WIN "带我飞行到荣誉点"
 
 bool GossipHello_npc_gryphoneer_windbellow(Player *player, Creature *creature)
 {
@@ -228,9 +228,9 @@ bool GossipSelect_npc_gryphoneer_windbellow(Player *player, Creature *creature, 
 ## npc_wing_commander_brack
 ######*/
 
-#define GOSSIP_ITEM1_BRA "Fly me to Murketh and Shaadraz Gateways"
-#define GOSSIP_ITEM2_BRA "Fly me to The Abyssal Shelf"
-#define GOSSIP_ITEM3_BRA "Fly me to Spinebreaker Post"
+#define GOSSIP_ITEM1_BRA "带我飞到穆尔凯斯和沙德拉兹之门"
+#define GOSSIP_ITEM2_BRA "带我飞行到深渊架"
+#define GOSSIP_ITEM3_BRA "带我飞行到断背岗哨"
 
 bool GossipHello_npc_wing_commander_brack(Player *player, Creature *creature)
 {
@@ -365,8 +365,8 @@ bool QuestAccept_npc_wounded_blood_elf(Player* player, Creature* creature, Quest
 ## npc_demoniac_scryer
 ######*/
 
-#define GOSSIP_ITEM_ATTUNE    "Yes, Scryer. You may possess me."
-#define FINISHED_WHISPER    "Thank you for allowing me to visit, $N. You have a very colorful soul, but it's a little brighter than I prefer... or I might have stayed longer!"
+#define GOSSIP_ITEM_ATTUNE    "是的，Scryer。你可以拥有我。"
+#define FINISHED_WHISPER    "谢谢你允许我去拜访你，你有一个非常丰富多彩的灵魂，但是它比我喜欢的更明亮一点…否则我可能会呆久一点！"
 
 enum
 {
@@ -877,16 +877,16 @@ CreatureAI* GetAI_npc_abyssal_shelf_quest(Creature *creature)
 
 const char* YellChange[3] = 
 {
-    "No... no... NO!!!!!",
-    "My power... is gone!",
-    "What have you done!"
+    "不...不...不!！！！！",
+    "我的力量…用完了！",
+    "你做了什么！"
 };
 const char* YellSiphon[4] = 
 {
-    "More... more... MORE!!!",
-    "I will soon be stronger than any elf! I will serve at Kil'jaeden's side!",
-    "Unparalleled power... I... crave... more!",
-    "Your life force is my nourishment, demon... Kil'jaeden's gift to us!"
+    "更多…更多…更多！！！",
+    "我很快就会比任何精灵都强壮！我会在基尔加丹的侧服务！",
+    "无与伦比的力量…I. ..渴望...更多！",
+    "你的生命力是我的养料，恶魔…基尔加丹给我们的礼物！"
 };
 
 struct npc_felblood_initiateAI : public ScriptedAI
@@ -1004,7 +1004,7 @@ CreatureAI* GetAI_npc_felblood_initiate(Creature *creature)
 /// Ice Stone
 ///////
 
-#define GOSSIP_ICE_STONE        "Place your hands on stone"
+#define GOSSIP_ICE_STONE        "把你的手放在石头上"
 
 enum
 {
@@ -1225,7 +1225,7 @@ CreatureAI* GetAI_npc_anchorite_relic_bunny(Creature* creature)
 ## npc_anchorite_barada
 ######*/
 
-#define GOSSIP_ITEM_START      "I am ready Amchorite.Let us begin the exorcim."
+#define GOSSIP_ITEM_START      "我准备好了隐士.让我们开始驱魔。"
 #define SAY_BARADA1            -1900100
 #define SAY_BARADA2            -1900101
 #define SAY_BARADA3            -1900104

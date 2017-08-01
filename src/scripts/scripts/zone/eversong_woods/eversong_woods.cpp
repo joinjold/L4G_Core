@@ -34,8 +34,8 @@ EndContentData */
 ## npc_prospector_anvilward
 ######*/
 
-#define GOSSIP_HELLO    "I need a moment of your time, sir."
-#define GOSSIP_SELECT   "Why... yes, of course. I've something to show you right inside this building, Mr. Anvilward."
+#define GOSSIP_HELLO    "我需要你一点时间，先生。"
+#define GOSSIP_SELECT   "为什么...当然听说过。我有事要告诉你这里面的建筑权, Mr. Anvilward."
 
 #define SAY_PR_1 -1000281
 #define SAY_PR_2 -1000282

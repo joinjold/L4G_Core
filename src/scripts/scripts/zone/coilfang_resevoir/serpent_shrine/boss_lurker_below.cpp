@@ -26,7 +26,7 @@ EndScriptData */
 #include "../../../creature/simple_ai.h"
 #include "Spell.h"
 
-#define EMOTE_SPOUT "takes a deep breath."
+#define EMOTE_SPOUT "深深吸了一口气。"
 
 #define SPELL_SPOUT_ANIM    42835
 #define SPELL_SPOUT         37433

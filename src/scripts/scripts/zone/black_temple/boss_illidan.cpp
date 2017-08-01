@@ -26,7 +26,7 @@ EndScriptData */
 
 /************* Quotes and Sounds ***********************/
 // Gossip for when a player clicks Akama
-#define GOSSIP_ITEM           "We are ready to face Illidan"
+#define GOSSIP_ITEM           "我们已经准备好面对伊利丹"
 
 
 // Yells for/by Akama

@@ -30,8 +30,8 @@ EndScriptData */
 #define SAY_HALFLIFE        -1469029
 #define SAY_KILLTARGET      -1469030
 
-#define GOSSIP_ITEM         "Start Event <Needs Gossip Text>"
-#define GOSSIP_ITEM_2       "<Nefarius's Corruption>"
+#define GOSSIP_ITEM         "开始事件 <Needs Gossip Text>"
+#define GOSSIP_ITEM_2       "《奈法里奥斯的腐蚀》"
 
 #define SPELL_ESSENCEOFTHERED       23513
 #define SPELL_FLAMEBREATH           23461

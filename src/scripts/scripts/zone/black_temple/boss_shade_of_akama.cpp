@@ -24,7 +24,7 @@ EndScriptData */
 #include "precompiled.h"
 #include "def_black_temple.h"
 
-#define GOSSIP_ITEM     "We are ready to fight alongside you, Akama"
+#define GOSSIP_ITEM     "我们愿意和你并肩战斗，阿卡玛"
 #define CHANNELERS_Z    118.538f
 
 enum shade_akama

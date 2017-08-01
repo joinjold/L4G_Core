@@ -29,7 +29,7 @@ EndScriptData */
 ## npc_gregan_brewspewer
 ######*/
 
-#define GOSSIP_HELLO "Buy somethin', will ya?"
+#define GOSSIP_HELLO "买东西，好吗？"
 
 bool GossipHello_npc_gregan_brewspewer(Player* player, Creature* creature)
 {

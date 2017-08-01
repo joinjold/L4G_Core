@@ -26,8 +26,8 @@ EndScriptData */
 #define SPELL_HANDOFTHAURISSAN          17492
 #define SPELL_AVATAROFFLAME             15636
 
-#define SAY_AGGRO                       "Come to aid the Throne!"
-#define SAY_SLAY                        "Hail to the king, baby!"
+#define SAY_AGGRO                       "来援助的宝座！"
+#define SAY_SLAY                        "向国王致敬，宝贝!"
 
 struct boss_draganthaurissanAI : public ScriptedAI
 {

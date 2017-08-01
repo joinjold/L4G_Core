@@ -11,18 +11,18 @@
 #define SOUND_ONDEATH 11018
 
 #define SAY_ONSLAY1 "Shaza-Kiel!"
-#define SAY_ONSLAY2 "You... are nothing!"
-#define SAY_ONSLAY3 "Miserable nuisance!"
+#define SAY_ONSLAY2 "你……什么都不是！"
+#define SAY_ONSLAY3 "你个讨厌的可怜虫！"
 #define SOUND_ONSLAY1 11017
 #define SOUND_ONSLAY2 11053
 #define SOUND_ONSLAY3 11054
 
-#define SAY_MARK1 "Your death will be a painful one."
-#define SAY_MARK2 "You... are marked."
+#define SAY_MARK1 "你将经历痛苦的死亡。"
+#define SAY_MARK2 "你……被标记了。 "
 #define SOUND_MARK1 11016
 #define SOUND_MARK2 11052
 
-#define SAY_ONAGGRO "Cry for mercy! Your meaningless lives will soon be forfeit."
+#define SAY_ONAGGRO "哀求我高抬贵手吧！你那无意义的生命很快就会被没收！"
 #define SOUND_ONAGGRO 11015
 
 struct boss_kazrogalAI : public hyjal_trashAI

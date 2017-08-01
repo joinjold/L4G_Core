@@ -45,7 +45,7 @@ EndContentData */
 
 bool GossipHello_npc_brazen(Player *player, Creature *creature)
 {
-    player->ADD_GOSSIP_ITEM(0, "I am ready to go to Durnholde Keep.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+    player->ADD_GOSSIP_ITEM(0, "我准备去敦霍尔德城堡。", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
     player->SEND_GOSSIP_MENU(creature->GetNpcTextId(), creature->GetGUID());
     return true;
 }
@@ -82,7 +82,7 @@ bool GossipHello_npc_erozion(Player *player, Creature *creature)
 
     ScriptedInstance* pInstance = (creature->GetInstanceData());
     if ( pInstance && pInstance->GetData(TYPE_BARREL_DIVERSION) != DONE && !player->HasItemCount(ITEM_ENTRY_BOMBS, 1))
-        player->ADD_GOSSIP_ITEM( 0, "I need a pack of Incendiary Bombs.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+        player->ADD_GOSSIP_ITEM( 0, "我需要一包燃烧弹。", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
 
     //if( !player->GetQuestRewardStatus(QUEST_ENTRY_RETURN) && player->GetQuestStatus(QUEST_ENTRY_RETURN) == QUEST_STATUS_COMPLETE )
         //player->ADD_GOSSIP_ITEM( 0, "[PH] Teleport please, i'm tired.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
@@ -237,16 +237,16 @@ enum Thrall
 #define SKARLOC_MOUNT_MODEL     18223
 
 //gossip items
-#define GOSSIP_ITEM_START       "We are ready to get you out of here, Thrall. Let's go!"
+#define GOSSIP_ITEM_START       "我们已经准备好让你离开这里，萨尔。走吧!"
 #define GOSSIP_ID_START         9568
 #define GOSSIP_ID_SKARLOC1      9614                        //I'm glad Taretha is alive. We now must find a way to free her...
-#define GOSSIP_ITEM_SKARLOC1    "Taretha cannot see you, Thrall."
+#define GOSSIP_ITEM_SKARLOC1    "塔蕾莎不能见你，萨尔。"
 #define GOSSIP_ID_SKARLOC2      9579                        //What do you mean by this? Is Taretha in danger?
-#define GOSSIP_ITEM_SKARLOC2    "The situation is rather complicated, Thrall. It would be best for you to head into the mountains now, before more of Blackmoore's men show up. We'll make sure Taretha is safe."
+#define GOSSIP_ITEM_SKARLOC2    "情况相当复杂，萨尔。你的头进山，现在是最好的，在更多的布莱克莫尔的人出现了。我们会确保塔蕾莎是安全的。"
 #define GOSSIP_ID_SKARLOC3      9580
-#define GOSSIP_ITEM_SKARLOC3    "Tarren Mill."
+#define GOSSIP_ITEM_SKARLOC3    "塔伦米尔"
 #define GOSSIP_ID_TARREN        9597                        //tarren mill is beyond these trees
-#define GOSSIP_ITEM_TARREN      "We're ready, Thrall."
+#define GOSSIP_ITEM_TARREN      "我们已经准备好了，萨尔。"
 #define GOOSIP_ID_TARETHA       9614
 #define GOSSIP_ID_COMPLETE      9578                        //Thank you friends, I owe my freedom to you. Where is Taretha? I hoped to see her
 
@@ -1022,9 +1022,9 @@ bool GossipSelect_npc_thrall_old_hillsbrad(Player *player, Creature *creature, u
 ######*/
 
 #define GOSSIP_ID_EPOCH1        9610                        //Thank you for helping Thrall escape, friends. Now I only hope
-#define GOSSIP_ITEM_EPOCH1      "Strange wizard?"
+#define GOSSIP_ITEM_EPOCH1      "奇怪的精灵"
 #define GOSSIP_ID_EPOCH2        9613                        //Yes, friends. This man was no wizard of
-#define GOSSIP_ITEM_EPOCH2      "We'll get you out. Taretha. Don't worry. I doubt the wizard would wander too far away."
+#define GOSSIP_ITEM_EPOCH2      "我们会把你救出来的。塔蕾莎。不必担心，我怀疑巫师会走得太远。"
 
 struct npc_tarethaAI : public npc_escortAI
 {

@@ -52,15 +52,15 @@ enum HyjalGossipMenu
     GOSSIP_MENU_TYRANDE                     = 20012
 };
 
-#define GOSSIP_ITEM_BEGIN_ALLY      "My companions and I are with you, Lady Proudmoore."
-#define GOSSIP_ITEM_ANETHERON       "We are ready for whatever Archimonde might send our way, Lady Proudmoore."
-#define GOSSIP_ITEM_RETREAT_JAINA   "Until we meet again, Lady Proudmoore."
+#define GOSSIP_ITEM_BEGIN_ALLY      "我和我的同伴都与你同在，吉安娜·普罗德摩尔"
+#define GOSSIP_ITEM_ANETHERON       "我们准备不管阿克蒙德给我们的路, 吉安娜·普罗德摩尔"
+#define GOSSIP_ITEM_RETREAT_JAINA   "直到我们再次相遇, 吉安娜·普罗德摩尔."
 
-#define GOSSIP_ITEM_BEGIN_HORDE     "I am with you, Thrall."
-#define GOSSIP_ITEM_AZGALOR         "We have nothing to fear."
-#define GOSSIP_ITEM_RETREAT_THRALL  "Until we meet again, Thrall."
+#define GOSSIP_ITEM_BEGIN_HORDE     "我与你，萨尔。"
+#define GOSSIP_ITEM_AZGALOR         "我们有什么好怕的。"
+#define GOSSIP_ITEM_RETREAT_THRALL  "直到我们再次见面，萨尔。"
 
-#define GOSSIP_ITEM_TYRANDE         "I would be grateful for any aid you can provide, Priestess."
+#define GOSSIP_ITEM_TYRANDE         "我会很感激你能提供的任何帮助，女祭司。"
 #define ITEM_TEAR_OF_GODDESS        24494
 
 
@@ -98,7 +98,7 @@ bool GossipHello_npc_jaina_proudmoore(Player *player, Creature *_Creature)
     uint32 AnetheronEncounter = ai->GetInstanceData(DATA_ANETHERONEVENT);
 
     if (player->isGameMaster())
-        player->ADD_GOSSIP_ITEM(2, "[GM] Toggle Debug Timers", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
+        player->ADD_GOSSIP_ITEM(2, "[GM] 切换调试定时器", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
 
     if (ai->EventBegun)
     {
@@ -109,7 +109,7 @@ bool GossipHello_npc_jaina_proudmoore(Player *player, Creature *_Creature)
         player->ADD_GOSSIP_ITEM(0, GOSSIP_ITEM_BEGIN_ALLY, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
 
         if (player->GetSession()->GetPermissions() > PERM_PLAYER) // isGameMaster() won't work here because it requires .GM to be on
-            player->ADD_GOSSIP_ITEM(0, "<GM> Skip trash waves and spawn Rage Winterchill", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
+            player->ADD_GOSSIP_ITEM(0, "<GM> 跳过垃圾波和产卵 雷基·冬寒", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
 
         player->SEND_GOSSIP_MENU(GOSSIP_MENU_WINTERCHILL_NOT_STARTED, _Creature->GetGUID());
     }
@@ -118,7 +118,7 @@ bool GossipHello_npc_jaina_proudmoore(Player *player, Creature *_Creature)
         player->ADD_GOSSIP_ITEM(0, GOSSIP_ITEM_ANETHERON, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
 
         if (player->GetSession()->GetPermissions() > PERM_PLAYER) // isGameMaster() won't work here because it requires .GM to be on
-            player->ADD_GOSSIP_ITEM(0, "<GM> Skip trash waves and spawn Anetheron", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 5);
+            player->ADD_GOSSIP_ITEM(0, "<GM> 跳过垃圾波和产卵安娜塞隆", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 5);
 
         player->SEND_GOSSIP_MENU(GOSSIP_MENU_WINTERCHILL_KILLED, _Creature->GetGUID());
     }
@@ -201,7 +201,7 @@ bool GossipHello_npc_thrall(Player *player, Creature *_Creature)
         uint32 AzgalorEvent  = ai->GetInstanceData(DATA_AZGALOREVENT);
 
         if (player->isGameMaster())
-            player->ADD_GOSSIP_ITEM(2, "[GM] Toggle Debug Timers", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
+            player->ADD_GOSSIP_ITEM(2, "[GM] 切换调试定时器", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
 
         if (ai->EventBegun)
         {
@@ -212,7 +212,7 @@ bool GossipHello_npc_thrall(Player *player, Creature *_Creature)
             player->ADD_GOSSIP_ITEM(0, GOSSIP_ITEM_BEGIN_HORDE, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
 
             if (player->GetSession()->GetPermissions() > PERM_PLAYER) // isGameMaster() won't work here because it requires .GM to be on
-                player->ADD_GOSSIP_ITEM(0, "<GM> Skip trash waves and spawn Kazrogal", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
+                player->ADD_GOSSIP_ITEM(0, "<GM> 跳过垃圾波和产卵卡兹洛加", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
 
             player->SEND_GOSSIP_MENU(GOSSIP_MENU_KAZROGAL_NOT_STARTED, _Creature->GetGUID());
         }
@@ -221,7 +221,7 @@ bool GossipHello_npc_thrall(Player *player, Creature *_Creature)
             player->ADD_GOSSIP_ITEM(0, GOSSIP_ITEM_AZGALOR, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
 
             if (player->GetSession()->GetPermissions() > PERM_PLAYER) // isGameMaster() won't work here because it requires .GM to be on
-                player->ADD_GOSSIP_ITEM(0, "<GM> Skip trash waves and spawn Azgalor", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 5);
+                player->ADD_GOSSIP_ITEM(0, "<GM> 跳过垃圾波和产卵的深渊领主", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 5);
 
             player->SEND_GOSSIP_MENU(GOSSIP_MENU_KAZROGAL_KILLED, _Creature->GetGUID());
         }

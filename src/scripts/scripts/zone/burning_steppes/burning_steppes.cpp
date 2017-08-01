@@ -31,18 +31,18 @@ EndContentData */
 ## npc_ragged_john
 ######*/
 
-#define GOSSIP_HELLO    "Official buisness, John. I need some information about Marsha Windsor. Tell me about the last time you saw him."
-#define GOSSIP_SELECT1  "So what did you do?"
-#define GOSSIP_SELECT2  "Start making sense, dwarf. I don't want to have anything to do with your cracker, your pappy, or any sort of 'discreditin'."
-#define GOSSIP_SELECT3  "Ironfoe?"
-#define GOSSIP_SELECT4  "Interesting... continue John."
-#define GOSSIP_SELECT5  "So that's how Windsor died..."
-#define GOSSIP_SELECT6  "So how did he die?"
-#define GOSSIP_SELECT7  "Ok so where the hell is he? Wait a minute! Are you drunk?"
-#define GOSSIP_SELECT8  "WHY is he in Blackrock Depths?"
-#define GOSSIP_SELECT9  "300? So the Dark Irons killed him and dragged him into the Depths?"
-#define GOSSIP_SELECT10 "Ahh... Ironfoe"
-#define GOSSIP_SELECT11 "Thanks, Ragged John. Your story was very uplifting and informative"
+#define GOSSIP_HELLO    "公务，约翰。我需要一些有关温德索尔元帅的信息。告诉我你最后一次见到他。"
+#define GOSSIP_SELECT1  "你要做什么?"
+#define GOSSIP_SELECT2  "从某种义意上说，矮人，我不希望与你交恶。"
+#define GOSSIP_SELECT3  "反对者?"
+#define GOSSIP_SELECT4  "有趣...继续约翰."
+#define GOSSIP_SELECT5  "温莎就是这样死的。"
+#define GOSSIP_SELECT6  "他是怎么死的？"
+#define GOSSIP_SELECT7  "好吧，他在哪儿？等一下!你醉了吗？"
+#define GOSSIP_SELECT8  "为什么他在黑石深渊？"
+#define GOSSIP_SELECT9  "300？所以黑铁杀死了他，把他拖进了深渊？"
+#define GOSSIP_SELECT10 "啊。。反对者"
+#define GOSSIP_SELECT11 "谢谢，狼狈不堪的约翰。你的故事非常振奋人心，内容丰富。"
 
 struct npc_ragged_johnAI : public ScriptedAI
 {
@@ -226,22 +226,22 @@ CreatureAI* GetAI_mob_broodlingessence(Creature *_Creature)
 ######*/
 const char* RelicQuotes[] =
 {
-    "Defiler... you will be punished for this incursion.",
-    "Your existence is acknowledged.",
-    "Help us, outsider.",
-    "He cannot be defeated.",
-    "Leave this place.",
-    "Do not taint these ruins, mortal."
+    "蝎子…你将因这次入侵而受到惩罚。",
+    "你的存在是公认的。",
+    "帮助我们，局外人。",
+    "他不能被打败。",
+    "离开这个地方。",
+    "不要玷污这些废墟，凡人。"
 };
 
 const char* RelicEmotes[] =
 {
-    "A symbol of flame radiates from the relic before it crumbles to the earth.",
-    "The relic turns to dust. Your head throbs with new-found wisdom. Something evil lurks in the heart of the mountain.",
-    "The relic crumbles to dust. A vision of eight Dark Iron dwarves performing some sort of ritual fills your head.",
-    "The relic burns to nothing. The memories it held are now your own. This city was destroyed by a being not of this world.",
-    "The relic emits a white hot arc of flame. A memory is gained: A lone Dark Iron dwarf is surrounded by seven corpses, kneeling before a monolith of flame.",
-    "You are engulfed in a blinding flash of light. A creature composed entirely of flame is the only thing you can remember seeing."
+    "象征着火焰的辐射从文物才粉碎了地球。",
+    "废墟变成尘土。你的头与新发现的智慧跳动。邪恶的东西潜伏在山的中心。",
+    "文物碎尘。一个八个暗铁矮人做某种仪式的幻象充满了你的头脑。",
+    "圣物烧成一无所有。它的记忆现在是你自己的。这个城市被一个不属于这个世界的人毁灭了。",
+    "文物发出火焰炽热的弧。有一个记忆：一个孤独的暗铁矮人被七具尸体包围，跪在一团火焰前。",
+    "你被一道耀眼的光芒吞噬。一个完全由火焰组成的生物是你唯一能记住的东西。"
 };
 
 bool GOUse_go_thaurissan_relic(Player *player, GameObject* _GO)
@@ -254,7 +254,7 @@ bool GOUse_go_thaurissan_relic(Player *player, GameObject* _GO)
         uint8 id = urand(0, (sizeof(RelicQuotes)/sizeof(char*)) -1);
         
         WorldPacket data(SMSG_MESSAGECHAT, 200);        //whisper packet - with name
-        _GO->BuildMonsterChat(&data,CHAT_MSG_MONSTER_WHISPER,RelicQuotes[id],LANG_UNIVERSAL, "A tormented voice", player->GetGUID());
+        _GO->BuildMonsterChat(&data,CHAT_MSG_MONSTER_WHISPER,RelicQuotes[id],LANG_UNIVERSAL, "一个痛苦的声音", player->GetGUID());
         player->SendPacketToSelf(&data);
 
         _GO->MonsterTextEmote(RelicEmotes[id], player->GetGUID());

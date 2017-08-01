@@ -9,32 +9,32 @@
 #define SPELL_INFERNO 31299
 #define SPELL_ENRAGE 26662
 
-#define SAY_ONDEATH "The clock... is still... ticking."
+#define SAY_ONDEATH "时间……仍然……在流逝……"
 #define SOUND_ONDEATH 10982
 
-#define SAY_ONSLAY1 "Your hopes are lost!"
-#define SAY_ONSLAY2 "Scream for me!"
-#define SAY_ONSLAY3 "Pity, no time for a slow death!"
+#define SAY_ONSLAY1 "你的希望都失去了！"
+#define SAY_ONSLAY2 "为我尖叫！"
+#define SAY_ONSLAY3 "可惜，没有时间慢慢死去！"
 #define SOUND_ONSLAY1 10981
 #define SOUND_ONSLAY2 11038
 #define SOUND_ONSLAY3 11039
 
-#define SAY_SWARM1 "The swarm is eager to feed!"
-#define SAY_SWARM2 "Pestilence upon you!"
+#define SAY_SWARM1 "我的虫群们渴望血肉!"
+#define SAY_SWARM2 "瘟疫降临了!"
 #define SOUND_SWARM1 10979
 #define SOUND_SWARM2 11037
 
-#define SAY_SLEEP1 "You look tired..."
-#define SAY_SLEEP2 "Sweet dreams..."
+#define SAY_SLEEP1 "你看起来累了"
+#define SAY_SLEEP2 "做个好梦。"
 #define SOUND_SLEEP1 10978
 #define SOUND_SLEEP2 11545
 
-#define SAY_INFERNO1 "Let fire rain from above!"
-#define SAY_INFERNO2 "Earth and sky shall burn!"
+#define SAY_INFERNO1 "让火从天而降吧"
+#define SAY_INFERNO2 "大地和天空燃烧起来吧！"
 #define SOUND_INFERNO1 10980
 #define SOUND_INFERNO2 11036
 
-#define SAY_ONAGGRO "You are defenders of a doomed world! Flee here, and perhaps you will prolong your pathetic lives!"
+#define SAY_ONAGGRO "你们是这个被毁灭的世界的守护者……逃走吧，或许你们那可怜的生命可以再多延续一会！"
 #define SOUND_ONAGGRO 10977
 
 struct boss_anetheronAI : public hyjal_trashAI

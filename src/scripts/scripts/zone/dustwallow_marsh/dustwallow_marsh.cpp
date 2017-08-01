@@ -45,7 +45,7 @@ EndContentData */
 ## npc_cassa_crimsonwing
 ######*/
 
-#define GOSSIP_SURVEY_ALCAZ_ISLAND "Lady Jaina told me to speak to you about using a Gryphon to survey Alcaz Island."
+#define GOSSIP_SURVEY_ALCAZ_ISLAND "Lady Jaina告诉我说你用狮鹫调查奥卡兹岛。"
 
 bool GossipHello_npc_cassa_crimsonwing(Player *player, Creature *_Creature)
 {
@@ -200,8 +200,8 @@ bool GossipHello_npc_deserter_agitator(Player *player, Creature *_Creature)
 ## npc_dustwallow_lady_jaina_proudmoore - TODO: should also have own scripted AI when horde attacks her
 ######*/
 
-#define GOSSIP_ITEM_JAINA "I know this is rather silly but i have a young ward who is a bit shy and would like your autograph."
-#define GOSSIP_TELE_TO_STORMWIND "I'm ready to travel to Stormwind."
+#define GOSSIP_ITEM_JAINA "我知道这很傻但我有一个年轻的病房的人是有点害羞，并希望你的签名。"
+#define GOSSIP_TELE_TO_STORMWIND "我准备去暴风城。"
 
 struct npc_dustwallow_lady_jaina_proudmooreAI : public ScriptedAI
 {

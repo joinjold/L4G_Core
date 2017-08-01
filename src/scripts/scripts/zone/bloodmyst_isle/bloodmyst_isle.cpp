@@ -78,14 +78,14 @@ CreatureAI* GetAI_mob_webbed_creature(Creature *_Creature)
 
 #define C_SUNHAWK_TRIGGER 17974
 
-#define GOSSIP_ITEM1 "I'm a prisoner, what does it look like? The draenei filth captured me as I exited the sun gate. They killed our portal controllers and destroyed the gate. The Sun King will be most displeased with this turn of events."
+#define GOSSIP_ITEM1 "我是一个囚犯，它看起来像什么？德莱尼污秽俘虏了我当我离开太阳门。他们杀死了我们的门控制器并摧毁了大门。太阳王对这一事件将极为不满。"
 
-#define GOSSIP_ITEM2 "Ah yes, Sironas. I had nearly forgoten that Sironas was here. I served under Sironas back on Outland. I hadn't heard of this abomination though; those damnable draenei captured me before I even fully materialized on this world."
-#define GOSSIP_ITEM3 "Incredible. How did Sironas accomplish such a thing?"
-#define GOSSIP_ITEM4 "Sironas is an eredar... I mean, yes, obviously."
-#define GOSSIP_ITEM5 "The Vector Coil is massive. I hope we have more than one abomination guarding the numerous weak points."
-#define GOSSIP_ITEM6 "I did and you believed me. Thank you for the information, blood elf. You have helped us more than you could know."
-#define say_captured_sunhawk_agent "Treacherous whelp! Sironas will destroy you and your people!"
+#define GOSSIP_ITEM2 "是啊，希隆娜丝。我几乎忘记，希隆娜丝在这里。我曾在希隆娜丝在外域。我从来没有听说过这可憎的事虽然那些该死的德莱尼捕获；我之前我甚至完全物化在这个世界。"
+#define GOSSIP_ITEM3 "简直不可思议.希隆娜丝是怎么做到这样的事？"
+#define GOSSIP_ITEM4 "希隆娜丝是艾瑞达…我是说，是的，很明显。"
+#define GOSSIP_ITEM5 "矢量线圈是巨大的。我希望我们有不止一个可憎的东西守卫着许多弱点。"
+#define GOSSIP_ITEM6 "我做到了，而你相信了我。谢谢你提供的信息，血精灵。你帮助我们更多的比你所知道的。"
+#define say_captured_sunhawk_agent "奸诈的幼兽！希隆娜丝会破坏你和你的人！"
 
 bool GossipHello_npc_captured_sunhawk_agent(Player *player, Creature *_Creature)
 {
@@ -137,7 +137,7 @@ bool GossipSelect_npc_captured_sunhawk_agent(Player *player, Creature *_Creature
 ## npc_exarch_admetius
 ######*/
 
-#define GOSSIP_ITEM_EXARCH "Create bloodelf disguise."
+#define GOSSIP_ITEM_EXARCH "创建血精灵伪装。"
 
 bool GossipHello_npc_exarch_admetius(Player *player, Creature *_Creature)
 {

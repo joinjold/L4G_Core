@@ -118,7 +118,7 @@ bool GossipHello_npc_tirion_fordring(Player *player, Creature *_Creature)
         player->PrepareQuestMenu( _Creature->GetGUID() );
 
     if (player->GetQuestStatus(5742) == QUEST_STATUS_INCOMPLETE && player->getStandState() == PLAYER_STATE_SIT )
-        player->ADD_GOSSIP_ITEM( 0, "I am ready to hear your tale, Tirion.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+        player->ADD_GOSSIP_ITEM( 0, "我愿意听你的故事，提里奥。", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
 
     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
 
@@ -130,15 +130,15 @@ bool GossipSelect_npc_tirion_fordring(Player *player, Creature *_Creature, uint3
     switch (action)
     {
         case GOSSIP_ACTION_INFO_DEF+1:
-            player->ADD_GOSSIP_ITEM( 0, "Thank you, Tirion.  What of your identity?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
+            player->ADD_GOSSIP_ITEM( 0, "谢谢你，提里奥。你的身份是什么？", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
             player->SEND_GOSSIP_MENU(4493, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF+2:
-            player->ADD_GOSSIP_ITEM( 0, "That is terrible.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
+            player->ADD_GOSSIP_ITEM( 0, "太可怕了", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
             player->SEND_GOSSIP_MENU(4494, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF+3:
-            player->ADD_GOSSIP_ITEM( 0, "I will, Tirion.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
+            player->ADD_GOSSIP_ITEM( 0, "我会的, 提里奥.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
             player->SEND_GOSSIP_MENU(4495, _Creature->GetGUID());
             break;
         case GOSSIP_ACTION_INFO_DEF+4:

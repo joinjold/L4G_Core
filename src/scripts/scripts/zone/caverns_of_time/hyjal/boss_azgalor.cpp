@@ -9,22 +9,22 @@
 #define SPELL_CLEAVE 31345
 #define SPELL_BERSERK 26662
 
-#define SAY_ONDEATH "Your time is almost... up"
+#define SAY_ONDEATH "大限……将至…… "
 #define SOUND_ONDEATH 11002
 
-#define SAY_ONSLAY1 "Reesh, hokta!"
-#define SAY_ONSLAY2 "Don't fight it"
-#define SAY_ONSLAY3 "No one is going to save you"
+#define SAY_ONSLAY1 "恶魔语"
+#define SAY_ONSLAY2 "别打了…… "
+#define SAY_ONSLAY3 "没人会救你的"
 #define SOUND_ONSLAY1 11001
 #define SOUND_ONSLAY2 11048
 #define SOUND_ONSLAY3 11047
 
-#define SAY_DOOM1 "Just a taste... of what awaits you"
-#define SAY_DOOM2 "Suffer you despicable insect!"
+#define SAY_DOOM1 "好好享受一下……等待着你的东西"
+#define SAY_DOOM2 "忍受你卑鄙的昆虫！"
 #define SOUND_DOOM1 11046
 #define SOUND_DOOM2 11000
 
-#define SAY_ONAGGRO "Abandon all hope! The legion has returned to finish what was begun so many years ago. This time there will be no escape!"
+#define SAY_ONAGGRO "舍弃你们所有的希望吧！燃烧军团来完成万年前未竟的工作了！这次我们不会放跑任何东西！"
 #define SOUND_ONAGGRO 10999
 
 struct boss_azgalorAI : public hyjal_trashAI

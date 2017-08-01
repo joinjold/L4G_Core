@@ -27,9 +27,9 @@ EndScriptData */
 #define SAY_GAMESBEGIN_2        -1469005
 #define SAY_VAEL_INTRO          -1469006                    //when he corrupts Vaelastrasz
 
-#define GOSSIP_ITEM_1           "I've made no mistakes."
-#define GOSSIP_ITEM_2           "You have lost your mind, Nefarius. You speak in riddles."
-#define GOSSIP_ITEM_3           "Please do."
+#define GOSSIP_ITEM_1           "我没有犯错误。"
+#define GOSSIP_ITEM_2           "你已经失去了你的心，奈法里奥斯。你说谜语。"
+#define GOSSIP_ITEM_3           "请你。"
 
 #define CREATURE_BRONZE_DRAKANOID       14263
 #define CREATURE_BLUE_DRAKANOID         14261

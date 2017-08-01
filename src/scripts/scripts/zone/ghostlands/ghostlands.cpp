@@ -35,7 +35,7 @@ EndContentData */
 ## npc_blood_knight_dawnstar
 ######*/
 
-#define GOSSIP_H_BKD "Take Blood Knight Insignia"
+#define GOSSIP_H_BKD "带血骑士徽章"
 
 bool GossipHello_npc_blood_knight_dawnstar(Player *player, Creature *_Creature)
 {
@@ -66,7 +66,7 @@ bool GossipSelect_npc_blood_knight_dawnstar(Player *player, Creature *_Creature,
 ## npc_budd_nedreck
 ######*/
 
-#define GOSSIP_HBN "You gave the crew disguises?"
+#define GOSSIP_HBN "你给船员的伪装？"
 
 bool GossipHello_npc_budd_nedreck(Player *player, Creature *_Creature)
 {

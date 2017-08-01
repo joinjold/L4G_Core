@@ -66,9 +66,9 @@ EndScriptData */
 #define SPELL_DECREASE_CAST_SPEED       39261
 
 //Yells and Quotes
-#define SAY_GAIN_BLESSING_OF_TIDES      "Your overconfidence will be your undoing! Guards, lend me your strength!"
+#define SAY_GAIN_BLESSING_OF_TIDES      "你的自信会毁了你！警卫，借给我你的力量！"
 #define SOUND_GAIN_BLESSING_OF_TIDES    11278
-#define SAY_MISC                        "Alana be'lendor!" //don't know what use this
+#define SAY_MISC                        "我解决你了!" //don't know what use this
 #define SOUND_MISC                      11283
 
 //Summoned Unit GUIDs

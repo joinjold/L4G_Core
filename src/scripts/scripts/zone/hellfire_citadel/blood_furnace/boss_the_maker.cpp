@@ -31,10 +31,10 @@ EndScriptData */
 #define SAY_KILL_2                  -1542013
 #define SAY_DIE                     -1542014
 
-#define SPELL_ACID_SPRAY            38153
-#define SPELL_EXPLODING_BREAKER     (HeroicMode ? 40059 : 30925)
-#define SPELL_KNOCKDOWN             20276
-#define SPELL_DOMINATION            30923
+#define SPELL_ACID_SPRAY            38153 //酸液喷泉 对目标及其周围的敌人造成点自然伤害。
+#define SPELL_EXPLODING_BREAKER     (HeroicMode ? 40059 : 30925) //爆炸之杯
+#define SPELL_KNOCKDOWN             20276 //击倒 对目标和它身边的敌人造成462点伤害，并使它们昏迷2秒。最多可影响5个目标。
+#define SPELL_DOMINATION            30923 //支配 控制一个等级不高于70级的敌对人型生物，持续10秒。
 
 struct boss_the_makerAI : public ScriptedAI
 {
