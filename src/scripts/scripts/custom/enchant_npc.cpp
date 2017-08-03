@@ -250,7 +250,7 @@ bool GossipSelect_enchant_npc(Player* Player, Creature* Creature, uint32 sender,
         Player->ADD_GOSSIP_ITEM(9,"+5 所有抗性 ",EQUIPMENT_SLOT_OFFHAND,27947);//永久性地为一面盾牌附魔，使它获得对所有魔法的抗性提高5点的效果。该装备等级不得低于35级。
         Player->ADD_GOSSIP_ITEM(9,"+15 盾牌格挡 ",EQUIPMENT_SLOT_OFFHAND,27946);//永久性地为一面盾牌附魔，使它获得格挡等级提高15的效果。该装备等级不得低于35级。
         Player->ADD_GOSSIP_ITEM(9,"+9 精神 ",EQUIPMENT_SLOT_OFFHAND,20016);//永久性地为一面盾牌附魔，使它获得精神+9的效果。
-        Player->ADD_GOSSIP_ITEM(9,"+8 Frost resistance ",EQUIPMENT_SLOT_OFFHAND,11224);//
+        //Player->ADD_GOSSIP_ITEM(9,"+8 Frost resistance ",EQUIPMENT_SLOT_OFFHAND,11224);//
         Player->ADD_GOSSIP_ITEM(9,"+30 护甲 ",EQUIPMENT_SLOT_OFFHAND,13464);//永久性地为一面盾牌附魔，使它获得护甲+30的效果。
         Player->ADD_GOSSIP_ITEM(9,"+26-38 盾刺伤害 ",EQUIPMENT_SLOT_OFFHAND,29454);//在你的盾牌上加装一根魔钢盾刺，每次使用这块盾牌格挡都会对攻击者造成26到38点伤害。
         Player->ADD_GOSSIP_ITEM(9,"<- 返回 ",0,0);
