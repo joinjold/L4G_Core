@@ -170,7 +170,7 @@ bool GossipSelect_custom_instant_70_uncommon(Player* Player, Creature* Creature,
                     Player->ADD_GOSSIP_ITEM(0, "DPS - Feral", GOSSIP_SENDER_MAIN, CAT_DRUID);
                     Player->ADD_GOSSIP_ITEM(0, "DPS - Balance", GOSSIP_SENDER_MAIN, BALANCE_DRUID);
                     Player->ADD_GOSSIP_ITEM(0, "Healer", GOSSIP_SENDER_MAIN, HEAL_DRUID);
-                    Player->ADD_GOSSIP_ITEM(0, "Tank", GOSSIP_SENDER_MAIN, TANK_DRUID);
+                    Player->ADD_GOSSIP_ITEM(0, "坦克", GOSSIP_SENDER_MAIN, TANK_DRUID);
                     break;
             }
             Player->PlayerTalkClass->SendGossipMenu(30012, Creature->GetGUID());

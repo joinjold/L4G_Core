@@ -101,7 +101,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
                     Player->PlayerTalkClass->SendGossipMenu(30020, Creature->GetGUID());
                     return true;
                 }
-                case 5: // ein char über 60, aber noch kein 2.
+                case 5: // ein char é»šer 60, aber noch kein 2.
                 {
                     Player->ADD_GOSSIP_ITEM(0, "continue", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 112);
                     Player->PlayerTalkClass->SendGossipMenu(30021, Creature->GetGUID());
@@ -184,7 +184,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 14:
         {
-            // WARRIOR - TANK -ü
+            // WARRIOR - TANK -?
             uint16 items[] = {32871,29794,30291,0,30270,30380,25979,32866,30225,30264,30006,31528,28042,31617,29777,30278,25624,25971};
             Player->EquipForPush(items);
             if (!Player->HasItemCount(28056, 200, true))
@@ -213,7 +213,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 16:
         {
-            // PALADIN - TANK -ü
+            // PALADIN - TANK -?
             uint16 items[] = {32871,28027,30381,0,30296,30330,29774,30334,30400,29959,27734,31528,25619,28042,29777,31448,25624,27949};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -222,7 +222,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 17:
         {
-            // PALADIN - Healer -ü
+            // PALADIN - Healer -?
             uint16 items[] = {25530,30276,31115,0,31765,25948,25929,30968,25592,25566,25542,31730,30293,25634,30338,25492,31732,23201};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -258,7 +258,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 21:
         {
-            // PRIEST - Healer -ü
+            // PRIEST - Healer -?
             uint16 items[] = {30294,30276,25925,0,29978,30923,31485,27728,30382,30521,31526,31730,31615,25634,30338,31700,0,29779};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -267,7 +267,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 22:
         {
-            // SHAMANE - VERSTÄRKER - fertig
+            // SHAMANE - VERSTè…žKER - fertig
             uint16 items[] = {30329,30981,30333,0,30255,30001,29968,30273,30399,30336,25779,30339,29776,31617,29792,30277,0,22395};
             Player->EquipForPush(items);
             Player->AddItem(14487, 1);
@@ -286,7 +286,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 24:
         {
-            // SHAMANE - Healer -ü
+            // SHAMANE - Healer -?
             uint16 items[] = {25575,30276,31533,0,25556,31114,25568,25479,25592,31515,25542,31730,30293,25634,30338,31475,31732,23200};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -322,7 +322,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 28:
         {
-            // DRUID - EULE -ü
+            // DRUID - EULE -?
             uint16 items[] = {30946,29775,30262,0,29967,25583,30290,30335,30520,31430,29793,31523,30340,31615,30971,30522,0,23197};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -331,7 +331,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 29:
         {
-            // DRUID - BAUM -ü
+            // DRUID - BAUM -?
             uint16 items[] = {30515,30276,31538,0,30945,31513,30290,27727,29955,25591,31526,31730,31615,25634,30338,31700,0,22398};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -340,7 +340,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
         }
         case GOSSIP_ACTION_INFO_DEF + 30:
         {
-            // DRUID - BÄR -ü
+            // DRUID - Bè…ž -?
             uint16 items[] = {30269,29794,29999,0,32869,30285,30941,30266,30332,30341,30006,31528,28042,31617,29777,25622,0,28064};
             Player->EquipForPush(items);
             Player->ADD_GOSSIP_ITEM(0, "Take me to class trainer", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
@@ -568,7 +568,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
             }
             break;
         }
-        case GOSSIP_ACTION_INFO_DEF + 405: //Kräuter
+        case GOSSIP_ACTION_INFO_DEF + 405: //Kré‹Ÿter
         {
             professions = 0;
             if (Player->HasSkill(SKILL_ALCHEMY))
@@ -605,7 +605,7 @@ bool GossipSelect_custom_gossip_codebox(Player* Player, Creature* Creature, uint
             }
             break;
         }
-        case GOSSIP_ACTION_INFO_DEF + 406: //Kürschner
+        case GOSSIP_ACTION_INFO_DEF + 406: //Ké»µschner
         {
             professions = 0;
             if (Player->HasSkill(SKILL_ALCHEMY))
